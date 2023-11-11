@@ -8,7 +8,8 @@
 
     "baseUrl": "./src",
     "paths": {
-      "assets/*": ["assets/*"]
+      "assets/*": ["assets/*"],
+      "models/*": ["models/*"]
     },
 
     /* Bundler mode */
