@@ -1,9 +1,9 @@
 import classes from './theme-button.module.scss';
 
-import lightModeIcon from 'assets/icons/common/light-icon.svg';
-import darkModeIcon from 'assets/icons/common/dark-icon.svg';
+import lightModeIcon from '@/assets/icons/common/light-icon.svg';
+import darkModeIcon from '@/assets/icons/common/dark-icon.svg';
 
-import {ThemeOption} from "models/ThemeOption.ts";
+import {ThemeOption} from "@/models/ThemeOption.ts";
 
 interface ThemeButtonProps {
     className?: string;

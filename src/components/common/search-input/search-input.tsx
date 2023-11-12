@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import searchIcon from "assets/icons/common/search-icon.svg";
+import searchIcon from "@/assets/icons/common/search-icon.svg";
 
 interface SearchInputProps {
     placeholder: string;

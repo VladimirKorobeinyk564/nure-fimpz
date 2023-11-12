@@ -4,7 +4,7 @@ import SearchInput from "../search-input/search-input.tsx";
 import ThemeButton from "../theme-button/theme-button.tsx";
 import LangSelect from "./lang-select/lang-select.tsx";
 
-import nureLogo from "assets/icons/common/nure-logo.svg";
+import nureLogo from "@/assets/icons/common/nure-logo.svg";
 
 function Header() {
     const navigate = useNavigate();
