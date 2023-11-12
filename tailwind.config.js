@@ -17,11 +17,20 @@ export default {
     },
     extend: {
       colors: {
+        //Dark
         'dark-bg': '#1A1E25',
         'dark-second-bg': '#23272F',
         'dark-input-bg': '#333A45',
         'dark-text-color': '#EBECF0',
         'dark-subtext-color': '#A1A1A1',
+
+        //Light
+        'light-bg': '#FFFFFF',
+        'light-input-bg': '#EBECF0',
+        'light-text-color': '#23272F',
+
+        //Common
+        'theme-hover-bg': 'rgba(175, 175, 175, 0.34)',
 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

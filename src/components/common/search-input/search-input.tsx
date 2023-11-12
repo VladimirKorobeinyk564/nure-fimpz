@@ -10,7 +10,6 @@ interface SearchInputProps {
     onValueChanged?: (value: string) => void;
 }
 
-
 function SearchInput(props: Readonly<SearchInputProps>) {
     const {
         placeholder,
@@ -26,9 +25,9 @@ function SearchInput(props: Readonly<SearchInputProps>) {
 
     return (
         <div
-            className={`search-container flex items-center w-full text-[#9AA1B4] overflow-hidden text-[15px] relative transition-all rounded-[8px] duration-300 ease-in-out ${containerClass} ${
-                isFocused ? 'active' : ''
-            }`}
+            className={`search-container flex items-center w-full text-[#9AA1B4] ` +
+                ` overflow-hidden text-[15px] relative rounded-[8px] ${containerClass} ` +
+                ` ${isFocused ? 'active' : ''}`}
         >
             <i
                 className={`search-icon mr-[5px] absolute left-[16px] transition-all duration-300`}
@@ -37,7 +36,10 @@ function SearchInput(props: Readonly<SearchInputProps>) {
                 <img src={searchIcon} alt="Search" />
             </i>
             <input
-                className={`search-input py-[6px] outline-none bg-dark-input-bg w-full pl-[38px] transition-all duration-300 ${inputClass}`}
+                className={
+                `  transition-[background, padding] duration-300 search-input py-[6px] outline-none bg-light-input-bg dark:bg-dark-input-bg ` +
+                    ` w-full pl-[38px] ${inputClass}`
+            }
                 type="text"
                 style={{ paddingLeft: isFocused ? '16px' : '38px' }}
                 placeholder={`${placeholder} ...`}

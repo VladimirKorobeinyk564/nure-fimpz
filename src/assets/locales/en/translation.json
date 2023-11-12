@@ -1,3 +1,23 @@
 {
-  "testHi": "Hello"
+  "common": {
+    "header": {
+      "searchText": "Search",
+      "nav": {
+        "home": "Home",
+        "labPz": "LB & PZ"
+      }
+    }
+  },
+  "homePage": {
+    "tagline": {
+      "span": "FORMAL",
+      "methods": "METHODS",
+      "other": "OF SOFTWARE ENGINEERING"
+    },
+    "subtitle": {
+      "first": "Learn key methods for modeling, developing, and verifying complex software products",
+      "second": "for reliable and secure solutions."
+    },
+    "startBtn": "Start to learn"
+  }
 }
