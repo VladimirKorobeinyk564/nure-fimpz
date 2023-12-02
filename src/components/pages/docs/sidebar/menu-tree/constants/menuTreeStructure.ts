@@ -1,6 +1,6 @@
 import {MenuItem} from "@/components/pages/docs/sidebar/menu-tree/menu-tree.tsx";
 
-export const menuItems: MenuItem[] = [
+export const menuItemsList: MenuItem[] = [
     {
         key: 'c6a7b20a-4498-4e37-bc5e-810fcf76d2ab',
         label: 'Практичні роботи',
