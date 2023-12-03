@@ -1,7 +1,7 @@
 function ThirdLaboratoryWork() {
     return (
         <div>
-            ThirdLab
+            Third lab
         </div>
     );
 }
