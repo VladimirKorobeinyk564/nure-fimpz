@@ -1,4 +1,5 @@
 import {MenuItem} from "@/components/pages/docs/sidebar/menu-tree/menu-tree.tsx";
+import {useAppSelector} from "@/hooks/redux.ts";
 
 interface MenuItemProps {
     item: MenuItem;
@@ -6,21 +7,24 @@ interface MenuItemProps {
     expandedItems: string[];
     toggleItem: (item: MenuItem) => void;
     renderMenu: (items: MenuItem[], level?: number) => JSX.Element[] | null;
+    maxDepth: number;
 }
 
 function MenuElement(props: Readonly<MenuItemProps>) {
     const {
         item, level,
         expandedItems, toggleItem,
-        renderMenu
+        renderMenu, maxDepth
     } = props;
+
+    const selectedMenuTabId = useAppSelector((state) => state.menuTree.selectedMenuTabId);
 
     return (
         <div key={item.key} style={{paddingLeft: `${10 * level}px`, fontWeight: `${level === 0 && 'bold'}`}}
-             className=" transition-all duration-300 menu-item py-[16px] cursor-pointer select-none">
-            <div className="flex items-center justify-between" onClick={() => toggleItem(item)}>
-                <p>{item.label}</p>
-                {item.nodes.length > 0 && (
+             className={`menu-item pr-[10px] cursor-pointer select-none rounded-r-[12px] ${item.key === selectedMenuTabId && 'bg-[#14293D] text-[#0075FF]'}`}>
+            <div className="flex items-center justify-between h-[60px]" onClick={() => toggleItem(item)}>
+                <p className={'pl-[30px]'}>{item.label}</p>
+                {item.nodes.length > 0 && level != maxDepth - 1 && (
                     <div className={`transition-transform duration-300 ${expandedItems.includes(item.key) ? 'rotate-[0deg]' : 'rotate-[-90deg]'}`}>
                         <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.00579834" y="1.93604" width="2.34743" height="10.7982" rx="1.17372"

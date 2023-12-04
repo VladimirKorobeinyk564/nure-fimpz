@@ -11,7 +11,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
                 label: 'Практичне № 1',
-                path: 'pz/pz-1',
+                path: 'pz/pz-1/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [
@@ -19,7 +19,15 @@ export const menuItemsList: MenuItem[] = [
                         key: '7fbb9f0d-9532-4783-8fc4-6b145d4acab7',
                         label: 'Мета заняття',
                         isNavigate: true,
-                        path: null,
+                        path: '#goal',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '3rwb9f0d-9532-4783-8fc4-6b145d4acab7',
+                        label: 'Мета заняття 2',
+                        isNavigate: true,
+                        path: '#goal2',
                         isActive: false,
                         nodes: []
                     },
@@ -28,7 +36,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
                 label: 'Практичне № 2',
-                path: 'pz/pz-2',
+                path: 'pz/pz-2/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [
@@ -54,7 +62,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: '6b82623b-b139-4f63-b6e3-d84e1b02c132',
                 label: 'Лабораторна №1',
-                path: 'lb/lb-1',
+                path: 'lb/lb-1/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [
@@ -71,7 +79,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: 'b6c02dc9-ecf4-463f-bcd0-6b9d3c44d47d',
                 label: 'Лабораторна №2',
-                path: 'lb/lb-2',
+                path: 'lb/lb-2/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [
@@ -88,7 +96,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                 label: 'Лабораторна №3',
-                path: 'lb/lb-3',
+                path: 'lb/lb-3/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [
@@ -114,7 +122,7 @@ export const menuItemsList: MenuItem[] = [
             {
                 key: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                 label: 'Програмування Python',
-                path: 'other/python-lesson',
+                path: 'other/python-lesson/',
                 isNavigate: true,
                 isActive: false,
                 nodes: [

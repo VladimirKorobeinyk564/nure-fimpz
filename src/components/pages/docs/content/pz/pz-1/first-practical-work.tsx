@@ -1,7 +1,7 @@
 
 function FirstPracticalWork() {
     return (
-        <div>
+        <div className={'w-full'}>
             <p>First practical work</p>
         </div>
     );
