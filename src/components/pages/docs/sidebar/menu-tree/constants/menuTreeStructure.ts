@@ -75,10 +75,18 @@ export const menuItemsList: MenuItem[] = [
                         nodes: []
                     },
                     {
-                        key: '9c3f8e69-21d03-4e3e-b6ee-30a15a54b2a2',
+                        key: '083f331a-c3a7-4f89-ba3d-d39f1935333f',
                         label: 'Теоретичні відомості',
                         isNavigate: true,
                         path: '#theoreticalInformation',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: 'e1e4c195-d9b4-4f36-9465-9f23f6d76332',
+                        label: 'Використання OpenJML',
+                        isNavigate: true,
+                        path: '#usingOpenjml',
                         isActive: false,
                         nodes: []
                     },
