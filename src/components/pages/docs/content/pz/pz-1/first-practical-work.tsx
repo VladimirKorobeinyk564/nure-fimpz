@@ -6,7 +6,6 @@ function FirstPracticalWork() {
             <p>First practical work</p>
             <SectionDivider></SectionDivider>
             <p>First practical work</p>
-
         </div>
     );
 }
