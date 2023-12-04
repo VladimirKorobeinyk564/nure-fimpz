@@ -69,8 +69,16 @@ export const menuItemsList: MenuItem[] = [
                     {
                         key: 'a30dc639-93f8-459e-b490-1a735c7ad95f',
                         label: 'Мета заняття',
-                        path: null,
+                        path: '#contractProgramming',
                         isNavigate: true,
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '9c3f8e69-21d03-4e3e-b6ee-30a15a54b2a2',
+                        label: 'Теоретичні відомості',
+                        isNavigate: true,
+                        path: '#theoreticalInformation',
                         isActive: false,
                         nodes: []
                     },
@@ -85,7 +93,7 @@ export const menuItemsList: MenuItem[] = [
                 nodes: [
                     {
                         key: '9c3f8e69-21d03-4e3e-b6ee-30a15a54b2a2',
-                        label: 'Мета заняття',
+                        label: 'Теоретичні відомості',
                         isNavigate: true,
                         path: null,
                         isActive: false,
