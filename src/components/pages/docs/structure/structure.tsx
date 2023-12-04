@@ -39,7 +39,7 @@ function Structure() {
             <div className="structure-container">
                 {selectedTabNodes?.nodes.map(item => (
                     <a
-                        className={`block decoration-none structure-item cursor-pointer py-[14px] pl-[15px] rounded-l-[12px] ${item.key === selectedStructureTabId && 'bg-[#14293D] text-[#0075FF]'} `}
+                        className={`block decoration-none structure-item cursor-pointer py-[14px] pl-[15px] rounded-l-[12px] ${item.key === selectedStructureTabId && 'bg-[#14293D] text-primary-color'} `}
                         href={item.path!}
                         onClick={() => selectStructureTab(item)}>
                         {item.label}
