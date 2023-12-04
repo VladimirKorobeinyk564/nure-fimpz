@@ -21,7 +21,7 @@ function MenuElement(props: Readonly<MenuItemProps>) {
 
     return (
         <div key={item.key} style={{paddingLeft: `${10 * level}px`, fontWeight: `${level === 0 && 'bold'}`}}
-             className={`menu-item pr-[10px] cursor-pointer select-none rounded-r-[12px] ${item.key === selectedMenuTabId && 'bg-[#14293D] text-[#0075FF]'}`}>
+             className={`menu-item pr-[10px] cursor-pointer select-none rounded-r-[12px] ${item.key === selectedMenuTabId && 'bg-[#14293D] text-primary-color'}`}>
             <div className="flex items-center justify-between h-[60px]" onClick={() => toggleItem(item)}>
                 <p className={'pl-[30px]'}>{item.label}</p>
                 {item.nodes.length > 0 && level != maxDepth - 1 && (

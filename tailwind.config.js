@@ -24,6 +24,9 @@ export default {
         'dark-text-color': '#EBECF0',
         'dark-subtext-color': '#A1A1A1',
 
+        //Accent
+        'primary-color': '#0075FF',
+
         //Light
         'light-bg': '#FFFFFF',
         'light-input-bg': '#EBECF0',
