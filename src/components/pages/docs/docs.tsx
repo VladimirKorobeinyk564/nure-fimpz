@@ -15,7 +15,7 @@ function Docs() {
                 <ScreenPlug></ScreenPlug>
             ) : (
                 <>
-                    <div className={'pt-[30px] px-[15px] flex-grow height-[300px] overflow-y-scroll'}>
+                    <div className={'pt-[30px] w-[calc(100%-610px)] px-[15px] flex-grow height-[300px] overflow-y-scroll'}>
                         <Content></Content>
                     </div>
                     <Structure></Structure>
