@@ -90,6 +90,46 @@ export const menuItemsList: MenuItem[] = [
                         isActive: false,
                         nodes: []
                     },
+                    {
+                        key: '1dec936d-5882-4a4a-a793-6e288ad12a5f',
+                        label: 'Тестування налаштованої утиліти',
+                        isNavigate: true,
+                        path: '#testingCustomizedUtility',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: 'dd9606f2-d3b7-4b2c-8f60-f220572f266e',
+                        label: 'Постановка задачі',
+                        isNavigate: true,
+                        path: '#problemStatement',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '6d8812f6-cdcb-492e-8d15-bf1ee4328efa',
+                        label: 'Варіанти індивідуальних завдань',
+                        isNavigate: true,
+                        path: '#variantsIndividualTasks',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '0de26de8-dc4a-4f01-83d4-fec5ef653134',
+                        label: 'Контрольні запитання і завдання',
+                        isNavigate: true,
+                        path: '#questionsAndTasks',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '1f13e009-922f-4128-b69e-e1ed4166eb26',
+                        label: 'Перелік посилань',
+                        isNavigate: true,
+                        path: '#referencesList',
+                        isActive: false,
+                        nodes: []
+                    },
                 ],
             },
             {
