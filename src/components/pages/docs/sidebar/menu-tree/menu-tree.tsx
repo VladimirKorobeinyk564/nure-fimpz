@@ -32,7 +32,7 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
 
     useEffect(() => {
         menuTreeAction.setMenuTree(menuItemsList);
-    }, [])
+    }, []);
 
     function toggleItem(clickedItem: MenuItem): void {
         const updatedItems = menuItems.map(item =>
@@ -49,6 +49,7 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
             navigate(clickedItem.path);
         } else {
             menuTreeAction.setSelectedMenuTab('');
+            navigate('/docs');
         }
 
         if (expandedItems.includes(key)) {

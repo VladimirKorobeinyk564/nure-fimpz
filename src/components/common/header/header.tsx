@@ -14,7 +14,7 @@ function Header() {
     return (
         <header className={
             ' header-container flex z-10 items-center justify-between fixed w-full px-[25px] h-[80px] border border-solid' +
-            '  transition-[background-color] !duration-300 border-b-[#CCCCCC] bg-light-bg dark:bg-dark-second-bg dark:border-dark-second-bg'
+            ' border-b-[#CCCCCC] bg-light-bg dark:bg-dark-second-bg dark:border-dark-second-bg'
         }>
             <div className="logo-block w-[55px] mr-[20px] cursor-pointer">
                 <img src={nureLogo} alt="Nure" onClick={() => navigate("/")} />

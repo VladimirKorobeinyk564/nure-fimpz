@@ -60,9 +60,6 @@
   body {
     @apply bg-background text-foreground;
   }
-  div {
-    @apply transition-colors duration-300;
-  }
 }
 
 body {
