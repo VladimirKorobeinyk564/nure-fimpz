@@ -37,7 +37,7 @@ function SearchInput(props: Readonly<SearchInputProps>) {
             </i>
             <input
                 className={
-                `  transition-[background, padding] duration-300 search-input py-[6px] outline-none bg-light-input-bg dark:bg-dark-input-bg ` +
+                `  transition-[padding] duration-300 search-input py-[6px] outline-none bg-light-input-bg dark:bg-dark-input-bg ` +
                     ` w-full pl-[38px] ${inputClass}`
             }
                 type="text"
