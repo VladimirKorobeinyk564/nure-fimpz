@@ -2,7 +2,7 @@ import MethodologySection from "@/components/common/methodology-section/Methodol
 
 const OperatoriSpinAtLtl = () => {
     return (
-        <MethodologySection title={"Оператори Spin у LTL"} id={"operatoriSpinAtLTL"} isFirstSection={}>
+        <MethodologySection title={"Оператори Spin у LTL"} id={"operatoriSpinAtLTL"} isFirstSection={false}>
         {/* table */}
         </MethodologySection>
     );

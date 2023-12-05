@@ -104,7 +104,79 @@ export const menuItemsList: MenuItem[] = [
                         key: 'a9e24943-b464-429c-ae26-5790db2b1716',
                         label: 'Мета заняття',
                         isNavigate: true,
-                        path: null,
+                        path: '#programVerificationBasedOnTemporalLogic',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: 'bd90595b-787b-44c7-a681-66bcc283bbe0',
+                        label: 'Методичні вказівки з організації самостійної роботи студентів',
+                        isNavigate: true,
+                        path: '#methodicalForIndependentWorkOfStudents',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '75669922-b5de-4973-957f-b48a45683cb7',
+                        label: 'Пакет Spin',
+                        isNavigate: true,
+                        path: '#spinPackage',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '085410ef-7337-4ad4-b109-151c076071c5',
+                        label: 'Використання Spin на платформі Windows',
+                        isNavigate: true,
+                        path: '#usingSpinOnWindows',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '0a12735f-7ede-454a-aff8-33fdf6cb8c2e',
+                        label: 'Перевірка коректності моделі на основі LTL',
+                        isNavigate: true,
+                        path: '#сheckingTheModelBasedOnLTL',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '7f9f2ee5-5862-4c75-8ed4-65c228b8e584',
+                        label: 'Класи властивостей розподілених систем',
+                        isNavigate: true,
+                        path: '#classesOfPropertiesOfDistributedSystems',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: 'febce69e-2258-45b1-9949-78b9dfa91ae7',
+                        label: 'Оператори Spin у LTL',
+                        isNavigate: true,
+                        path: '#operatoriSpinAtLTL',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: 'c7bb0bb5-a9d3-4c5f-9dca-c1fc2644c8a5',
+                        label: 'Варіанти індивідуальних завдань',
+                        isNavigate: true,
+                        path: '#variantsOfIndividualTasks',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '7ac57022-a4d5-48ef-9467-1561566b5744',
+                        label: 'Контрольні запитання і завдання',
+                        isNavigate: true,
+                        path: '#controlQuestions',
+                        isActive: false,
+                        nodes: []
+                    },
+                    {
+                        key: '88011098-41ea-4348-a79b-2c4742f25235',
+                        label: 'Перелік посилань',
+                        isNavigate: true,
+                        path: '#listOfLinks',
                         isActive: false,
                         nodes: []
                     },
