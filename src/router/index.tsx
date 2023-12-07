@@ -9,6 +9,8 @@ import FirstLaboratoryWork from "@/components/pages/docs/content/lb/lb-1/first-l
 import SecondLaboratoryWork from "@/components/pages/docs/content/lb/lb-2/second-laboratory-work.tsx";
 import ThirdLaboratoryWork from "@/components/pages/docs/content/lb/lb-3/third-laboratory-work.tsx";
 import PythonLesson from "@/components/pages/docs/content/other/python-lesson/python-lesson.tsx";
+import ScreenPlug from "@/components/pages/docs/screen-plug/screen-plug.tsx";
+import {Navigate} from "react-router";
 
 export interface IRoutes {
     path: string;
@@ -22,12 +24,14 @@ export const routes: IRoutes[] = [
         path: "/docs", component: <Docs/>, children: [
             {
                 path: 'pz', component: <Content/>, children: [
+                    {path: '', component: <Navigate to={'/docs'} />},
                     {path: 'pz-1', component: <FirstPracticalWork/>, children: []},
                     {path: 'pz-2', component: <SecondPracticalWork/>, children: []}
                 ]
             },
             {
                 path: 'lb', component: <Content/>, children: [
+                    {path: '', component: <Navigate to={'/docs'} />},
                     {path: 'lb-1', component: <FirstLaboratoryWork/>, children: []},
                     {path: 'lb-2', component: <SecondLaboratoryWork/>, children: []},
                     {path: 'lb-3', component: <ThirdLaboratoryWork/>, children: []}
@@ -35,7 +39,16 @@ export const routes: IRoutes[] = [
             },
             {
                 path: 'other', component: <Content/>, children: [
-                    {path: 'python-lesson', component: <PythonLesson/>, children: []},
+                    {path: '', component: <Navigate to={'/docs'} />},
+                    {path: 'python-lesson', component: <PythonLesson/>, children: []}
+                ]
+            },
+            {
+                path: '',
+                component: <Content />,
+                children: [
+                    { path: '*', component: <Navigate to={'/docs'} /> },
+                    { path: '', component: <ScreenPlug /> }
                 ]
             }
         ]

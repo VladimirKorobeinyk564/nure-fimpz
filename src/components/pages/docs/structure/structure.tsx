@@ -33,7 +33,8 @@ function Structure() {
 
     function selectStructureTab(item: MenuItem): void {
         menuTreeAction.setSelectedStructureTabId(item.key);
-        navigate(item.path!)
+        sessionStorage.setItem('selectedStructureTabId', item.key);
+        if (item.path) navigate(item.path)
     }
 
     return (

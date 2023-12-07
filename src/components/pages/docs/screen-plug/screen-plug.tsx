@@ -1,6 +1,6 @@
 function ScreenPlug() {
     return (
-        <div className={'w-[calc(100%-330px)] pr-[30px] pl-[15px] pt-[30px]'}>
+        <div className={'w-full pr-[30px] pl-[15px] pt-[30px]'}>
             <h3 className={"text-[40px] font-bold mb-[30px]"}>Формальні методи інженерії програмного забезпечення</h3>
             <p>
                 Дисципліна направлена на засвоєння студентами
