@@ -1,8 +1,10 @@
+import DeductiveProgramVerification
+    from "@/components/pages/docs/content/lb/lb-2/deductive-program-verification/deductive-program-verification.tsx";
 
 function SecondLaboratoryWork() {
     return (
         <div>
-            <p>Second laboratory work</p>
+            <DeductiveProgramVerification></DeductiveProgramVerification>
         </div>
     );
 }

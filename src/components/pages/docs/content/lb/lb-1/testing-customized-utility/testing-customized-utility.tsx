@@ -9,7 +9,7 @@ function TestingCustomizedUtility() {
             isFirstSection={false}
         >
             <p>Синтаксис JML детально описано в мануалі [1, c. 4-8].</p>
-            <p>Для тестування налаштованої утиліти створіть файли наступного вмісту:</p>
+            <p className={'mb-[10px]'}>Для тестування налаштованої утиліти створіть файли наступного вмісту:</p>
             <CodeSnippet title={'Person.java'}>
                 <code>
                     {`
@@ -77,8 +77,8 @@ public class PersonMain {
                         `}
                 </code>
             </CodeSnippet>
-            <p>Виконайте для файлів всі наведені команди по черзі.</p>
-            <CodeSnippet title={'Проаналізуйте результат.'}>
+            <p className={'mb-[10px]'}>Виконайте для файлів всі наведені команди по черзі.</p>
+            <CodeSnippet title={'Проаналізуйте результат'}>
                 <code>{'java -jar openjml.jar -source 1.7 -noInternalSpecs Person.java\n' +
                     'PersonMain.java'}</code>
             </CodeSnippet>

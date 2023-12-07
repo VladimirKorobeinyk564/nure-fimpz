@@ -143,7 +143,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '9c3f8e69-21d03-4e3e-b6ee-30a15a54b2a2',
                         label: 'docsPage.menuTree.laboratoryWork.lb2.goal',
                         isNavigate: true,
-                        path: null,
+                        path: '#deductiveProgramVerification',
                         isActive: false,
                         nodes: []
                     },
