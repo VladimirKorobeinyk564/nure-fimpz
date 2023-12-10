@@ -1,11 +1,11 @@
-import {useEffect, useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import {useEffect} from 'react';
 
 import MenuElement from './menu-element/menu-element.tsx';
 
 import {menuItemsList} from "@/components/pages/docs/sidebar/menu-tree/constants/menuTreeStructure.ts";
 import {useActionCreators, useAppSelector} from "@/hooks/redux.ts";
 import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
+import {useLocation} from "react-router";
 
 export interface MenuItem {
     key: string;
@@ -20,43 +20,28 @@ interface MenuTreeProps {
     maxDepth: number;
 }
 
-
 function MenuTree(props: Readonly<MenuTreeProps>) {
+    const location = useLocation();
+
     const {maxDepth = Infinity} = props;
-    const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
     const menuItems = useAppSelector((state) => state.menuTree.menuTreeList);
+
     const menuTreeAction = useActionCreators(menuTreeActions);
 
-    const navigate = useNavigate();
-
     useEffect(() => {
+        if (location.pathname !== '/docs') {
+            const selectedMenuTab = sessionStorage.getItem('selectedMenuTab');
+            const selectedStructureTabId = sessionStorage.getItem('selectedStructureTabId');
+
+            if (selectedMenuTab && selectedStructureTabId) {
+                menuTreeAction.setSelectedMenuTab(selectedMenuTab);
+                menuTreeAction.setSelectedStructureTabId(selectedStructureTabId);
+            }
+        }
+
         menuTreeAction.setMenuTree(menuItemsList);
-    }, [])
-
-    function toggleItem(clickedItem: MenuItem): void {
-        const updatedItems = menuItems.map(item =>
-            item.key === clickedItem.key ? { ...item, isActive: !item.isActive } : item
-        );
-
-        menuTreeAction.setMenuTree(updatedItems);
-
-        const key = clickedItem.key;
-
-        if (clickedItem.path !== null && clickedItem.isNavigate) {
-            menuTreeAction.setSelectedMenuTab(key);
-            menuTreeAction.setSelectedStructureTabId(clickedItem.nodes[0].key)
-            navigate(clickedItem.path);
-        } else {
-            menuTreeAction.setSelectedMenuTab('');
-        }
-
-        if (expandedItems.includes(key)) {
-            setExpandedItems(expandedItems.filter(itemKey => itemKey !== key));
-        } else {
-            setExpandedItems([...expandedItems, key]);
-        }
-    }
+    }, []);
 
     const renderMenu = (items: MenuItem[], level = 0) => {
         if (level >= maxDepth) return null;
@@ -67,8 +52,6 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
                 item={item}
                 maxDepth={maxDepth}
                 level={level}
-                expandedItems={expandedItems}
-                toggleItem={toggleItem}
                 renderMenu={renderMenu}
             ></MenuElement>
         );

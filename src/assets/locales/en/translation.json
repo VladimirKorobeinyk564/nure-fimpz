@@ -19,5 +19,45 @@
       "second": "for reliable and secure solutions."
     },
     "startBtn": "Start to learn"
+  },
+  "docsPage": {
+    "fimpzLearn": "STUDYING FMOSE",
+    "structure": "STRUCTURE",
+    "menuTree": {
+      "practicalWork": {
+        "label": "Practical work",
+        "pz1": {
+          "label": "Practical № 1",
+          "goal": "Objective of the lesson",
+          "goal2": "Objective of the lesson 2"
+        },
+        "pz2": {
+          "label": "Practical № 2",
+          "goal": "Objective of the lesson"
+        }
+      },
+      "laboratoryWork": {
+        "label": "Laboratory work",
+        "lb1": {
+          "label": "Laboratory № 1",
+          "goal": "Objective of the lesson"
+        },
+        "lb2": {
+          "label": "Laboratory № 2",
+          "goal": "Objective of the lesson"
+        },
+        "lb3": {
+          "label": "Laboratory № 3",
+          "goal": "Objective of the lesson"
+        }
+      },
+      "other": {
+        "label": "Other",
+        "pythonLesson": {
+          "label": "Python programming",
+          "goal": "Objective of the lesson"
+        }
+      }
+    }
   }
 }

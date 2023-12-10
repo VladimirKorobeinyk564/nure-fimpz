@@ -22,7 +22,9 @@ export default {
         'dark-second-bg': '#23272F',
         'dark-input-bg': '#333A45',
         'dark-text-color': '#EBECF0',
+        'dark-second-text-color': '#c8c9cf',
         'dark-subtext-color': '#A1A1A1',
+        'dark-tab-bg': '#1D2B39',
 
         //Accent
         'primary-color': '#0075FF',
@@ -30,7 +32,9 @@ export default {
         //Light
         'light-bg': '#FFFFFF',
         'light-input-bg': '#EBECF0',
-        'light-text-color': '#23272F',
+        'light-text-color': '#23272f',
+        'light-second-text-color': '#404756',
+        'light-tab-bg': 'rgba(189,222,255,0.61)',
 
         //Common
         'theme-hover-bg': 'rgba(175, 175, 175, 0.34)',
