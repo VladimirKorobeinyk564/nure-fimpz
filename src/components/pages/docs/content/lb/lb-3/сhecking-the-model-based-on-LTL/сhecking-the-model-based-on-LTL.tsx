@@ -2,6 +2,9 @@ import React from 'react';
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import AccentSpan from "@/components/common/accent-span/accent-span";
+import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper";
+import image4 from "@/assets/images/lb3/image4.png";
+import image5 from "@/assets/images/lb3/image5.png";
 
 const СheckingTheModelBasedOnLtl = () => {
     return (
@@ -27,8 +30,8 @@ const СheckingTheModelBasedOnLtl = () => {
                     {`[] (getzero -> (getzero U getone))`}
                 </code>
             </CodeSnippet>
-        {/*   Image */}
-        {/*   Image */}
+            <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image4} />
+            <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image5} />
             <p>Зверніть увагу, ми хочемо перевірити, що формула істина
                 при всіх виконаннях системи, тому обрано радіокнопку “All
                 executions” Тепер натисніть Generate – створиться процесс

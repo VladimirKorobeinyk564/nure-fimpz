@@ -1,6 +1,10 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
+import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper";
+import image1 from "@/assets/images/lb3/image1.png"
+import image2 from "@/assets/images/lb3/image2.png"
+import image3 from "@/assets/images/lb3/image3.png"
 
 const UsingSpinOnWindows = () => {
     return (
@@ -24,7 +28,7 @@ const UsingSpinOnWindows = () => {
                 <li>де xspin525.tcl – скрипт графічної оболонки. Зовнішній вигляд окна
                     візуальної оболонки наведено на рис. 1.</li>
             </List>
-            {/* Картинка */}
+            <ImageWrapper imgSubtitle={"xspin під час роботи"} image={image1} />
             <p>
                 Програму можна вводити прямо в редакторі чи завантажити з файла
                 *.pml через File/Open. Завантажте до середовища файл altbit.pml. В
@@ -69,13 +73,13 @@ const UsingSpinOnWindows = () => {
                 видатися «no syntax errors». Тепер можна запустити
                 симуляцію Run/Set Simulation Parameters (рис. 2)</p>
 
-        {/* Картинка */}
+            <ImageWrapper imgSubtitle={"Вікно налаштування параметрів симуляції"} image={image2} />
             <p>Натисніть Start. Відкриється профіль симуляції, де у вікні
                 Simulation Output будуть виводитися повідомлення
                 програми, а в Sequence Chart – графічно відображатися граф
                 взаємодії процесів(рис. 3). Симуляція підтримує 2 режими:
                 покрокова (Single Step) та безперервна (Run).</p>
-        {/*  Картинка */}
+            <ImageWrapper imgSubtitle={"Профіль симуляції взаємодії процесів"} image={image3} />
         </MethodologySection>
     );
 };
