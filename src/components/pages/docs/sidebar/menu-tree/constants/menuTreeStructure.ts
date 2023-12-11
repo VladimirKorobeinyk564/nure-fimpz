@@ -203,7 +203,87 @@ export const menuItemsList: MenuItem[] = [
                         label: 'docsPage.menuTree.other.pythonLesson.goal',
                         isNavigate: true,
                         isActive: false,
-                        path: null,
+                        path: '#contractProgrammingPython',
+                        nodes: []
+                    },
+                    {
+                        key: 'd105467f-0e97-461d-a4ff-72c7c6f23a3f',
+                        label: 'Основна ідея контрактного програмування',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#theMainIdeaContractProgramming',
+                        nodes: []
+                    },
+                    {
+                        key: '234493cf-83b0-48e6-aef7-98aa2903c3c9',
+                        label: 'Пакет PyContracts',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#pyContractsPackage',
+                        nodes: []
+                    },
+                    {
+                        key: '69bcdf85-2c97-4db9-aa2c-289ab22f9e24',
+                        label: 'Приклад встановлення та використання PyContracts на Ubuntu',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#exampleOfPyContractsOnUbuntu',
+                        nodes: []
+                    },
+                    {
+                        key: 'b58e984a-6666-4321-b496-8ede1f83b280',
+                        label: 'Приклад встановлення та використання PyContracts на Windows',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#installingPyContractsOnWindows',
+                        nodes: []
+                    },
+                    {
+                        key: 'db087012-369f-42bc-8aa5-820764c47d9d',
+                        label: 'Кроки встановлення',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#installationSteps',
+                        nodes: []
+                    },
+                    {
+                        key: '7900ef18-afad-4b4d-8891-2c5916c4404a',
+                        label: 'Тестування налаштованої утиліти',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#termsOfUse',
+                        nodes: []
+                    },
+                    {
+                        key: 'a939eb85-2713-4818-a523-542971990083',
+                        label: 'Помилки, які є в прикладі вище',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#mistakes',
+                        nodes: []
+                    },
+                    {
+                        key: '1f3ab914-de9a-41f2-9a19-6f3338103ac3',
+                        label: 'Постановка задачі',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#taskStatement',
+                        nodes: []
+                    },
+                    {
+                        key: '46512146-d173-456d-9ec9-e51462111d09',
+                        label: 'Варіанти індивідуальних завдань',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#variantsOfIndividualTasks',
+                        nodes: []
+                    },
+                    {
+                        key: '39fc4043-1009-4661-9d81-67640ace16cc',
+                        label: 'Контрольні запитання і завдання',
+                        isNavigate: true,
+                        isActive: false,
+                        path: '#controlQuestions',
                         nodes: []
                     },
                 ],
