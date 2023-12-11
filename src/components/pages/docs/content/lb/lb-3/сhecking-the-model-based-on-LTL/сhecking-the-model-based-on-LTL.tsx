@@ -20,8 +20,7 @@ const СheckingTheModelBasedOnLtl = () => {
                 якщо від клієнта прийшло підтвердження. Тепер можна
                 виразити вимогу, що модель коректна, якщо на кожну
                 відправку обов’язково прийде підтвердження</p>
-            <p>Run/LTL Property Manager (рис. 4).</p>
-            <CodeSnippet>
+            <CodeSnippet title={"Run/LTL Property Manager (рис. 4)."}>
                 <code>
                     {`#define getone (accepted == 1)`}
                     <br/>

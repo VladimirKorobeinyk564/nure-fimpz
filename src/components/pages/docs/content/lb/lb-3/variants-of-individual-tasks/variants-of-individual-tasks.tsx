@@ -25,8 +25,7 @@ const VariantsOfIndividualTasks = () => {
                             який він передає клієнту за запитанням. Менеджер, який отримує заявку
                             клієнта, але не має віртуального точена повинен запросити його у інших
                             менеджерів.</p>
-                        <p>Прикад заготовки процесу-клієнту наведено нижче:</p>
-                        <CodeSnippet>
+                        <CodeSnippet title={"Прикад заготовки процесу-клієнту наведено нижче:"}>
                             <code>
                                 {`proctype user(chan mgr) { /* user process in cluster */
                         req: mgr!P; /* request access from local manager */

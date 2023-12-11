@@ -12,8 +12,7 @@ const ListOfLinks = () => {
                     66 с.</li>
                 <li>G. Holzmann The Spin Model Checker: Primer and
                     Reference Manual [Електронний ресурс] / SPIN HomePage /
-                    Режим доступу: www/URL:
-                    http://spinroot.com/spin/Doc/Book_extras/ – 19.05.2012 г. –
+                    Режим доступу: www/URL:<a href={"http://spinroot.com/spin/Doc/Book_extras"} className={"text-primary-color"}>http://spinroot.com/spin/Doc/Book_extras</a> – 19.05.2012 г. –
                     Загол. з екрану.</li>
             </List>
         </MethodologySection>
