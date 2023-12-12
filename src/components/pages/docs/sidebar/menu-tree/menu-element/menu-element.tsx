@@ -1,9 +1,9 @@
 import {useActionCreators, useAppSelector} from "@/hooks/redux.ts";
 import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router-dom";
+import {cn} from "@/lib/utils.ts";
 
 import {MenuItem} from "@/components/pages/docs/sidebar/menu-tree/menu-tree.tsx";
-import {cn} from "@/lib/utils.ts";
-import {useNavigate} from "react-router-dom";
 import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
 
 interface MenuItemProps {
@@ -21,38 +21,62 @@ function MenuElement(props: Readonly<MenuItemProps>) {
 
     const menuTreeAction = useActionCreators(menuTreeActions);
 
-    const menuItems = useAppSelector((state) => state.menuTree.menuTreeList);
-    const expandedItems = useAppSelector(state => state.menuTree.expandedItems);
-    const selectedMenuTabId = useAppSelector((state) => state.menuTree.selectedMenuTabId);
-
+    const {
+        menuTreeList,
+        expandedItems,
+        selectedMenuTabId
+    } = useAppSelector((state) => state.menuTree);
 
     function toggleMenuItem(clickedItem: MenuItem): void {
         const clickedItemKey = clickedItem.key;
-        const updatedItems = updateMenuItem(clickedItem, menuItems);
-        menuTreeAction.setMenuTree(updatedItems);
 
         if (clickedItem.isNavigate) navigateTo(clickedItem);
 
-        expandItem(clickedItemKey);
-    }
-
-    function updateMenuItem(clickedItem: MenuItem, menuItems: MenuItem[]): MenuItem[] {
-        return menuItems.map(item =>
-            item.key === clickedItem.key ? { ...item, isActive: !item.isActive } : item
-        );
+        if (!clickedItem.parentKey) expandItem(clickedItemKey);
     }
 
     function navigateTo(clickedItem: MenuItem): void {
         const clickedItemKey = clickedItem.key;
-        const clickedItemStructureKey = clickedItem.nodes[0].key;
+        const navigatePath = buildPathToChild(clickedItemKey, menuTreeList);
 
         menuTreeAction.setSelectedMenuTab(clickedItemKey);
-        menuTreeAction.setSelectedStructureTabId(clickedItemStructureKey);
 
-        sessionStorage.setItem('selectedMenuTab', clickedItemKey);
-        sessionStorage.setItem('selectedStructureTabId', clickedItemStructureKey);
+        if (navigatePath) navigate(`/docs${navigatePath}/`);
+    }
 
-        if (clickedItem.path) navigate(clickedItem.path);
+    function buildPathToChild(
+        clickedItemKey: string, menuItems: MenuItem[], currentPath: string = ''
+    ): string | null {
+        for (const menuItem of menuItems) {
+            const path = getCurrentPath(menuItem, currentPath);
+            let foundPath = checkForKeyAndReturnPath(menuItem, clickedItemKey, path);
+
+            if (foundPath) return foundPath;
+
+            if (menuItem.nodes.length > 0) {
+                foundPath = buildPathToChild(clickedItemKey, menuItem.nodes, path);
+                if (foundPath) return foundPath;
+            }
+        }
+        return null;
+    }
+
+    function getCurrentPath(menuItem: MenuItem, currentPath: string): string {
+        const menuItemPath =  menuItem.path;
+
+        if (menuItemPath) {
+            return currentPath === '' ? menuItemPath : `${currentPath}/${menuItemPath}`;
+        }
+
+        return currentPath;
+    }
+
+    function checkForKeyAndReturnPath(
+        menuItem: MenuItem, clickedItemKey: string, currentPath: string
+    ): string | null {
+        return menuItem.key === clickedItemKey
+            ? `/${currentPath}`
+            : null;
     }
 
     function expandItem(clickedItemKey: string): void {

@@ -1,5 +1,5 @@
+import {useEffect} from "react";
 import {useActionCreators, useAppSelector} from "@/hooks/redux.ts";
-import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
 import {MenuItem} from "@/components/pages/docs/sidebar/menu-tree/menu-tree.tsx";
@@ -8,15 +8,32 @@ import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
 
 function Structure() {
     const {t} = useTranslation();
-    const navigate = useNavigate();
 
-    const menuTreeList = useAppSelector((state) => state.menuTree.menuTreeList);
-    const selectedMenuTabId = useAppSelector((state) => state.menuTree.selectedMenuTabId);
-    const selectedStructureTabId = useAppSelector((state) => state.menuTree.selectedStructureTabId);
+    const {
+        menuTreeList,
+        selectedMenuTabId,
+        selectedStructureTabId
+    } = useAppSelector((state) => state.menuTree);
+
     const selectedTabNodes = findMenuItemByKey(selectedMenuTabId, menuTreeList);
 
     const menuTreeAction = useActionCreators(menuTreeActions);
 
+
+    useEffect(() => {
+        const locationHash = window.location.hash;
+        const firstStructureTab = selectedTabNodes?.nodes[0];
+
+        if (locationHash === '' && firstStructureTab) {
+            selectStructureTab(firstStructureTab)
+        } else if (locationHash !== '') {
+            const item = selectedTabNodes?.nodes
+                .find(node => node.path === locationHash);
+
+            if (item) menuTreeAction.setSelectedStructureTabId(item.key);
+            window.history.pushState(null, '', window.location.href)
+        }
+    }, [selectedMenuTabId]);
 
     function findMenuItemByKey(keyToFind: string, items: MenuItem[]): MenuItem | null {
         for (const item of items) {
@@ -33,8 +50,11 @@ function Structure() {
 
     function selectStructureTab(item: MenuItem): void {
         menuTreeAction.setSelectedStructureTabId(item.key);
-        sessionStorage.setItem('selectedStructureTabId', item.key);
-        if (item.path) navigate(item.path)
+        if (item.path) setHashToUrl(item.path)
+    }
+
+    function setHashToUrl(path: string): void {
+        window.history.pushState(null, '', window.location.href + path);
     }
 
     return (

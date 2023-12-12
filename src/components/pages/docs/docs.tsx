@@ -20,15 +20,14 @@ function Docs() {
         if (location.pathname === '/docs') {
             menuTreeAction.setSelectedMenuTab('');
             menuTreeAction.setSelectedStructureTabId('');
-            sessionStorage.removeItem('selectedMenuTab');
-             sessionStorage.removeItem('selectedStructureTabId');
         }
     }, [location.pathname]);
 
     return (
         <div className={'h-[100vh] pt-[80px] flex'}>
             <Sidebar></Sidebar>
-            <div className={'pt-[30px] w-[calc(100%-610px)] px-[15px] flex-grow height-[300px] overflow-y-scroll'}>
+            <div
+                className={'pt-[30px] w-[calc(100%-610px)] px-[15px] flex-grow height-[300px] overflow-y-scroll scroll-smooth'}>
                 <Content></Content>
             </div>
             {selectedMenuTabId !== '' && (

@@ -25,6 +25,9 @@ const slice = createSlice({
         setExpandedItems(state, action: PayloadAction<string[]>): void {
             state.expandedItems = action.payload;
         },
+        addExpandedItem(state, action: PayloadAction<string[]>): void {
+            state.expandedItems = [...state.expandedItems, ...action.payload];
+        },
     }
 })
 
