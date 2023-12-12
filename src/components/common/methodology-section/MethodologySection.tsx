@@ -23,7 +23,7 @@ const MethodologySection = (props: Readonly<MethodologySectionProps>) => {
         navigator.clipboard.writeText(currentURL)
             .then(() => {
                 toast({
-                    duration: 700,
+                    duration: 900,
                     description: "Link to article copied successfully.",
                 })
             })
@@ -31,7 +31,7 @@ const MethodologySection = (props: Readonly<MethodologySectionProps>) => {
                 console.error('Failed to copy URL to clipboard:', err);
                 toast({
                     variant: "destructive",
-                    duration: 700,
+                    duration: 900,
                     description: "Article link copying error.",
                 })
             });
