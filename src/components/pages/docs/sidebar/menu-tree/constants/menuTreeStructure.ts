@@ -71,7 +71,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'docsPage.menuTree.laboratoryWork.lb1.goal',
                         path: '#contractProgramming',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -79,7 +79,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Теоретичні відомості',
                         isNavigate: true,
                         path: '#theoreticalInformation',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -87,7 +87,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Використання OpenJML',
                         isNavigate: true,
                         path: '#usingOpenjml',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -95,7 +95,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Тестування налаштованої утиліти',
                         isNavigate: true,
                         path: '#testingCustomizedUtility',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -103,7 +103,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Постановка задачі',
                         isNavigate: true,
                         path: '#problemStatement',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -111,7 +111,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Варіанти індивідуальних завдань',
                         isNavigate: true,
                         path: '#variantsIndividualTasks',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -119,7 +119,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Контрольні запитання і завдання',
                         isNavigate: true,
                         path: '#questionsAndTasks',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                     {
@@ -127,7 +127,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Перелік посилань',
                         isNavigate: true,
                         path: '#referencesList',
-                        isActive: false,
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
                         nodes: []
                     },
                 ],
