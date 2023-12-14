@@ -147,6 +147,38 @@ export const menuItemsList: MenuItem[] = [
                         parentKey: 'b6c02dc9-ecf4-463f-bcd0-6b9d3c44d47d',
                         nodes: []
                     },
+                    {
+                        key: '7ed21c5d-3c67-486a-ba5c-d69652110cf0',
+                        label: 'Вибір середовища верифікації та робота з KeY',
+                        isNavigate: true,
+                        path: '#selectingVerificationEnvironment',
+                        parentKey: 'b6c02dc9-ecf4-463f-bcd0-6b9d3c44d47d',
+                        nodes: []
+                    },
+                    {
+                        key: 'c7219e27-b7a7-48b7-be05-184878156432',
+                        label: 'Варіанти індивідуальних завдань',
+                        isNavigate: true,
+                        path: '#variantsIndividualTasksLb2',
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
+                        nodes: []
+                    },
+                    {
+                        key: '1d6b53ad-32ec-4028-a8bf-4344302c4dc8',
+                        label: 'Контрольні запитання і завдання',
+                        isNavigate: true,
+                        path: '#questionsAndTasksLb2',
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
+                        nodes: []
+                    },
+                    {
+                        key: '1523cffb-6123-4db1-9712-ac46faebdc02',
+                        label: 'Перелік посилань',
+                        isNavigate: true,
+                        path: '#referencesListLb2',
+                        parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
+                        nodes: []
+                    },
                 ],
             },
             {

@@ -1,5 +1,5 @@
 interface ImageWrapperProps {
-    imgSubtitle: string;
+    imgSubtitle?: string;
     image: string;
 }
 
