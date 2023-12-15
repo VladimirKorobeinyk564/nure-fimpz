@@ -5,6 +5,7 @@ import {useTranslation} from "react-i18next";
 import {MenuItem} from "@/components/pages/docs/sidebar/menu-tree/menu-tree.tsx";
 
 import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
+import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area/scroll-area";
 
 function Structure() {
     const {t} = useTranslation();
@@ -60,7 +61,8 @@ function Structure() {
     return (
         <div className={'w-[280px] flex flex-col py-[30px] pl-[15px] pr-[0]'}>
             <h3 className={'text-[#62656F] mb-[10px]'}>{t('docsPage.structure')}</h3>
-            <div className="structure-container">
+            <ScrollArea>
+                <ScrollBar className={"hidden"} />
                 {selectedTabNodes?.nodes.map(item => (
                     <a
                         className={`block decoration-none structure-item cursor-pointer py-[14px] pl-[15px] pr-[30px] rounded-l-[12px] ${item.key === selectedStructureTabId && ' bg-light-tab-bg dark:bg-dark-tab-bg text-[#3175F9]'} `}
@@ -70,7 +72,7 @@ function Structure() {
                         {t(item.label)}
                     </a>
                 ))}
-            </div>
+            </ScrollArea>
         </div>
     );
 }

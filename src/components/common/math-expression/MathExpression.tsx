@@ -1,6 +1,11 @@
 import MathJax from 'react-mathjax2'
+import React from "react";
 
-const MathExpression = ({children}) => {
+interface MathExpressionProps {
+    children: React.ReactNode;
+}
+
+const MathExpression = ({children}: MathExpressionProps) => {
     return (
         <div className={"flex justify-center items-center py-[40px] w-full rounded-[15px] bg-[#CDDFFF] dark:bg-[#1F242E]"}>
             <MathJax.Context input='ascii'>

@@ -1,0 +1,10 @@
+.copy_btn {
+  &:hover {
+    background-color: #3aa745;
+    svg {
+      path {
+        fill: #CAD1D9;
+      }
+    }
+  }
+}
