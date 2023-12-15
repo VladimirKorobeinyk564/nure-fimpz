@@ -7,6 +7,7 @@ import Structure from "@/components/pages/docs/structure/structure.tsx";
 
 import {useActionCreators, useAppSelector} from "@/hooks/redux.ts";
 import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
+import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area/scroll-area";
 
 function Docs() {
     const selectedMenuTabId = useAppSelector((state) =>
@@ -26,10 +27,10 @@ function Docs() {
     return (
         <div className={'h-[100vh] pt-[80px] flex'}>
             <Sidebar></Sidebar>
-            <div
-                className={'pt-[30px] w-[calc(100%-610px)] px-[15px] flex-grow height-[300px] overflow-y-scroll scroll-smooth'}>
+            <ScrollArea className={"pt-[30px] w-[calc(100%-610px)] pl-[15px] flex-grow height-[300px] pr-[20px]"}>
+                <ScrollBar />
                 <Content></Content>
-            </div>
+            </ScrollArea>
             {selectedMenuTabId !== '' && (
                 <Structure></Structure>
             )}
