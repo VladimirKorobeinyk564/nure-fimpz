@@ -5,8 +5,30 @@ import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper";
 import image1 from "@/assets/images/lb3/image1.png"
 import image2 from "@/assets/images/lb3/image2.png"
 import image3 from "@/assets/images/lb3/image3.png"
+import {python} from "@codemirror/lang-python";
 
 const UsingSpinOnWindows = () => {
+    const code = `mtype = { msg, ack };/* объявляем два возможных типа сообщения */
+/* объявляем канал отправителя */
+chan to_sndr = [2] of { mtype, bit };
+/* объявляем канал получателя */
+chan to_rcvr = [2] of { mtype, bit };
+
+active proctype Sender(){ /* процесс отправителя */
+    again: to_rcvr!msg,1; /* отправляем сообщение, помеченное битом 1 */
+    to_sndr?ack,1; /* получаем подтверждение, помеченное битом 1 */
+    to_rcvr!msg,0; /* отправляем сообщение, помеченное битом 0 */
+    to_sndr?ack,0; /* получаем подтверждение, помеченное битом 0 */
+    goto again
+}
+/* процесс получателя */
+active proctype Receiver() {
+    again: to_rcvr?msg,1; /* получаем сообщение, помеченное битом 1 */
+    to_sndr!ack,1; /* отправляем подтверждение, помеченное битом 1 */
+    to_rcvr?msg,0; /* получаем сообщение, помеченное битом 0 */
+    to_sndr!ack,0; /* отправляем подтверждение, помеченное битом 0 */
+    goto again
+}`
     return (
         <MethodologySection title={"Використання Spin на платформі Windows"}
                             id={"usingSpinOnWindows"} isFirstSection={false}>
@@ -38,35 +60,8 @@ const UsingSpinOnWindows = () => {
                 Процес-отримувач отримує повідомлення, помічені то бітом 1, то бітом
                 0, і відсилає процесу-відправнику підтвердження на них.
             </p>
-            <CodeSnippet>
-                <code>
-                    {'mtype = { msg, ack };/* объявляем два возможных типа сообщения */'}
-                    <br/>
-                    /* объявляем канал отправителя */
-                    <br/>
-                    {'chan to_sndr = [2] of { mtype, bit };'}
-                    <br/>
-                    /* объявляем канал получателя */
-                    <br/>
-                    {'chan to_rcvr = [2] of { mtype, bit };'}
-                    <br/>
-
-                    {`active proctype Sender(){ /* процесс отправителя */
-                        again: to_rcvr!msg,1; /* отправляем сообщение, помеченное битом 1 */
-                               to_sndr?ack,1; /* получаем подтверждение, помеченное битом 1 */
-                               to_rcvr!msg,0; /* отправляем сообщение, помеченное битом 0 */
-                               to_sndr?ack,0; /* получаем подтверждение, помеченное битом 0 */
-                        goto again
-                     }
-                     /* процесс получателя */
-                     active proctype Receiver() {
-                        again: to_rcvr?msg,1; /* получаем сообщение, помеченное битом 1 */
-                               to_sndr!ack,1; /* отправляем подтверждение, помеченное битом 1 */
-                               to_rcvr?msg,0; /* получаем сообщение, помеченное битом 0 */
-                               to_sndr!ack,0; /* отправляем подтверждение, помеченное битом 0 */
-                        goto again
-                     }`}
-                </code>
+            <CodeSnippet lang={[python()]}>
+                {code}
             </CodeSnippet>
             <p>Перевірте синтаксичну коректність програми, обравши
                 Run/Run Syntax Check. У вікно повідомлень повинно

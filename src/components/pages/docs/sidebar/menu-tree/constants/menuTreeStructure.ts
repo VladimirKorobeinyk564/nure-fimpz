@@ -113,7 +113,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Методичні вказівки з організації самостійної роботи студентів',
                         isNavigate: true,
                         path: '#methodicalForIndependentWorkOfStudents',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -121,7 +121,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Пакет Spin',
                         isNavigate: true,
                         path: '#spinPackage',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -129,7 +129,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Використання Spin на платформі Windows',
                         isNavigate: true,
                         path: '#usingSpinOnWindows',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -137,7 +137,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Перевірка коректності моделі на основі LTL',
                         isNavigate: true,
                         path: '#сheckingTheModelBasedOnLTL',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -145,7 +145,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Класи властивостей розподілених систем',
                         isNavigate: true,
                         path: '#classesOfPropertiesOfDistributedSystems',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -153,7 +153,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Оператори Spin у LTL',
                         isNavigate: true,
                         path: '#operatoriSpinAtLTL',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -161,7 +161,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Варіанти індивідуальних завдань',
                         isNavigate: true,
                         path: '#variantsOfIndividualTasks',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -169,7 +169,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Контрольні запитання і завдання',
                         isNavigate: true,
                         path: '#controlQuestions',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                     {
@@ -177,7 +177,7 @@ export const menuItemsList: MenuItem[] = [
                         label: 'Перелік посилань',
                         isNavigate: true,
                         path: '#listOfLinks',
-                        isActive: false,
+                        parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
                         nodes: []
                     },
                 ],
@@ -210,7 +210,7 @@ export const menuItemsList: MenuItem[] = [
                         key: 'd105467f-0e97-461d-a4ff-72c7c6f23a3f',
                         label: 'Основна ідея контрактного програмування',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#theMainIdeaContractProgramming',
                         nodes: []
                     },
@@ -218,7 +218,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '234493cf-83b0-48e6-aef7-98aa2903c3c9',
                         label: 'Пакет PyContracts',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#pyContractsPackage',
                         nodes: []
                     },
@@ -226,7 +226,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '69bcdf85-2c97-4db9-aa2c-289ab22f9e24',
                         label: 'Приклад встановлення та використання PyContracts на Ubuntu',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#exampleOfPyContractsOnUbuntu',
                         nodes: []
                     },
@@ -234,7 +234,7 @@ export const menuItemsList: MenuItem[] = [
                         key: 'b58e984a-6666-4321-b496-8ede1f83b280',
                         label: 'Приклад встановлення та використання PyContracts на Windows',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#installingPyContractsOnWindows',
                         nodes: []
                     },
@@ -242,7 +242,7 @@ export const menuItemsList: MenuItem[] = [
                         key: 'db087012-369f-42bc-8aa5-820764c47d9d',
                         label: 'Кроки встановлення',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#installationSteps',
                         nodes: []
                     },
@@ -250,7 +250,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '7900ef18-afad-4b4d-8891-2c5916c4404a',
                         label: 'Тестування налаштованої утиліти',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#termsOfUse',
                         nodes: []
                     },
@@ -258,7 +258,7 @@ export const menuItemsList: MenuItem[] = [
                         key: 'a939eb85-2713-4818-a523-542971990083',
                         label: 'Помилки, які є в прикладі вище',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#mistakes',
                         nodes: []
                     },
@@ -266,7 +266,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '1f3ab914-de9a-41f2-9a19-6f3338103ac3',
                         label: 'Постановка задачі',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#taskStatement',
                         nodes: []
                     },
@@ -274,7 +274,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '46512146-d173-456d-9ec9-e51462111d09',
                         label: 'Варіанти індивідуальних завдань',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#variantsOfIndividualTasks',
                         nodes: []
                     },
@@ -282,7 +282,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '39fc4043-1009-4661-9d81-67640ace16cc',
                         label: 'Контрольні запитання і завдання',
                         isNavigate: true,
-                        isActive: false,
+                        parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#controlQuestions',
                         nodes: []
                     },

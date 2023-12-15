@@ -2,8 +2,21 @@ import MethodologySection from "@/components/common/methodology-section/Methodol
 import List from "@/components/common/list/List";
 import AccentSpan from "@/components/common/accent-span/accent-span";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
+import {python} from "@codemirror/lang-python";
 
 const VariantsOfIndividualTasks = () => {
+    const code = `proctype user(chan mgr) { /* user process in cluster */
+    req: mgr!P; /* request access from local manager */
+    mgr?G: /* gain access */
+    progress:
+    cs: count++;
+    assert(count == 1);
+    count--;
+    mgr!V; /* release access */
+    out:
+    skip;
+    goto req
+}`
     return (
         <MethodologySection title={"Варіанти індивідуальних завдань"} id={"variantsOfIndividualTasks"} isFirstSection={false}>
             <List type={"Number"}>
@@ -25,21 +38,8 @@ const VariantsOfIndividualTasks = () => {
                             який він передає клієнту за запитанням. Менеджер, який отримує заявку
                             клієнта, але не має віртуального точена повинен запросити його у інших
                             менеджерів.</p>
-                        <CodeSnippet title={"Прикад заготовки процесу-клієнту наведено нижче:"}>
-                            <code>
-                                {`proctype user(chan mgr) { /* user process in cluster */
-                        req: mgr!P; /* request access from local manager */
-                        mgr?G: /* gain access */
-                        progress:
-                        cs: count++;
-                        assert(count == 1);
-                        count--;
-                        mgr!V; /* release access */
-                        out:
-                        skip;
-                        goto req
-                     }`}
-                            </code>
+                        <CodeSnippet lang={[python()]} title={"Прикад заготовки процесу-клієнту наведено нижче:"}>
+                            {code}
                         </CodeSnippet>
                         <List type={"Text"}>
                             <li>Додайте всі необхідні складові (інші процеси, необхідні глобальні та

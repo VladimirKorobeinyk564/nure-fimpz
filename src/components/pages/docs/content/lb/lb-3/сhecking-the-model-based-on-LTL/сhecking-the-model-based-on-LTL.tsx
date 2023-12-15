@@ -5,8 +5,21 @@ import AccentSpan from "@/components/common/accent-span/accent-span";
 import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper";
 import image4 from "@/assets/images/lb3/image4.png";
 import image5 from "@/assets/images/lb3/image5.png";
+import {python} from "@codemirror/lang-python";
 
 const СheckingTheModelBasedOnLtl = () => {
+    const code = `#define getone (accepted == 1)
+#define getzero (accepted == 0)
+[] (getzero -> (getzero U getone))`;
+    const code1 = `unreached in proctype Sender
+line 14, "pan.__", state 10, "-end-"
+(1 of 10 states)
+unreached in proctype Receiver
+line 23, "pan.__", state 6, "-end-"
+(1 of 6 states)
+unreached in proctype :never:
+line 50, "pain.__", state 14, "-end-"
+(1 of 14 states)`;
     return (
         <MethodologySection title={"Перевірка коректності моделі на основі LTL"} id={"сheckingTheModelBasedOnLTL"} isFirstSection={false}>
             <p>Перевірка коректності моделі на основі верифікації LTL
@@ -20,14 +33,8 @@ const СheckingTheModelBasedOnLtl = () => {
                 якщо від клієнта прийшло підтвердження. Тепер можна
                 виразити вимогу, що модель коректна, якщо на кожну
                 відправку обов’язково прийде підтвердження</p>
-            <CodeSnippet title={"Run/LTL Property Manager (рис. 4)."}>
-                <code>
-                    {`#define getone (accepted == 1)`}
-                    <br/>
-                    {`#define getzero (accepted == 0)`}
-                    <br/>
-                    {`[] (getzero -> (getzero U getone))`}
-                </code>
+            <CodeSnippet lang={[python()]} title={"Run/LTL Property Manager (рис. 4)."}>
+                {code}
             </CodeSnippet>
             <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image4} />
             <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image5} />
@@ -38,19 +45,8 @@ const СheckingTheModelBasedOnLtl = () => {
                 введеної формули. Тепер натисніть Run Verification. У полі
                 Verification Results буде видано позитивний звіт за
                 результатами перевірки: <AccentSpan>valid</AccentSpan></p>
-            <CodeSnippet>
-                <code>
-                    {`unreached in proctype Sender
-                        line 14, "pan.__", state 10, "-end-"
-                        (1 of 10 states)
-                      unreached in proctype Receiver
-                        line 23, "pan.__", state 6, "-end-"
-                        (1 of 6 states)
-                      unreached in proctype :never:
-                        line 50, "pain.__", state 14, "-end-"
-                        (1 of 14 states)
-                    `}
-                </code>
+            <CodeSnippet lang={[python()]}>
+                {code1}
             </CodeSnippet>
             <p>Аналогічним чином виконайте індивідуальне завдання.</p>
             <p>Звіт повинен містити код моделі мовою Promela, автомат
