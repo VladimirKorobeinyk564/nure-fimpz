@@ -1,4 +1,4 @@
-import {Button} from "@/components/ui/button.tsx";
+import {Button} from "@/components/ui/button/button.tsx";
 import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import SupportUkraine from "@/components/common/support-ukraine/support-ukraine.tsx";
