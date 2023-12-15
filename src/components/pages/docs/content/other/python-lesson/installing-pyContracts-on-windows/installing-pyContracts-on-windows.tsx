@@ -1,5 +1,6 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
+import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 
 const InstallingPyContractsOnWindows = () => {
     return (
@@ -29,13 +30,14 @@ const InstallingPyContractsOnWindows = () => {
                 <li>
                     Встановлюємо virtualenv та створюємо робоче оточення. Для цього в cmd.exe виконуємо наступні команди:
                     <List type={"Text"}>
-                        <li>pip install virtualenv</li>
-                        <li>virtualenv env</li>
-                        <li>env\Scripts\activate</li>
+                        <li><CodeSnippet>pip install virtualenv</CodeSnippet></li>
+                        <li><CodeSnippet>virtualenv env</CodeSnippet></li>
+                        <li><CodeSnippet>env\Scripts\activate</CodeSnippet></li>
                     </List>
                 </li>
                 <li>
-                    Встановлюємо PyContracts: pip install PyContracts3==3.0.2
+                    Встановлюємо PyContracts:
+                    <CodeSnippet>pip install PyContracts3==3.0.2</CodeSnippet>
                 </li>
                 <li>
                     Для використання пакету імпортуємо його в файл:  from contracts import contract

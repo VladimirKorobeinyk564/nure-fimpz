@@ -6,7 +6,7 @@ const ContractProgrammingPython = () => {
         <MethodologySection title={"Контрактне програмування в Python"}
                             id={"contractProgrammingPython"} isFirstSection={true}>
             <MethodologyObjective>
-                навчитися складати формальні специфікації реальних програм на основі парадигми «розробка за контрактом».
+                Навчитися складати формальні специфікації реальних програм на основі парадигми «розробка за контрактом».
             </MethodologyObjective>
         </MethodologySection>
     );
