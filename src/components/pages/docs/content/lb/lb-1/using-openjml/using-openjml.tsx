@@ -27,40 +27,36 @@ function UsingOpenjml() {
                 </List>
             </div>
 
-            <CodeSnippet>
-                <code>
-                    openjml.localSetup=
-                    <br/>
-                    openjml.defaultProver=yices
-                    <br/>
-                    openjml.prover.yices= d:/users/openjml/yices/bin/yices.exe
-                </code>
+            <CodeSnippet lang={''}>
+                {`
+                openjml.localSetup=
+                
+                openjml.defaultProver=yices
+                
+                openjml.prover.yices= d:/users/openjml/yices/bin/yices.exe`}
             </CodeSnippet>
 
             <p>Правила користування утилітою детально описані в мануалі [2, 6-12].</p>
             <p>Наведемо лише основні команди.</p>
 
             <p className={'mb-[10px]'}>Запуск перевірки синтаксису анотацій:</p>
-            <CodeSnippet title={'Для jdk 1.7'}>
-                <code>{'java -jar openjml.jar -source 1.7 -noInternalSpecs <File.java>'}</code>
+            <CodeSnippet title={'Для jdk 1.7'} lang={''}>
+                {'java -jar openjml.jar -source 1.7 -noInternalSpecs <File.java>'}
             </CodeSnippet>
-            <CodeSnippet title={'Для jdk 1.6'}>
-                <code>{'java -Xbootclasspath/p:d:\\users\\openjml/openjmlboot.jar -jar\n' +
-                    'openjml.jar -source 1.7 -noInternalSpecs -showNotImplemented\n' +
-                    '<File.java>'}</code>
+            <CodeSnippet title={'Для jdk 1.6'} lang={''}>
+                {'java -Xbootclasspath/p:d:\\users\\openjml/openjmlboot.jar -jar openjml.jar -source 1.7 -noInternalSpecs -showNotImplemented <File.java>'}
             </CodeSnippet>
             <p className={'mb-[10px]'}>Запуск генерації об’єктного коду з перевіркою виконання контрактів:</p>
-            <CodeSnippet>
-                <code>{'java -jar openjml.jar -cp jmlspecs.jar -rac –source 1.7 –target 1.7 -\n' +
-                    'showNotImplemented <File.java>'}</code>
+            <CodeSnippet lang={''}>
+                {'java -jar openjml.jar -cp jmlspecs.jar -rac –source 1.7 –target 1.7 -showNotImplemented <File.java>'}
             </CodeSnippet>
             <p className={'mb-[10px]'}>Запуск скомпільованого класу на виконання:</p>
-            <CodeSnippet>
-                <code>{'java -classpath .;jmlruntime.jar; <File>'}</code>
+            <CodeSnippet lang={''}>
+                {'java -classpath .;jmlruntime.jar; <File>'}
             </CodeSnippet>
             <p className={'mb-[10px]'}>Запуск статичної перевірки коду:</p>
-            <CodeSnippet>
-                <code>{'java -jar openjml.jar -cp jmlspecs.jar -esc -source 1.7 <File.java>'}</code>
+            <CodeSnippet lang={''}>
+                {'java -jar openjml.jar -cp jmlspecs.jar -esc -source 1.7 <File.java>'}
             </CodeSnippet>
         </MethodologySection>
     );

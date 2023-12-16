@@ -5,6 +5,7 @@ import windowBeforeStartRefinement from "@/assets/images/lb/lb-2/window-before-s
 import settingKeyAuto1 from "@/assets/images/lb/lb-2/setting-key-auto-1.jpg";
 import settingKeyAuto2 from "@/assets/images/lb/lb-2/setting-key-auto-2.jpg";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
+import {java} from "@codemirror/lang-java";
 
 function InstructionsWorkStudents() {
     return (
@@ -20,8 +21,8 @@ function InstructionsWorkStudents() {
                 проанотуйте його за допомогою JML та перевірте синтаксичну
                 коректність анотацій за допомогою JMLEclipse аналогічно до роботи №1.
             </p>
-            <CodeSnippet title={'Запустіть'}>
-                Key %KEYROOT%/bin/startProver.bat.
+            <CodeSnippet title={'Запустіть'} lang={''}>
+                {`Key %KEYROOT%/bin/startProver.bat.`}
             </CodeSnippet>
             <p className={'mb-[10px]'}>
                 Виберіть File/Open та оберіть проанотований файл *.java.
@@ -86,7 +87,7 @@ function InstructionsWorkStudents() {
             <p>
                 Зверніть увагу, що доведення інколи не може буди виконане повністю в автоматичному режимі. Прикладом такого випадку є метод getMaximumRecord класу LogFile. В ньому інваріанта стверджує, що зміння max містить поточне більше значення у частині масиву, що вже була проаналізована до позиції j.
             </p>
-            <CodeSnippet>
+            <CodeSnippet lang={[java()]}>
                 {`/* public normal_behaviour
     *  ensures (\\forall int i; 0 <= i && i < logArray.length;
     *       logArray[i].balance <= \\result.balance);
