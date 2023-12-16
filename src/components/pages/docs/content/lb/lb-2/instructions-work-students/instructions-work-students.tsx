@@ -21,7 +21,7 @@ function InstructionsWorkStudents() {
                 проанотуйте його за допомогою JML та перевірте синтаксичну
                 коректність анотацій за допомогою JMLEclipse аналогічно до роботи №1.
             </p>
-            <CodeSnippet title={'Запустіть'} lang={''}>
+            <CodeSnippet title={'Запустіть'}>
                 {`Key %KEYROOT%/bin/startProver.bat.`}
             </CodeSnippet>
             <p className={'mb-[10px]'}>

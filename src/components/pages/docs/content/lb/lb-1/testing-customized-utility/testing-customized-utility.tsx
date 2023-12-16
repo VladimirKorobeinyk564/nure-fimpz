@@ -1,10 +1,10 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 import {java} from "@codemirror/lang-java";
+import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
 
 function TestingCustomizedUtility() {
-    const code = `
-                        package com.example.Person;
+    const code = `package com.example.Person;
 
 public class Person {
     private /* spec_public non_null */ String name;
@@ -47,12 +47,9 @@ public class Person {
         name = n;
         weight = 0;
     }
-}
+}`;
 
-                        `;
-
-    const code1 = `
-                        package com.example.Person;
+    const code1 = `package com.example.Person;
 
 public class PersonMain {
 
@@ -60,9 +57,7 @@ public class PersonMain {
         System.out.println(new Person(null));
         System.out.println(new Person(""));
     }
-}
-
-                        `;
+}`;
     return (
         <MethodologySection
             title={'Тестування налаштованої утиліти'}
@@ -78,9 +73,9 @@ public class PersonMain {
                 {code1}
             </CodeSnippet>
             <p className={'mb-[10px]'}>Виконайте для файлів всі наведені команди по черзі.</p>
-            <CodeSnippet title={'Проаналізуйте результат'} lang={[java()]}>
+            <TerminalSnippet title={'Проаналізуйте результат'}>
                 {'java -jar openjml.jar -source 1.7 -noInternalSpecs Person.java PersonMain.java'}
-            </CodeSnippet>
+            </TerminalSnippet>
         </MethodologySection>
     );
 }

@@ -1,6 +1,6 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
-import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
+import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
 
 function UsingOpenjml() {
     return (
@@ -27,37 +27,37 @@ function UsingOpenjml() {
                 </List>
             </div>
 
-            <CodeSnippet lang={''}>
+            <TerminalSnippet>
                 {`
                 openjml.localSetup=
                 
                 openjml.defaultProver=yices
                 
                 openjml.prover.yices= d:/users/openjml/yices/bin/yices.exe`}
-            </CodeSnippet>
+            </TerminalSnippet>
 
             <p>Правила користування утилітою детально описані в мануалі [2, 6-12].</p>
             <p>Наведемо лише основні команди.</p>
 
             <p className={'mb-[10px]'}>Запуск перевірки синтаксису анотацій:</p>
-            <CodeSnippet title={'Для jdk 1.7'} lang={''}>
+            <TerminalSnippet title={'Для jdk 1.7'}>
                 {'java -jar openjml.jar -source 1.7 -noInternalSpecs <File.java>'}
-            </CodeSnippet>
-            <CodeSnippet title={'Для jdk 1.6'} lang={''}>
+            </TerminalSnippet>
+            <TerminalSnippet title={'Для jdk 1.6'}>
                 {'java -Xbootclasspath/p:d:\\users\\openjml/openjmlboot.jar -jar openjml.jar -source 1.7 -noInternalSpecs -showNotImplemented <File.java>'}
-            </CodeSnippet>
+            </TerminalSnippet>
             <p className={'mb-[10px]'}>Запуск генерації об’єктного коду з перевіркою виконання контрактів:</p>
-            <CodeSnippet lang={''}>
+            <TerminalSnippet>
                 {'java -jar openjml.jar -cp jmlspecs.jar -rac –source 1.7 –target 1.7 -showNotImplemented <File.java>'}
-            </CodeSnippet>
+            </TerminalSnippet>
             <p className={'mb-[10px]'}>Запуск скомпільованого класу на виконання:</p>
-            <CodeSnippet lang={''}>
+            <TerminalSnippet>
                 {'java -classpath .;jmlruntime.jar; <File>'}
-            </CodeSnippet>
+            </TerminalSnippet>
             <p className={'mb-[10px]'}>Запуск статичної перевірки коду:</p>
-            <CodeSnippet lang={''}>
+            <TerminalSnippet>
                 {'java -jar openjml.jar -cp jmlspecs.jar -esc -source 1.7 <File.java>'}
-            </CodeSnippet>
+            </TerminalSnippet>
         </MethodologySection>
     );
 }
