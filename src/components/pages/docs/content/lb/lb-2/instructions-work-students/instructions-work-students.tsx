@@ -6,8 +6,34 @@ import settingKeyAuto1 from "@/assets/images/lb/lb-2/setting-key-auto-1.jpg";
 import settingKeyAuto2 from "@/assets/images/lb/lb-2/setting-key-auto-2.jpg";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 import {java} from "@codemirror/lang-java";
+import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
 
 function InstructionsWorkStudents() {
+    const code = `/* public normal_behaviour
+*  ensures (\\forall int i; 0 <= i && i < logArray.length;
+*       logArray[i].balance <= \\result.balance);
+*  diverges true;
+* */
+public /*pure*/ LogRecord getMaximumRecord() {
+    LogRecord max = logArray[0];
+    
+    /* loop_invariant
+    *    0 <= i && i <= logArray.length
+    *    && max != null &&
+    *    (\\forall int j; 0 <= j && j < i;
+    *    max.balance >= logArray[j].balance);
+    *  assignable max, i;
+    * */
+    while (i < logArray.length) {
+        LogRecord lr = logArray[i++];
+        if (lr.getBalance() > max.getBalance()) {
+            max = lr;
+        }
+    }
+
+    return max;
+}`;
+
     return (
         <MethodologySection
             title={'Постановка задачі'}
@@ -21,9 +47,9 @@ function InstructionsWorkStudents() {
                 проанотуйте його за допомогою JML та перевірте синтаксичну
                 коректність анотацій за допомогою JMLEclipse аналогічно до роботи №1.
             </p>
-            <CodeSnippet title={'Запустіть'}>
+            <TerminalSnippet title={'Запустіть'}>
                 {`Key %KEYROOT%/bin/startProver.bat.`}
-            </CodeSnippet>
+            </TerminalSnippet>
             <p className={'mb-[10px]'}>
                 Виберіть File/Open та оберіть проанотований файл *.java.
                 Псля аналізу коду KeY через вікно Proof Obligation Browser
@@ -69,7 +95,7 @@ function InstructionsWorkStudents() {
                 автоматичного доведення твердження, як вказано на рис. 2.3.
             </p>
 
-            <div className="image-container flex justify-center items-center">
+            <div className="image-container flex flex-col justify-center items-center">
                 <div className={'w-[620px] mr-[10px]'}>
                     <ImageWrapper
                         image={settingKeyAuto1}
@@ -83,34 +109,12 @@ function InstructionsWorkStudents() {
                     ></ImageWrapper>
                 </div>
             </div>
-            <p>Налаштування KeY для проведення автоматизованого доведення</p>
-            <p>
+            <p className={'mb-[10px]'}>Налаштування KeY для проведення автоматизованого доведення</p>
+            <p className={'mb-[10px]'}>
                 Зверніть увагу, що доведення інколи не може буди виконане повністю в автоматичному режимі. Прикладом такого випадку є метод getMaximumRecord класу LogFile. В ньому інваріанта стверджує, що зміння max містить поточне більше значення у частині масиву, що вже була проаналізована до позиції j.
             </p>
             <CodeSnippet lang={[java()]}>
-                {`/* public normal_behaviour
-    *  ensures (\\forall int i; 0 <= i && i < logArray.length;
-    *       logArray[i].balance <= \\result.balance);
-    *  diverges true;
-    * */
-    public /*pure*/ LogRecord getMaximumRecord() {
-        LogRecord max = logArray[0];
-        /* loop_invariant
-        *    0 <= i && i <= logArray.length
-        *    && max != null &&
-        *    (\\forall int j; 0 <= j && j < i;
-        *    max.balance >= logArray[j].balance);
-        *  assignable max, i;
-        * */
-        while (i < logArray.length) {
-            LogRecord lr = logArray[i++];
-            if (lr.getBalance() > max.getBalance()) {
-                max = lr;
-            }
-        }
-
-        return max;
-    }`}
+                {code}
             </CodeSnippet>
             <p className={'mb-[10px]'}>
                 Завантажте твердження EnsuresPost для вказаного методу. Виберіть у якості стратегії стратегії Java DL, а «Loop treatment» встановіть у None, та встановіть флажок «Autoresume strategy» , розпочніть доказ. Якщо б інваріанта була не вказана у коді, то система запросила б під час доказу ввести інваріанту або гіпотезу індукції. Коли більше не буде правил для застосування оберіть цикл while включаючи попередній блок, натисніть кнопку миші та оберіть loopInvariant. Таким чином ви задієте інваріанту та директиву «assignables» в коді. Декілька цілей залишиться відкритими після поновлення стратегії доказу. Перезапустіть стратегії та виконуйте їх доки лише одна ціль залишиться відкритою. Застосуйте зовнішній прувер – натисніть Run Yices (або інший встановлений прувер). Доведення закінчиться успішно.
