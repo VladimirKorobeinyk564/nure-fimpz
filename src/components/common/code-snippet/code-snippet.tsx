@@ -9,7 +9,7 @@ import {cn} from "@/lib/utils";
 interface CodeSnippetProps {
     title?: string | undefined;
     children: string;
-    lang: any;
+    lang?: any;
 }
 
 
@@ -41,9 +41,6 @@ function CodeSnippet(props: Readonly<CodeSnippetProps>) {
             {title && (
                 <div className="title-block font-medium bg-[#CFD2D8] dark:bg-[#343a46] px-[20px] py-[5px] text-primary-color">
                     {title}
-                    <div>
-
-                    </div>
                 </div>
             )}
             <div className="content relative" onMouseEnter={() => setIsCopyOut(true)} onMouseLeave={() => setIsCopyOut(false)}>
