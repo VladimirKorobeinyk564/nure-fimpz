@@ -44,7 +44,9 @@ function CodeSnippet(props: Readonly<CodeSnippetProps>) {
                 </div>
             )}
             <div className="content relative" onMouseEnter={() => setIsCopyOut(true)} onMouseLeave={() => setIsCopyOut(false)}>
-                <ReactCodeMirror value={children} theme={theme === 'dark' ? 'dark' : githubLight} extensions={lang} editable={false} basicSetup={false}/>
+                <ReactCodeMirror value={children} theme={theme === 'dark' ? 'dark' : githubLight} extensions={lang} editable={false} basicSetup={{
+                    lineNumbers: false,
+                }}/>
                 {isCopyOut && (
                     <div className={cn("absolute top-[15px] right-[15px] bg-[#eff2f2] p-[10px] rounded-md transition duration-300 cursor-pointer dark:bg-[#454E59]", classes.copy_btn)} onClick={copyCode}>
                         <svg width="252" height="252" viewBox="0 0 252 252" fill="none" xmlns="http://www.w3.org/2000/svg" className={"w-[15px] h-[15px]"}>
