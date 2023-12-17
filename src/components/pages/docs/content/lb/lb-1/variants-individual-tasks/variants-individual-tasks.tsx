@@ -1,21 +1,24 @@
 import List from "@/components/common/list/List.tsx";
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import {useTranslation} from "react-i18next";
 
 function VariantsIndividualTasks() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Варіанти індивідуальних завдань'}
+            title={t('docsPage.content.lb.lb1.variantsIndividualTasks.label')}
             id={"variantsIndividualTasks"}
             isFirstSection={false}
         >
             <List type={'Text'}>
-                <li>Варіант 1. Гра «Сапер».</li>
-                <li>Варіант 2. Гра «Шашки».</li>
-                <li>Варіант 3. Гра «П’ятнашки».</li>
-                <li>Варіант 4. Гра «Морський бій».</li>
-                <li>Варіант 5. Гра «Хрестики-нуліки».</li>
-                <li>Варіант 6. Гра «Шарики».</li>
-                <li>Варіант 7. Гра «Піддавки».</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l1')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l2')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l3')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l4')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l5')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l6')}</li>
+                <li>{t('docsPage.content.lb.lb1.variantsIndividualTasks.l7')}</li>
             </List>
         </MethodologySection>
     );

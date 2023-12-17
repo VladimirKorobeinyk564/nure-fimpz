@@ -16,9 +16,7 @@ function SecondLaboratoryWork() {
             <DeductiveProgramVerification></DeductiveProgramVerification>
             <SelectingVerificationEnvironment></SelectingVerificationEnvironment>
             <SectionDivider></SectionDivider>
-
             <InstructionsWorkStudents></InstructionsWorkStudents>
-
             <SectionDivider></SectionDivider>
             <VariantsIndividualTasks></VariantsIndividualTasks>
             <SectionDivider></SectionDivider>

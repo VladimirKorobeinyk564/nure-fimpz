@@ -40,11 +40,23 @@
         "label": "Laboratory work",
         "lb1": {
           "label": "Laboratory № 1",
-          "goal": "Objective of the lesson"
+          "goal": "Objective of the lesson",
+          "theoreticalInformation": "Theoretical information",
+          "usageOpenJML": "OpenJML usage",
+          "testingCustomizedUtility": "Testing the customized utility",
+          "problemStatement": "Problem statement",
+          "variantsIndividualTasks": "Options of individual tasks",
+          "controlQuestionsTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
         },
         "lb2": {
           "label": "Laboratory № 2",
-          "goal": "Objective of the lesson"
+          "goal": "Objective of the lesson",
+          "preparingWorkKeY": "Preparing to work with KeY",
+          "provingStatementsHelpKeY": "Proving statements with the help of KeY",
+          "variantsIndividualTasks": "Options of individual tasks",
+          "controlQuestionsTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
         },
         "lb3": {
           "label": "Laboratory № 3",
@@ -56,6 +68,137 @@
         "pythonLesson": {
           "label": "Python programming",
           "goal": "Objective of the lesson"
+        }
+      }
+    },
+    "content": {
+      "goalLesson": "Objective of the lesson",
+      "lb": {
+        "lb1": {
+          "main": {
+            "label": "Contract programming",
+            "goal": "Learn how to create formal specifications for real-world programs based on the \"development under contract\" paradigm"
+          },
+          "theoreticalInformation": {
+            "label": "Theoretical information",
+            "p1": {
+              "t1": "To develop the specification, it is proposed to use ",
+              "span": "Java Modeling Language (JML)",
+              "t2": " [1, p.1-13]."
+            },
+            "p2": "It is a language that formalizes a behavioral specification interface that can be used to describe the behavior of Java modules. It combines the \"design by contract\" approach borrowed from Eiffel, model-based specification borrowed from the Larch family of specification languages, and elements of refinement calculus.",
+            "p3": "To process jml specifications, you can use any of two console utilities: jmlspecs[1, p.9-10] (processes java 1.4 syntax) or OpenJml [2, 3-20] (java 1.4-1.7) - still under development. You can also use a plug-in for the Eclipse environment - JMLEclipse [3]."
+          },
+          "usageOpenJML": {
+            "label": "OpenJML usage",
+            "p1": "The instructions for using OpenJML are as follows.",
+            "list": {
+              "l1": "Unpack the latest version of openjml into a new directory, for example, ",
+              "l2": "Unpack the automatic theorem proving utility yices alongside, for example, to ",
+              "l3-1": "Add a directory ",
+              "l3-2": " to the CLASSPATH variable.",
+              "l4-1": "Create a configuration file ",
+              "l4-2": " in the directory ",
+              "l4-3": " with the following content"
+            },
+            "p2": "The rules for using the utility are described in detail in the manual [2, 6-12].",
+            "p3": "Here are just the basic commands.",
+            "p4": "Launch the annotation syntax checker:",
+            "p5": "Launch the generation of object code with contract execution verification:",
+            "p6": "Run the compiled class for execution:",
+            "p7": "Start static code verification:"
+          },
+          "testingCustomizedUtility": {
+            "label": "Testing the customized utility",
+            "p1": "The JML syntax is described in detail in the manual [1, p. 4-8].",
+            "p2": "To test the customized utility, create the following content files:",
+            "p3": "Run all the above commands for the files one by one.",
+            "p4": "Analyze the result"
+          },
+          "problemStatement": {
+            "label": "Problem statement",
+            "l1": "Design interfaces or abstract classes for game entities.",
+            "l2": "Formulate and express pre- and post-condition invariants in jml for all types and methods.",
+            "l3": "Check the jml specification with a static code analyzer.",
+            "l4": "Fix any errors you find. Verify that all pre-, post-conditions and invariants are actually fulfilled by testing the game."
+          },
+          "variantsIndividualTasks": {
+            "label": "Options of individual tasks",
+            "l1": "Option 1. The game \"Sapper\".",
+            "l2": "Option 2. The game \"Checkers\".",
+            "l3": "Option 3. The game \"Piggyback\".",
+            "l4": "Option 4. The game \"Sea Battle\".",
+            "l5": "Option 5. The game \"Tic-tac-toe\".",
+            "l6": "Option 6. The game \"Balls\".",
+            "l7": "Option 7. The game \"Giveaways\"."
+          },
+          "controlQuestionsTasks": {
+            "label": "Control questions and tasks",
+            "l1": "List the basic jml constructs.",
+            "l2": "List the main tasks of openjml.",
+            "l3": "What utilities are included in OpenJml and what is the purpose of each of them?"
+          },
+          "listOfReferences": {
+            "label": "List of references",
+            "eletrResource": "Electronic resource",
+            "accessMode": "Access mode",
+            "year": " – 19.05.2012 - Headline. From the screen."
+          }
+        },
+        "lb2": {
+          "main": {
+            "label": "Deductive program verification",
+            "goal": "Learn to perform static verification of object-oriented programs based on deductive logic and symbolic program execution."
+          },
+          "preparingWorkKeY": {
+            "label": "Preparing to work with KeY",
+            "p1": "We will verify programs using KeY [1, pp. 7-14], a static verification environment for programs in JML and a subset of the Java programming language (Java Cards API 2.2), as well as in UML+OCL. From the Java language standard, which is not related to the Java Cards API, the environment supports multidimensional arrays, integer and character and string data types. That is, if you write a program without dynamically loading classes and the float data type, you can prove its correctness using KeY.",
+            "p2": "In addition, you can choose between different semantics of the integer data type: mathematical definition, overflow consideration. KeY is based on dynamic logic (DL), which works on the same level as a programming language (there is no need to translate expressions into formalisms such as finite automata or higher-order logic). DL is a modal logic that operates formulas depending on the current state to which the program is led by the execution of its operators. To prove formulas about KeY positional logic, I use automatic proof utilities such as Simplify, Yieces, Z3, etc.",
+            "p3": "You will need a stable version of KeY 1.4 and JDK 1.4 or higher. To complete the assignment, implement the specified task in Java, annotate it using JML, and check the syntactic correctness of the annotations using JMLEclipse similarly to the assignment #1.",
+            "p4": "Launch",
+            "p5": "Choose File/Open and select the annotated *.java file. After analyzing the KeY code, the Proof Obligation Browser will prompt you to select a class, then a method, and the desired statement to prove (the so-called proof obligations). Proof obligations are generated on the basis of annotations attached to the selected method and its context (invariants of the class where the method is located). The most commonly used proof obligations are PreservesInv, Ensures-Post, RespectModifies."
+          },
+          "provingStatementsHelpKeY": {
+            "label": "Proving statements with the help of KeY",
+            "p1": "For the test example, load the issued paycard package, select the PayCard.java class and the charge(int amount) method. You will be presented with several statements related to this method that correspond to the constraints classified in the annotation as two normal or error calls.",
+            "p2": "For each constraint, the pre- and post-condition and the mode of proof are specified (Fig. 1).",
+            "p3": "Selecting a statement to prove",
+            "p4": "Select the first option normal_behavior. The Java DL statement will be loaded into the environment (Figure 2).",
+            "p5": "The system window before the start of refinement",
+            "p6": "On the Proof Search Strategy tab, select the necessary parameters that will control the procedure of automatic proof of the statement, as shown in Fig. 2.3.",
+            "p7": "Step 1",
+            "p8": "Step 2",
+            "p9": "Setting up KeY for automated proofing",
+            "p10": "Note that sometimes the proof cannot be performed completely automatically. An example of such a case is the getMaximumRecord method of the LogFile class. In it, the invariant asserts that the change in max contains the current larger value in the part of the array that has already been analyzed up to position j.",
+            "p11": "Load the EnsuresPost assertion for the specified method. Select Java DL as the strategy, set \"Loop treatment\" to None, and check the \"Autoresume strategy\" box, then start the proof. If an invariant was not specified in the code, the system would prompt you to enter an invariant or an induction hypothesis during the proof. When there are no more rules to apply, select the while loop including the previous block, click the mouse button, and select loopInvariant. This way you will use the invariant and the \"assignables\" directive in the code. Several targets will remain open after the proof strategy is refreshed. Restart the strategies and execute them until only one target remains open. Apply an external prouver - click Run Yices (or another installed prouver). The proof will complete successfully.",
+            "p12": "Do the same for your individual assignment.",
+            "p13": "The report should contain an annotated implementation of the class, the course (history) of the proof of each statement in it. You can save the proof by selecting Save current proof in the panel."
+          },
+          "variantsIndividualTasks": {
+            "label": "Options of individual tasks",
+            "l1": "Option 1: ATD Stack.",
+            "l2": "Option 2: ATD Queue.",
+            "l3": "Option 3. ATD Plural.",
+            "l4": "Option 4. ATD A queue with priorities.",
+            "l5": "Option 5. Sort by inserts.",
+            "l6": "Option 6. Binary search.",
+            "l7": "Option 7. Quick sorting.",
+            "l8": "Option 8. Sum, minimum and maximum in an array."
+          },
+          "controlQuestionsTasks": {
+            "label": "Control questions and tasks",
+            "l1": "Describe the basic principles of predicate logic.",
+            "l2": "What are the methods of logical inference in predicate logic?",
+            "l3": "Describe the basic principles and constructions of dynamic logic, how does it differ from predicate logic?",
+            "l4": "List the main features of KeY",
+            "l5": "List the main limitations of KeY"
+          },
+          "listOfReferences": {
+            "label": "List of references",
+            "eletrResource": "Electronic resource",
+            "accessMode": "Access mode",
+            "year": " – 19.05.2012 - Headline. From the screen."
+          }
         }
       }
     }

@@ -1,16 +1,18 @@
 import MethodologyObjective from "@/components/common/methodology-objective/MethodologyObjective.tsx";
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import {useTranslation} from "react-i18next";
 
 function DeductiveProgramVerification() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Дедуктивна верифікація програм'}
+            title={t('docsPage.content.lb.lb2.main.label')}
             id={"deductiveProgramVerification"}
             isFirstSection={true}
         >
             <MethodologyObjective>
-                Навчитися проводити статичну верифікацію об’єктно-орієнтованих програм на основі дедуктивної логіки та
-                символьного виконання программ.
+                {t('docsPage.content.lb.lb2.main.goal')}
             </MethodologyObjective>
         </MethodologySection>
     );

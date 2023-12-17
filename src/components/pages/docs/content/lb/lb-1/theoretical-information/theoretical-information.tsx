@@ -1,22 +1,21 @@
 import AccentSpan from "@/components/common/accent-span/accent-span.tsx";
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import {useTranslation} from "react-i18next";
 
 function TheoreticalInformation() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Теоретичні відомості'}
+            title={t('docsPage.content.lb.lb1.theoreticalInformation.label')}
             id={"theoreticalInformation"}
             isFirstSection={false}
         >
-            <p className={'mb-[10px]'}>Для розробки специфікації пропонується використовувати <AccentSpan>Java
-                Modeling Language (JML)</AccentSpan> [1, c.1-13].</p>
-            <p className={'mb-[10px]'}>Це мова, яка формалізує інтерфейс поведінкової специфікації, який може бути
-                використаний для опису поведінки Java-модулей. Він комбінує підходи «design by contract»,
-                запозичений з мови Eiffel, специфікацію на основі моделі, запозичену з мов специфікації сімейства
-                Larch, та елементи refinement calculus (числення уточнень).</p>
-            <p>Для обробки jml специфікацій можна користуватися будь-якою з двох консольних утиліт: jmlspecs[1,
-                c.9-10] (обробляє java синтаксису 1.4) або OpenJml [2, 3-20] (java 1.4-1.7) – ще знаходиться у
-                розробці. Також можна користуватися плагіном для середовища Eclipse – JMLEclipse [3].</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.theoreticalInformation.p1.t1')}
+                <AccentSpan>{t('docsPage.content.lb.lb1.theoreticalInformation.p1.span')} </AccentSpan>
+                {t('docsPage.content.lb.lb1.theoreticalInformation.p1.t2')}</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.theoreticalInformation.p2')}</p>
+            <p>{t('docsPage.content.lb.lb1.theoreticalInformation.p3')}</p>
         </MethodologySection>
     );
 }

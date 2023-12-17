@@ -76,7 +76,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '083f331a-c3a7-4f89-ba3d-d39f1935333f',
-                        label: 'Теоретичні відомості',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.theoreticalInformation',
                         isNavigate: true,
                         path: '#theoreticalInformation',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -84,7 +84,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'e1e4c195-d9b4-4f36-9465-9f23f6d76332',
-                        label: 'Використання OpenJML',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.usageOpenJML',
                         isNavigate: true,
                         path: '#usingOpenjml',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -92,7 +92,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '1dec936d-5882-4a4a-a793-6e288ad12a5f',
-                        label: 'Тестування налаштованої утиліти',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.testingCustomizedUtility',
                         isNavigate: true,
                         path: '#testingCustomizedUtility',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -100,7 +100,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'dd9606f2-d3b7-4b2c-8f60-f220572f266e',
-                        label: 'Постановка задачі',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.problemStatement',
                         isNavigate: true,
                         path: '#problemStatement',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -108,7 +108,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '6d8812f6-cdcb-492e-8d15-bf1ee4328efa',
-                        label: 'Варіанти індивідуальних завдань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.variantsIndividualTasks',
                         isNavigate: true,
                         path: '#variantsIndividualTasks',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -116,7 +116,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '0de26de8-dc4a-4f01-83d4-fec5ef653134',
-                        label: 'Контрольні запитання і завдання',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.controlQuestionsTasks',
                         isNavigate: true,
                         path: '#questionsAndTasks',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -124,7 +124,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '1f13e009-922f-4128-b69e-e1ed4166eb26',
-                        label: 'Перелік посилань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb1.listOfReferences',
                         isNavigate: true,
                         path: '#referencesList',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -149,15 +149,23 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '7ed21c5d-3c67-486a-ba5c-d69652110cf0',
-                        label: 'Вибір середовища верифікації та робота з KeY',
+                        label: 'docsPage.menuTree.laboratoryWork.lb2.preparingWorkKeY',
                         isNavigate: true,
-                        path: '#selectingVerificationEnvironment',
+                        path: '#preparingWorkWithKeY',
+                        parentKey: 'b6c02dc9-ecf4-463f-bcd0-6b9d3c44d47d',
+                        nodes: []
+                    },
+                    {
+                        key: '648b84f9-0631-4906-9350-931db9ed3c7a',
+                        label: 'docsPage.menuTree.laboratoryWork.lb2.provingStatementsHelpKeY',
+                        isNavigate: true,
+                        path: '#provingAssertionsKeY',
                         parentKey: 'b6c02dc9-ecf4-463f-bcd0-6b9d3c44d47d',
                         nodes: []
                     },
                     {
                         key: 'c7219e27-b7a7-48b7-be05-184878156432',
-                        label: 'Варіанти індивідуальних завдань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb2.variantsIndividualTasks',
                         isNavigate: true,
                         path: '#variantsIndividualTasksLb2',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -165,7 +173,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '1d6b53ad-32ec-4028-a8bf-4344302c4dc8',
-                        label: 'Контрольні запитання і завдання',
+                        label: 'docsPage.menuTree.laboratoryWork.lb2.controlQuestionsTasks',
                         isNavigate: true,
                         path: '#questionsAndTasksLb2',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',
@@ -173,7 +181,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '1523cffb-6123-4db1-9712-ac46faebdc02',
-                        label: 'Перелік посилань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb2.listOfReferences',
                         isNavigate: true,
                         path: '#referencesListLb2',
                         parentKey: '6b82623b-b139-4f63-b6e3-d84e1b02c13',

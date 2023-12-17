@@ -1,32 +1,30 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import {useTranslation} from "react-i18next";
 
 function SelectingVerificationEnvironment() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Вибір середовища верифікації та робота з KeY'}
-            id={'selectingVerificationEnvironment'}
+            title={t('docsPage.content.lb.lb2.preparingWorkKeY.label')}
+            id={'preparingWorkWithKeY'}
             isFirstSection={false}
         >
             <p className={'mb-[10px]'}>
-                Верифікацію програм проводитимемо за допомогою KeY [1, c. 7-14] –
-                середовища статичної верифікації програм на JML та підмножині мови
-                програмування Java (Java Cards API 2.2), а також на UML+OCL. Зі
-                стандарту мови Java, яка не відноситься до Java Cards API, середовище
-                підтримує багатовимірні масиви, цілочисельний та символьний та
-                строковий типи даних. Тобто, якщо написати програму без динамічного
-                завантаження класів та типу даних float, то можливо доводити її
-                коректність за допомогою KeY.
+                {t('docsPage.content.lb.lb2.preparingWorkKeY.p1')}
             </p>
             <p className={'mb-[10px]'}>
-                Окрім того, можна обирати між різною семантикою типу даних integer:
-                математичне визначення, врахування можливості переповнення. В основі
-                KeY лежить динамічна логіка (DL), яка працює на тому ж рівні, що і
-                мова програмування (нема необхідності переводити вирази у такі
-                формалізми, як скінченні автомати або логіки вищих порядків). DL – це
-                модальна логіка, яка оперує формули залежно від поточного стану, до
-                якого приводить програму виконання її операторів. Для доведення
-                формул про позиційної логіки KeY використовую утиліти автоматичного
-                доведення терем, такі як Simplify, Yieces, Z3 та ін.
+                {t('docsPage.content.lb.lb2.preparingWorkKeY.p2')}
+            </p>
+            <p className={'mb-[10px]'}>
+                {t('docsPage.content.lb.lb2.preparingWorkKeY.p3')}
+            </p>
+            <TerminalSnippet title={t('docsPage.content.lb.lb2.preparingWorkKeY.p4')}>
+                {`Key %KEYROOT%/bin/startProver.bat.`}
+            </TerminalSnippet>
+            <p className={'mb-[10px]'}>
+                {t('docsPage.content.lb.lb2.preparingWorkKeY.p5')}
             </p>
         </MethodologySection>
     );

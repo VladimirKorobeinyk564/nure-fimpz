@@ -1,18 +1,20 @@
 import List from "@/components/common/list/List.tsx";
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import {useTranslation} from "react-i18next";
 
 function QuestionsAndTasks() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Контрольні запитання і завдання'}
+            title={t('docsPage.content.lb.lb1.controlQuestionsTasks.label')}
             id={"questionsAndTasks"}
             isFirstSection={false}
         >
             <List type={'Number'}>
-                <li>Перелічіть основні конструкції jml.</li>
-                <li>Перелічіть основні задачі openjml.</li>
-                <li>Які утиліти входять до OpenJml та яке призначення кожної з
-                    них?</li>
+                <li>{t('docsPage.content.lb.lb1.controlQuestionsTasks.l1')}</li>
+                <li>{t('docsPage.content.lb.lb1.controlQuestionsTasks.l2')}</li>
+                <li>{t('docsPage.content.lb.lb1.controlQuestionsTasks.l3')}</li>
             </List>
         </MethodologySection>
     );

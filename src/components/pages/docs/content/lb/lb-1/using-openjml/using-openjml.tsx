@@ -1,60 +1,56 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import {useTranslation} from "react-i18next";
 
 function UsingOpenjml() {
-    return (
+    const {t} = useTranslation();
 
+    return (
         <MethodologySection
-            title={'Використання OpenJML'}
+            title={t('docsPage.content.lb.lb1.usageOpenJML.label')}
             id={"usingOpenjml"}
             isFirstSection={false}
         >
-            <p>Інструкції з використання OpenJML наступні.</p>
+            <p>{t('docsPage.content.lb.lb1.usageOpenJML.p1')}</p>
 
             <div className="mb-[20px]">
                 <List type={'Number'}>
-                    <li>Розпакувати останню версію openjml у нову директорію,
-                        наприклад, <code>d:\users\openjml</code>.
+                    <li>{t('docsPage.content.lb.lb1.usageOpenJML.list.l1')}<code>d:\users\openjml</code>.
                     </li>
-                    <li>Розпакувати поруч утиліту автоматичного доведення теорем yices, наприклад
-                        до <code>d:\users\openjml\yices</code>.
+                    <li>{t('docsPage.content.lb.lb1.usageOpenJML.list.l2')}<code>d:\users\openjml\yices</code>.
                     </li>
-                    <li>Додати директорію <code>d:\users\openjml</code> до змінної CLASSPATH.</li>
-                    <li>Створити конфігураційний файл <code>openjml.properties</code> у
-                        директорії <code>d:\users\openjml</code> з наступним вмістом
-                    </li>
+                    <li>{t('docsPage.content.lb.lb1.usageOpenJML.list.l3-1')}<code>d:\users\openjml</code>{t('docsPage.content.lb.lb1.usageOpenJML.list.l3-2')}</li>
+                    <li>{t('docsPage.content.lb.lb1.usageOpenJML.list.l4-1')}<code>openjml.properties</code>{t('docsPage.content.lb.lb1.usageOpenJML.list.l4-2')}<code>d:\users\openjml</code>{t('docsPage.content.lb.lb1.usageOpenJML.list.l4-3')}</li>
                 </List>
             </div>
 
             <TerminalSnippet>
-                {`
-                openjml.localSetup=
-                
-                openjml.defaultProver=yices
-                
-                openjml.prover.yices= d:/users/openjml/yices/bin/yices.exe`}
+                {`openjml.localSetup=
+openjml.defaultProver=yices
+openjml.prover.yices= d:/users/openjml/yices/bin/yices.exe`
+                }
             </TerminalSnippet>
 
-            <p>Правила користування утилітою детально описані в мануалі [2, 6-12].</p>
-            <p>Наведемо лише основні команди.</p>
+            <p>{t('docsPage.content.lb.lb1.usageOpenJML.p2')}</p>
+            <p>{t('docsPage.content.lb.lb1.usageOpenJML.p3')}</p>
 
-            <p className={'mb-[10px]'}>Запуск перевірки синтаксису анотацій:</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.usageOpenJML.p4')}</p>
             <TerminalSnippet title={'Для jdk 1.7'}>
                 {'java -jar openjml.jar -source 1.7 -noInternalSpecs <File.java>'}
             </TerminalSnippet>
             <TerminalSnippet title={'Для jdk 1.6'}>
                 {'java -Xbootclasspath/p:d:\\users\\openjml/openjmlboot.jar -jar openjml.jar -source 1.7 -noInternalSpecs -showNotImplemented <File.java>'}
             </TerminalSnippet>
-            <p className={'mb-[10px]'}>Запуск генерації об’єктного коду з перевіркою виконання контрактів:</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.usageOpenJML.p5')}</p>
             <TerminalSnippet>
                 {'java -jar openjml.jar -cp jmlspecs.jar -rac –source 1.7 –target 1.7 -showNotImplemented <File.java>'}
             </TerminalSnippet>
-            <p className={'mb-[10px]'}>Запуск скомпільованого класу на виконання:</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.usageOpenJML.p6')}</p>
             <TerminalSnippet>
                 {'java -classpath .;jmlruntime.jar; <File>'}
             </TerminalSnippet>
-            <p className={'mb-[10px]'}>Запуск статичної перевірки коду:</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.usageOpenJML.p7')}</p>
             <TerminalSnippet>
                 {'java -jar openjml.jar -cp jmlspecs.jar -esc -source 1.7 <File.java>'}
             </TerminalSnippet>

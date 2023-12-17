@@ -2,8 +2,11 @@ import MethodologySection from "@/components/common/methodology-section/Methodol
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 import {java} from "@codemirror/lang-java";
 import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import {useTranslation} from "react-i18next";
 
 function TestingCustomizedUtility() {
+    const {t} = useTranslation();
+
     const code = `package com.example.Person;
 
 public class Person {
@@ -60,20 +63,20 @@ public class PersonMain {
 }`;
     return (
         <MethodologySection
-            title={'Тестування налаштованої утиліти'}
+            title={t('docsPage.content.lb.lb1.testingCustomizedUtility.label')}
             id={"testingCustomizedUtility"}
             isFirstSection={false}
         >
-            <p>Синтаксис JML детально описано в мануалі [1, c. 4-8].</p>
-            <p className={'mb-[10px]'}>Для тестування налаштованої утиліти створіть файли наступного вмісту:</p>
+            <p>{t('docsPage.content.lb.lb1.testingCustomizedUtility.p1')}</p>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.testingCustomizedUtility.p2')}</p>
             <CodeSnippet title={'Person.java'} lang={[java()]}>
                 {code}
             </CodeSnippet>
             <CodeSnippet title={'PersonMain.java'} lang={[java()]}>
                 {code1}
             </CodeSnippet>
-            <p className={'mb-[10px]'}>Виконайте для файлів всі наведені команди по черзі.</p>
-            <TerminalSnippet title={'Проаналізуйте результат'}>
+            <p className={'mb-[10px]'}>{t('docsPage.content.lb.lb1.testingCustomizedUtility.p3')}</p>
+            <TerminalSnippet title={t('docsPage.content.lb.lb1.testingCustomizedUtility.p4')}>
                 {'java -jar openjml.jar -source 1.7 -noInternalSpecs Person.java PersonMain.java'}
             </TerminalSnippet>
         </MethodologySection>
