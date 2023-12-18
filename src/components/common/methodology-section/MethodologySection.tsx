@@ -39,7 +39,7 @@ const MethodologySection = (props: Readonly<MethodologySectionProps>) => {
 
     return (
         <div id={id}>
-            <div className="flex mb-[30px] items-center">
+            <div className="flex max-[1280px]:mb-[20px] max-[1500px]:mb-[22px] mb-[30px] items-center">
                 {isFirstSection ?
                     <h3 className={"text-[40px] font-bold"}>{title}</h3>
                     : <h4 className={"text-[30px] font-bold"}>{title}</h4>}
@@ -50,7 +50,7 @@ const MethodologySection = (props: Readonly<MethodologySectionProps>) => {
                     <img src={copyLink} alt="Copy link"/>
                 </button>
             </div>
-            <div className={"text-[18px] leading-[36px]"}>
+            <div className={"max-[1280px]:text-[13px] max-[1500px]:text-[17px] text-[18px] leading-[36px]"}>
                 {children}
             </div>
         </div>
