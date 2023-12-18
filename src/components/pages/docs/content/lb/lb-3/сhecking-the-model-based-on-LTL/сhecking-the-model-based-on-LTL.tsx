@@ -6,11 +6,15 @@ import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper";
 import image4 from "@/assets/images/lb3/image4.png";
 import image5 from "@/assets/images/lb3/image5.png";
 import {python} from "@codemirror/lang-python";
+import {useTranslation} from "react-i18next";
 
 const СheckingTheModelBasedOnLtl = () => {
+    const {t} = useTranslation();
+
     const code = `#define getone (accepted == 1)
 #define getzero (accepted == 0)
 [] (getzero -> (getzero U getone))`;
+
     const code1 = `unreached in proctype Sender
 line 14, "pan.__", state 10, "-end-"
 (1 of 10 states)
@@ -21,38 +25,20 @@ unreached in proctype :never:
 line 50, "pain.__", state 14, "-end-"
 (1 of 14 states)`;
     return (
-        <MethodologySection title={"Перевірка коректності моделі на основі LTL"} id={"сheckingTheModelBasedOnLTL"} isFirstSection={false}>
-            <p>Перевірка коректності моделі на основі верифікації LTL
-                формул полягає в тому, що у виді формули LTL виражається
-                деякі властивості її «правильної» поведінки. Всі такі
-                властивості повинні бути перевірені по черзі одна за одною.</p>
-            <p>Для перевірки моделі на основі LTL введемо до програми
-                додаткову змінну accepted, яка буде встановлена у 0 на
-                початку запуску і кожного разу, коли повідомлення
-                відправляється клієнту. Accepted встановлюється в 1 тільки,
-                якщо від клієнта прийшло підтвердження. Тепер можна
-                виразити вимогу, що модель коректна, якщо на кожну
-                відправку обов’язково прийде підтвердження</p>
+        <MethodologySection title={t('docsPage.menuTree.laboratoryWork.lb3.correctnessModel')} id={"сheckingTheModelBasedOnLTL"} isFirstSection={false}>
+            <p>{t('docsPage.content.lb.lb3.correctnessModel.p1')}</p>
+            <p>{t('docsPage.content.lb.lb3.correctnessModel.p2')}</p>
             <CodeSnippet lang={[python()]} title={"Run/LTL Property Manager (рис. 4)."}>
                 {code}
             </CodeSnippet>
-            <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image4} />
-            <ImageWrapper imgSubtitle={"Вікно верифікації системи"} image={image5} />
-            <p>Зверніть увагу, ми хочемо перевірити, що формула істина
-                при всіх виконаннях системи, тому обрано радіокнопку “All
-                executions” Тепер натисніть Generate – створиться процесс
-                Never Claim, який мовою Promela містить вираження
-                введеної формули. Тепер натисніть Run Verification. У полі
-                Verification Results буде видано позитивний звіт за
-                результатами перевірки: <AccentSpan>valid</AccentSpan></p>
+            <ImageWrapper imgSubtitle={t('docsPage.content.lb.lb3.correctnessModel.img1')} image={image4} />
+            <ImageWrapper imgSubtitle={t('docsPage.content.lb.lb3.correctnessModel.img1')} image={image5} />
+            <p>{t('docsPage.content.lb.lb3.correctnessModel.p3')}<AccentSpan>valid</AccentSpan></p>
             <CodeSnippet lang={[python()]}>
                 {code1}
             </CodeSnippet>
-            <p>Аналогічним чином виконайте індивідуальне завдання.</p>
-            <p>Звіт повинен містити код моделі мовою Promela, автомат
-                станів моделі, фрагмент симуляції, перелік всіх (на вашу
-                думку) необхідних LTL формул для верифікації моделі та
-                відповідні їм протоколи (скріншоти екранів).</p>
+            <p>{t('docsPage.content.lb.lb3.correctnessModel.p4')}</p>
+            <p>{t('docsPage.content.lb.lb3.correctnessModel.p5')}</p>
         </MethodologySection>
     );
 };

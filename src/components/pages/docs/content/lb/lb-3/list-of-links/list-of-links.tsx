@@ -1,9 +1,12 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
+import {useTranslation} from "react-i18next";
 
 const ListOfLinks = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Перелік посилань"} id={"listOfLinks"} isFirstSection={false}>
+        <MethodologySection title={t('docsPage.menuTree.laboratoryWork.lb3.listOfReferences')} id={"listOfLinks"} isFirstSection={false}>
             <List type={"Number"}>
                 <li>Шошмина, И.В. Введение в язык Promela и систему
                     комплексной верификации Spin [Текст] / И.В. Шошмина, Ю.

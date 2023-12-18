@@ -1,12 +1,15 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import MethodologyObjective from "@/components/common/methodology-objective/MethodologyObjective";
+import {useTranslation} from "react-i18next";
 
 const ProgramVerificationBasedOnTemporalLogic = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Верифікація програм на основі темпоральної логіки"}
+        <MethodologySection title={t('docsPage.content.lb.lb3.main.label')}
                             id={"programVerificationBasedOnTemporalLogic"} isFirstSection={true}>
             <MethodologyObjective>
-                Навчитися проводити верифікацію автоматних моделей програм на основі темпоральної логіки LTL.
+                {t('docsPage.content.lb.lb3.main.goal')}
             </MethodologyObjective>
         </MethodologySection>
     );

@@ -60,7 +60,16 @@
         },
         "lb3": {
           "label": "Laboratory № 3",
-          "goal": "Objective of the lesson"
+          "goal": "Objective of the lesson",
+          "guidelinesForIndependentWork": "Guidelines for organizing students' independent work",
+          "spinPackage": "Spin package",
+          "spinOnWindows": "Using Spin on Windows platform",
+          "correctnessModel": "Checking the correctness of the model based on LTL",
+          "classesOfPropertiesDistributedSystems": "Classes of properties of distributed systems",
+          "spinOperatorsLTL": "Spin operators in LTL",
+          "optionsIndividualTasks": "Options for individual tasks",
+          "controlQuestionsAndTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
         }
       },
       "other": {
@@ -198,6 +207,91 @@
             "eletrResource": "Electronic resource",
             "accessMode": "Access mode",
             "year": " – 19.05.2012 - Headline. From the screen."
+          }
+        },
+        "lb3": {
+          "main": {
+            "label": "Program verification based on temporal logic",
+            "goal": "Learn how to verify automated program models based on LTL temporal logic."
+          },
+          "guidelinesForIndependentWork": {
+            "p1": "To perform the work, we use SPIN [1, pp. 4-32,6 pp. 1-126] - a verifier of models of parallel programs written in the C-like language Promela (Protocol Meta Language). It was developed at the Bell Labs research center by Gerard Holzmann. The ACM International Association awarded Spin with the ACM Software System Award for 2001. In 1983, this award was given to the UNIX operating system, in 1997 - to Tcl/Tk, and in 2002 - to the Java language."
+          },
+          "spinPackage": {
+            "p1": "The Spin package allows:",
+            "l1": "build models of parallel programs (protocols, drivers, logic control and management systems) and a wide class of discrete systems;",
+            "l2": "express the necessary properties of their behavior (temporal properties);",
+            "l3": "automatically check the fulfillment of temporal properties of models based on the phomal approach by pressing a button.",
+            "p2": "Spin can be used in two modes: as a simulator and as a verifier. During a simulation, Spin displays information about one specific trajectory of the built model in graphical mode - a graphical representation of the behavior in the form of a Message Sequence Diagrams that occurs during the operation of parallel processes.",
+            "p3": "When performing a simulation, you need to understand that no amount of simulation can ",
+            "p4": "bring ",
+            "p5": "properties of the models. To do this, you need to do the following ",
+            "p6": "verification.",
+            "p7": "The verifier tries to find a counterexample - an incorrect, false behavioral trajectory that refutes the user-defined property - by analyzing all possible executions of the model. To do this, it builds a synchronous combination of the transition model of the system under test and a Boolean automaton that sets all undesirable incorrect behaviors. If the intersection of the models is invalid, which is a counterexample, Spin shows it to the user in a controlled manner. Thus, simulation and verification in Spin are closely related."
+          },
+          "spinOnWindows": {
+            "p1": "To use spin on Windows, you will need the following minimum set of utilities:",
+            "l1": "mingw - windows port of the GNU gcc compiler;",
+            "l2": "ActiveTcl is an interpreter of the high-level scripting language Tcl/Tk;",
+            "l3": "Graphviz is a library for building a wide range of graphs and charts;",
+            "l4": "Spin is a console utility for interpreting Promela programs;",
+            "l5": "xspin is a Tcl/Tk script that implements a graphical shell to facilitate and automate work with the Spin interpreter.",
+            "l6": "The bin directories of all utilities must be included in the PATH system variable.",
+            "l7": "The syntax of the Promella language was discussed in detail in the lecture and in [1,2]. Let's consider an example of working with the system. To run the utility, you need to create and run the run.bat script as follows:",
+            "l8": "wish -f xspin525.tcl,",
+            "l9": "where xspin525.tcl is the graphical shell script. The appearance of the visual shell window is shown in Fig. 1.",
+            "p2": "You can enter the program directly in the editor or load it from a *.pml file using File/Open. Load the altbit.pml file into the environment. It implements the alternate bit protocol. In the alternating bit algorithm, the sending process alternately sends messages marked with bit 1 or bit 0 and waits for the corresponding confirmations. The receiving process receives messages marked with bit 1 or bit 0 and sends acknowledgments to the sending process.",
+            "p3": "Check the syntactic correctness of the program by selecting Run/Run Syntax Check. The message box should say \"no syntax errors\". Now you can start the simulation Run/Set Simulation Parameters (Fig. 2)",
+            "p4": "Click Start. The simulation profile opens, where the Simulation Output window displays program messages and the Sequence Chart graphically displays the graph of process interaction (Fig. 3). The simulation supports 2 modes: Single Step and Run."
+          },
+          "correctnessModel":  {
+            "p1": "Checking the correctness of a model based on the verification of LTL formulas means that some properties of its \"correct\" behavior are expressed in the form of an LTL formula. All such properties must be checked one by one.",
+            "p2": "To test the LTL-based model, let's introduce an additional variable accepted to the program, which will be set to 0 at the beginning of the run and every time a message is sent to the client. Accepted is set to 1 only if a confirmation is received from the client. Now we can express the requirement that the model is correct if every message is always acknowledged",
+            "img1": "System verification window",
+            "p3": "Please note that we want to verify that the formula is true for all executions of the system, so select the \"All executions\" radio button Now click Generate - a Never Claim process will be created, which in Promela contains the expression of the entered formula. Now click Run Verification. In the Verification Results field, you will see a positive report on the verification results: ",
+            "p4": "Do the same for your individual assignment.",
+            "p5": "The report should contain the model code in Promela, the model state machine, a fragment of the simulation, a list of all (in your opinion) necessary LTL formulas for model verification and the corresponding protocols (screenshots)."
+          },
+          "classesOfPropertiesDistributedSystems": {
+            "p1": "Traditionally, the properties of distributed systems are divided into the following classes:",
+            "l1": "reachability properties, establishing that a specific state of the system can be achieved, the general form of the LTL formula ",
+            "l2": "safety properties, establishing that something undesirable will never happen in the system, the general form of the LTL formula ",
+            "l3": "liveness properties, establishing that under certain conditions something \"good\" will eventually happen in any scenario of system behavior, the general form of the LTL formula ",
+            "l4": "fairness properties, establishing that something will be executed indefinitely often, the general form of the LTL formula"
+          },
+          "spinOperatorsLTL":  {
+            "table1": "Description",
+            "table2": "At least once in the future q",
+            "table3": "Always in the future q",
+            "table4": "w until the moment when q"
+          },
+          "optionsIndividualTasks": {
+            "l1": "Student/Beverage vending machine;",
+            "l2": "ATM/user",
+            "l3": "The algorithm for finding NODs",
+            "l4": "Modeling the interaction of processes from N distributed clusters to ensure exclusive access of processes to a shared resource.",
+            "l5": "Description",
+            "l6": ". N clusters with M user processes on each cluster and one manager process per cluster. General description of the protocol idea: when a user process wants to access a resource, it submits a request to its manager and waits for access to be granted, uses it, and must notify the manager when the resource is free. Managers interact with each other to control/grant access to the resource to only one client at a time. The manager who exclusively owns the resource holds a so-called virtual token, which he/she gives to the client upon request. A manager who receives a client's request but does not have a virtual token must request it from other managers.",
+            "c1": "An example of a process-client workpiece is shown below:",
+            "l7": "Add all the necessary components (other processes, required global and local variables) to make the simulation possible. Create two clusters and 2 client processes on each.",
+            "l8": "Prove the following rules on the created system:",
+            "l9": "only one process can access the resource at a time;",
+            "l10": "no starvation (if the client has requested a resource, sooner or later he will receive it).",
+            "l11": "Needham-Schroeder cryptographic protocol. Implement the protocol, introduce a third party (an attacker), and prove the possibility of an external attack (the attacker learns the secret of one of the parties)."
+          },
+          "controlQuestionsAndTasks":  {
+            "l1": "Define temporal logic.",
+            "l2": "What constructions distinguish temporal logic from predicate logic?",
+            "l3": "What subclasses of temporal logics exist?",
+            "l4": "Define the Kripke model and the Bushy automaton and how they are related to each other.",
+            "l5": "Explain the strategy for checking the truth of the formula of the CTL logic.",
+            "l6": "Explain the strategy for checking the truth of the LTL logic formula.",
+            "l7": "What are the principles of xSpin utility operation when verifying program models based on temporal logic?"
+          },
+          "listOfReferences": {
+            "l1": "Шошмина, И.В. Введение в язык Promela и систему комплексной верификации Spin [Текст] / И.В. Шошмина, Ю. Г. Карпов; Санкт-Петербургский государственный политехнический университет. – СПб:Университет, 2009 г. – 66 с.",
+            "l2": "G. Holzmann The Spin Model Checker: Primer and Reference Manual [Електронний ресурс] / SPIN HomePage / Режим доступу: www/URL:",
+            "l3": " – 19.05.2012 г. – Загол. з екрану."
           }
         }
       }

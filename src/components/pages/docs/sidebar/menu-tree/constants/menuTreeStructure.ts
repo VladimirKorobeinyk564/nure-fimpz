@@ -206,7 +206,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'bd90595b-787b-44c7-a681-66bcc283bbe0',
-                        label: 'Методичні вказівки з організації самостійної роботи студентів',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.guidelinesForIndependentWork',
                         isNavigate: true,
                         path: '#methodicalForIndependentWorkOfStudents',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -214,7 +214,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '75669922-b5de-4973-957f-b48a45683cb7',
-                        label: 'Пакет Spin',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.spinPackage',
                         isNavigate: true,
                         path: '#spinPackage',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -222,7 +222,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '085410ef-7337-4ad4-b109-151c076071c5',
-                        label: 'Використання Spin на платформі Windows',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.spinOnWindows',
                         isNavigate: true,
                         path: '#usingSpinOnWindows',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -230,7 +230,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '0a12735f-7ede-454a-aff8-33fdf6cb8c2e',
-                        label: 'Перевірка коректності моделі на основі LTL',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.correctnessModel',
                         isNavigate: true,
                         path: '#сheckingTheModelBasedOnLTL',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -238,7 +238,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '7f9f2ee5-5862-4c75-8ed4-65c228b8e584',
-                        label: 'Класи властивостей розподілених систем',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.classesOfPropertiesDistributedSystems',
                         isNavigate: true,
                         path: '#classesOfPropertiesOfDistributedSystems',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -246,7 +246,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'febce69e-2258-45b1-9949-78b9dfa91ae7',
-                        label: 'Оператори Spin у LTL',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.spinOperatorsLTL',
                         isNavigate: true,
                         path: '#operatoriSpinAtLTL',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -254,7 +254,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'c7bb0bb5-a9d3-4c5f-9dca-c1fc2644c8a5',
-                        label: 'Варіанти індивідуальних завдань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.optionsIndividualTasks',
                         isNavigate: true,
                         path: '#variantsOfIndividualTasks',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -262,7 +262,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '7ac57022-a4d5-48ef-9467-1561566b5744',
-                        label: 'Контрольні запитання і завдання',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.controlQuestionsAndTasks',
                         isNavigate: true,
                         path: '#controlQuestions',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',
@@ -270,7 +270,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '88011098-41ea-4348-a79b-2c4742f25235',
-                        label: 'Перелік посилань',
+                        label: 'docsPage.menuTree.laboratoryWork.lb3.listOfReferences',
                         isNavigate: true,
                         path: '#listOfLinks',
                         parentKey: '4dcdfc18-5c3b-4f9c-91e3-0e17d40b3b17',

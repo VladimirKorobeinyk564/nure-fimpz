@@ -1,33 +1,23 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
 import AccentSpan from "@/components/common/accent-span/accent-span";
+import {useTranslation} from "react-i18next";
 
 const SpinPackage = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Пакет Spin"}
+        <MethodologySection title={t('docsPage.menuTree.laboratoryWork.lb3.spinPackage')}
                             id={"spinPackage"} isFirstSection={false}>
-            <p>Пакет Spin дозволяє:</p>
+            <p>{t('docsPage.content.lb.lb3.spinPackage.p1')}</p>
             <List type={"Text"}>
-                <li>будувати моделі паралельних програм (протоколів, драйверів, систем логічного контролю та управління) та широкого класу дискретних систем;</li>
-                <li>виражати потрібні властивості їх поведінки (темпоральні властивості);</li>
-                <li>автоматично шляхом натиснення кнопки перевіряти виконання темпоральних властивостей моделей на основі фомального підхода.</li>
+                <li>{t('docsPage.content.lb.lb3.spinPackage.l1')}</li>
+                <li>{t('docsPage.content.lb.lb3.spinPackage.l2')}</li>
+                <li>{t('docsPage.content.lb.lb3.spinPackage.l3')}</li>
             </List>
-            <p>Spin може використовуватися в двох режимах: як симулятор та як
-                верифікатор. Під час симуляції Spin у графічному режимі виводить
-                інформацію про одну конкретну траєкторію виконання побудованої
-                моделі – графічне подання поведінки у вигляді діаграми «послідовності
-                повідомлень» (Message Sequence Diagrams), що виникає під час
-                функціонування паралельних процесів.</p>
-            <p>Виконуючи симуляцію треба розуміти, що ніяка кількість симуляцій не
-                може <AccentSpan>довести</AccentSpan> властивостей моделей. Для цього треба виконувати
-                <AccentSpan> верифікацію</AccentSpan>. Верифікатор намагається знайти контрприклад –
-                неправильну, помилкову траєкторію поведінки, що спростовує задану
-                користувачем властивість, через аналіз всіх можливих виконань моделі.
-                Для цього він будує синхронну комбінацію моделі переходів системи,
-                що перевіряєтья, та автомату Бюхі, який задає всі небажані некоректні
-                поведінки. Якщо перетин моделей непустий – це і є контр приклад, Spin
-                демонструє його користувачу у керованому режимі. Таким чином
-                симуляція та верифікація у Spin тісно пов’язані.</p>
+            <p>{t('docsPage.content.lb.lb3.spinPackage.p2')}</p>
+            <p>{t('docsPage.content.lb.lb3.spinPackage.p3')}<AccentSpan>{t('docsPage.content.lb.lb3.spinPackage.p4')}</AccentSpan>{t('docsPage.content.lb.lb3.spinPackage.p5')}
+                <AccentSpan>{t('docsPage.content.lb.lb3.spinPackage.p6')}</AccentSpan>{t('docsPage.content.lb.lb3.spinPackage.p7')}</p>
         </MethodologySection>
     );
 };
