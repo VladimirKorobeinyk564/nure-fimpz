@@ -14,8 +14,8 @@ function TerminalSnippet(props: Readonly<CodeSnippetProps>) {
                     {title}
                 </div>
             )}
-            <div className="content p-[20px]">
-                {children}
+            <div className="max-[1280px]:text-[13px] max-[1500px]:text-[16px] text-[18px] content p-[20px] overflow-scroll">
+                <pre>{children}</pre>
             </div>
         </div>
     );
