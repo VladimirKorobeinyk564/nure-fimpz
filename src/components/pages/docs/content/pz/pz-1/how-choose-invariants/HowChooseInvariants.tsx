@@ -1,5 +1,5 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 function HowChooseInvariants() {
     return (
@@ -15,7 +15,7 @@ function HowChooseInvariants() {
             <p className={"mb-[10px] font-bold"}>Інваріанта називається підходящою, якщо дозволяє
                 довести, що після завершення циклу його постумову
                 виконано (часткова коректність циклу).</p>
-            <TerminalSnippet children={"Inv(x, z) & ! B ==> Post(x, z)x"}/>
+            <CodeSnippet children={"\n" + "Inv(x, z) & ! B ==> Post(x, z)x" + "\n"}/>
         </MethodologySection>
     )
 }

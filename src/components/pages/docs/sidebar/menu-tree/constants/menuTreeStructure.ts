@@ -19,7 +19,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '7fbb9f0d-9532-4783-8fc4-6b145d4acab7',
                         label: 'docsPage.menuTree.practicalWork.pz1.goal',
                         isNavigate: true,
-                        path: '#goal',
+                        path: '#deductiveVerificationPrograms',
                         parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
                         nodes: []
                     },
@@ -27,7 +27,7 @@ export const menuItemsList: MenuItem[] = [
                         key: '3rwb9f0d-9532-4783-8fc4-6b145d4acab7',
                         label: 'docsPage.menuTree.practicalWork.pz1.goal2',
                         isNavigate: true,
-                        path: '#goal2',
+                        path: '#methodicalInstructionsOrganizationIndependentWork',
                         parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
                         nodes: []
                     },

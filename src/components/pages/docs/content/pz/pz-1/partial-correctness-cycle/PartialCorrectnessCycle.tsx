@@ -1,6 +1,6 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
-import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 function PartialCorrectnessCycle() {
     return (
@@ -11,7 +11,7 @@ function PartialCorrectnessCycle() {
         >
             <p className={'mb-[10px]'}>Розглянемо цикл у формі, до якої можна привести всі види циклів: x –
                 входи, z-виходи:</p>
-            <TerminalSnippet children={"Init(x,z); while(B)S(x,z);"}/>
+            <CodeSnippet children={"\n" + "Init(x,z); while(B)S(x,z);" + "\n"}/>
             <p className={'mb-[10px] font-bold'}>Тут:</p>
             <List type={"Text"}>
                 <li>B — умова циклу while</li>

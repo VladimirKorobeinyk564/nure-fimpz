@@ -1,5 +1,7 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
+import MathExpression from "@/components/common/math-expression/MathExpression.tsx";
+import MathJax from "react-mathjax2";
 
 function ExampleCorrectProgramming() {
     return (
@@ -19,7 +21,16 @@ function ExampleCorrectProgramming() {
                 "S = S*i/(i+1)+a[i]/(i+1);"}/>
             <p className={"mb-[10px]"}>Стверджується, що цей цикл обчислює середнє арифметичне елементів масиву.
                 Необхідно довести або спростувати це.</p>
-            <p className={"mb-[10px]"}>Визначимо Pre(S,n,i): S=0 && n ≥ 0 && i=0</p>
+            <div className={"mb-[10px] flex"}>
+            <span className={"mr-1"}>Визначимо</span>
+                <MathJax.Context input='ascii'>
+                    <div>
+                        <MathJax.Node>{`Pre(S,n,i): S=0 && n ≥ 0 && i=0`}</MathJax.Node>
+                    </div>
+                </MathJax.Context>
+            </div>
+            <MathExpression className={"pb-0 rounded-b-none"} children={"Post(S,a,n): S=sum_(k=0)^(n-1)((a[k])/n)"}/>
+            <MathExpression className={"rounded-t-none"} children={"Inv(S,a,i): S=sum_(k=0)^(i-1)((a[k])/i)"}/>
         </MethodologySection>
     )
 }

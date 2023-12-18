@@ -1,5 +1,4 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 
@@ -14,7 +13,7 @@ function ProvingCorrectnessCycle() {
                 використовується для доказу того, що цикл завершиться.</p>
             <p className={"mb-[10px]"}>Визначення 1.2 (варіанта циклу). Цілочисельний невід'ємний вираз Var
                 (x, z) називається варіантом циклу, якщо виконується наступна тріада:</p>
-            <TerminalSnippet children={"{(Var(x,z)= n) & B} S(x,z){(Var(x,z)= m) & (m < n)}"}/>
+            <CodeSnippet children={"\n" + "{(Var(x,z)= n) & B} S(x,z){(Var(x,z)= m) & (m < n)}" + "\n"}/>
             <p className={"mb-[10px]"}>Змістовно це означає, що кожне виконання тіла циклу призводить до зменшення
                 значення його варіанти. Після кінцевого числа кроків варіант досягає своєї
                 нижньої межі, і цикл завершується. Найпростішим прикладом варіанти циклу є

@@ -1,5 +1,5 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
+import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 function DefinitionCycleInvariant() {
     return (
@@ -10,7 +10,7 @@ function DefinitionCycleInvariant() {
         >
             <p className={"mb-[10px]"}>Предикат Inv(x, z) називається інваріантом циклу while, якщо істина
                 наступна тріада Хоара:</p>
-            <TerminalSnippet children={"{Inv(x, z)& B}S(x,z){Inv(x,z)}"}/>
+            <CodeSnippet children={"\n" + "{Inv(x, z)& B}S(x,z){Inv(x,z)}" + "\n"}/>
             <p>Змістовно це означає, що з істинності інваріанта циклу до початку
                 виконання тіла циклу і з істинності умови циклу, що гарантує виконання
                 тіла, випливає істинність інваріанта після виконання тіла циклу. Скільки

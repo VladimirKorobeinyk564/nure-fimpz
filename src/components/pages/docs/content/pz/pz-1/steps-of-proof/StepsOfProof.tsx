@@ -1,6 +1,6 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet.tsx";
 import List from "@/components/common/list/List.tsx";
+import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 function StepsOfProof() {
     return (
@@ -9,11 +9,11 @@ function StepsOfProof() {
             id={"stepsOfProof"}
             isFirstSection={false}
         >
-            <TerminalSnippet children={"Inv(x, z) & ! B ==> Post(x, z)"}/>
+            <CodeSnippet children={"\n" + "Inv(x, z) & ! B ==> Post(x, z)" + "\n"}/>
             <List type={"Number"}>
-                <li><TerminalSnippet children={"Pre(x) -> Inv(x,z)"}/></li>
-                <li><TerminalSnippet children={"{Inv(x, z)& B} S(x,z){Inv(x,z)}"}/></li>
-                <li><TerminalSnippet children={"~B & Inv(x, z) -> Post(x,z)"}/></li>
+                <li><CodeSnippet children={"\n" + "Pre(x) -> Inv(x,z)" + "\n"}/></li>
+                <li><CodeSnippet children={"\n" + "{Inv(x, z)& B} S(x,z){Inv(x,z)}" + "\n"}/></li>
+                <li><CodeSnippet children={"\n" + "~B & Inv(x, z) -> Post(x,z)" + "\n"}/></li>
             </List>
             <p className={'mb-[10px]'}>Щоб довести п.(б) необхідно виконати наступні кроки:</p>
             <List type={"Text"}>

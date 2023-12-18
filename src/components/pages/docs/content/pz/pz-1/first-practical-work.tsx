@@ -16,6 +16,12 @@ import RuleCorrectProgramming
     from "@/components/pages/docs/content/pz/pz-1/rule-correct-programming/RuleCorrectProgramming.tsx";
 import ExampleCorrectProgramming
     from "@/components/pages/docs/content/pz/pz-1/ example-correct-programming/ExampleCorrectProgramming.tsx";
+import ExampleOfProofCorrectProgramming
+    from "@/components/pages/docs/content/pz/pz-1/example-of-proof-correct-programming/ExampleOfProofCorrectProgramming.tsx";
+import ControlQuestionsAndTasks
+    from "@/components/pages/docs/content/pz/pz-1/control-questions-and-tasks/ControlQuestionsAndTasks.tsx";
+import ExamplesClassroomAndHomeworkTasks
+    from "@/components/pages/docs/content/pz/pz-1/examples-classroom-and-homework-tasks/ExamplesClassroomAndHomeworkTasks.tsx";
 
 function FirstPracticalWork() {
     return (
@@ -39,6 +45,11 @@ function FirstPracticalWork() {
             <SectionDivider />
             <ExampleCorrectProgramming />
             <SectionDivider />
+            <ExampleOfProofCorrectProgramming />
+            <SectionDivider />
+            <ControlQuestionsAndTasks />
+            <SectionDivider />
+            <ExamplesClassroomAndHomeworkTasks />
         </div>
     );
 }

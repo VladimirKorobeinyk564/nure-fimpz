@@ -5,7 +5,7 @@ function DeductiveVerificationPrograms() {
     return (
         <MethodologySection
             title={'Дедуктивна верифікація програм'}
-            id={"DeductiveVerificationPrograms"}
+            id={"deductiveVerificationPrograms"}
             isFirstSection={true}
         >
             <MethodologyObjective>
