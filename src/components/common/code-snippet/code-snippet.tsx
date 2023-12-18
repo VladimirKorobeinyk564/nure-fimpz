@@ -43,7 +43,7 @@ function CodeSnippet(props: Readonly<CodeSnippetProps>) {
                     {title}
                 </div>
             )}
-            <div className="content relative" onMouseEnter={() => setIsCopyOut(true)} onMouseLeave={() => setIsCopyOut(false)}>
+            <div className="content relative max-[1280px]:text-[13px] max-[1500px]:text-[16px] text-[18px]" onMouseEnter={() => setIsCopyOut(true)} onMouseLeave={() => setIsCopyOut(false)}>
                 <ReactCodeMirror value={children} theme={theme === 'dark' ? 'dark' : githubLight} extensions={lang} editable={false} basicSetup={{
                     lineNumbers: false,
                 }}/>
