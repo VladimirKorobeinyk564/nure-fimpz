@@ -3,8 +3,11 @@ import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import ReactCodeMirror from "@uiw/react-codemirror";
 import { StreamLanguage } from '@codemirror/language';
 import {python} from "@codemirror/lang-python";
+import {useTranslation} from "react-i18next";
 
 const TermsOfUse = () => {
+    const {t} = useTranslation();
+
     const code = `from contracts import contract, new_contract
  
 new_contract('str_len_gt_zero', lambda s: isinstance(s, str) and len(s)>0)
@@ -85,21 +88,18 @@ def add_weight(self, kgs='float|int,>0') -> "str":
 self.weight += kgs
 return f"{self.name} is now {self.weight:.2f}kgs."`
     return (
-        <MethodologySection title={"Тестування налаштованої утиліти"}
+        <MethodologySection title={t('docsPage.menuTree.other.pythonLesson.testing')}
                             id={"termsOfUse"} isFirstSection={false}>
-            <p>Правила користування та функціональність пакету детально описані в презентації [2].</p>
-            <CodeSnippet lang={[python()]} title={"Для тестування налаштованої утиліти створіть файл наступного вмісту:"}>
+            <p>{t('docsPage.content.other.pythonLesson.testing.p1')}</p>
+            <CodeSnippet lang={[python()]} title={t('docsPage.content.other.pythonLesson.testing.code1')}>
                 {code}
             </CodeSnippet>
-            <p>Код можна скопіювати з <a href={"https://gist.github.com/HoloborodkoBohdan/b59a02abcaf06c4f8dd9d325160903ce"} className={"text-primary-color"}>gist.github.com</a>.</p>
-            <p>В прикладі контракти реалізовано через декоратори. Проте, їх також можна прописати, використовуючи docstrings чи анотації типів.</p>
-            <CodeSnippet lang={[python()]} title={"Наприклад, метод add_weight може бути прописаний наступним чином:"}>
+            <p>{t('docsPage.content.other.pythonLesson.testing.p2')} <a href={"https://gist.github.com/HoloborodkoBohdan/b59a02abcaf06c4f8dd9d325160903ce"} className={"text-primary-color"}>gist.github.com</a>.</p>
+            <p>{t('docsPage.content.other.pythonLesson.testing.p3')}</p>
+            <CodeSnippet lang={[python()]} title={t('docsPage.content.other.pythonLesson.testing.code2')}>
                 {code1}
             </CodeSnippet>
-            <p>Використовуючи new_contract ми створили власне правило валідації даних - 'str_len_gt_zero'. Логіка цієї перевірки доволі проста: параметр має бути строкою та мати довжину більше 0. Завдяки цій функції можна створити майже будь-яке правило для валідації даних.
-                Так як PyContracts валідує дані лише під час виконання функції, то для перевірки ми створимо два екземпляри класу: person1 та person2.
-                Запустіть файл person.py, та виправте помилки, які виникли при валідації. Також, переробіть описані контракти через docstrings або анотації типів.
-            </p>
+            <p>{t('docsPage.content.other.pythonLesson.testing.p4')}</p>
         </MethodologySection>
     );
 };

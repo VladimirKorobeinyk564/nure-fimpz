@@ -304,7 +304,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'd105467f-0e97-461d-a4ff-72c7c6f23a3f',
-                        label: 'Основна ідея контрактного програмування',
+                        label: 'docsPage.menuTree.other.pythonLesson.mainIdeaContractProgramming',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#theMainIdeaContractProgramming',
@@ -312,7 +312,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '234493cf-83b0-48e6-aef7-98aa2903c3c9',
-                        label: 'Пакет PyContracts',
+                        label: 'docsPage.menuTree.other.pythonLesson.pyContractsPackage',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#pyContractsPackage',
@@ -320,7 +320,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '69bcdf85-2c97-4db9-aa2c-289ab22f9e24',
-                        label: 'Приклад встановлення та використання PyContracts на Ubuntu',
+                        label: 'docsPage.menuTree.other.pythonLesson.pyContractsOnUbuntu',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#exampleOfPyContractsOnUbuntu',
@@ -328,7 +328,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'b58e984a-6666-4321-b496-8ede1f83b280',
-                        label: 'Приклад встановлення та використання PyContracts на Windows',
+                        label: 'docsPage.menuTree.other.pythonLesson.pyContractsOnWindows',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#installingPyContractsOnWindows',
@@ -336,7 +336,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'db087012-369f-42bc-8aa5-820764c47d9d',
-                        label: 'Кроки встановлення',
+                        label: 'docsPage.menuTree.other.pythonLesson.installationSteps',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#installationSteps',
@@ -344,7 +344,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '7900ef18-afad-4b4d-8891-2c5916c4404a',
-                        label: 'Тестування налаштованої утиліти',
+                        label: 'docsPage.menuTree.other.pythonLesson.testing',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#termsOfUse',
@@ -352,7 +352,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: 'a939eb85-2713-4818-a523-542971990083',
-                        label: 'Помилки, які є в прикладі вище',
+                        label: 'docsPage.menuTree.other.pythonLesson.mistakes',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#mistakes',
@@ -360,7 +360,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '1f3ab914-de9a-41f2-9a19-6f3338103ac3',
-                        label: 'Постановка задачі',
+                        label: 'docsPage.menuTree.other.pythonLesson.problemStatement',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#taskStatement',
@@ -368,7 +368,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '46512146-d173-456d-9ec9-e51462111d09',
-                        label: 'Варіанти індивідуальних завдань',
+                        label: 'docsPage.menuTree.other.pythonLesson.individualTasks',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#variantsOfIndividualTasks',
@@ -376,7 +376,7 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '39fc4043-1009-4661-9d81-67640ace16cc',
-                        label: 'Контрольні запитання і завдання',
+                        label: 'docsPage.menuTree.other.pythonLesson.controlQuestions',
                         isNavigate: true,
                         parentKey: '8ae106ab-9f25-4789-bf5a-7e8e17555a8d',
                         path: '#controlQuestions',

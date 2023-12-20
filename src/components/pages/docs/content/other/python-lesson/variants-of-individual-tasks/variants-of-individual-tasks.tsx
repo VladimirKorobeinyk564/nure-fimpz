@@ -1,18 +1,21 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
+import {useTranslation} from "react-i18next";
 
 const VariantsOfIndividualTasks = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Варіанти індивідуальних завдань"}
+        <MethodologySection title={t('docsPage.menuTree.other.pythonLesson.individualTasks')}
                             id={"variantsOfIndividualTasks"} isFirstSection={false}>
             <List type={"Text"}>
-                <li>Варіант 1. Гра «Сапер».</li>
-                <li>Варіант 2. Гра «Шашки».</li>
-                <li>Варіант 3. Гра «П’ятнашки».</li>
-                <li>Варіант 4. Гра «Морський бій».</li>
-                <li>Варіант 5. Гра «Хрестики-нуліки».</li>
-                <li>Варіант 6. Гра «Шарики».</li>
-                <li>Варіант 7. Гра «Піддавки».</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l1')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l2')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l3')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l4')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l5')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l6')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.individualTasks.l7')}</li>
             </List>
         </MethodologySection>
     );

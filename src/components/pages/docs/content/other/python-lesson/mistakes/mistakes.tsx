@@ -6,20 +6,23 @@ import image9 from "@/assets/images/lb4/image9.png"
 import image10 from "@/assets/images/lb4/image10.png"
 import image11 from "@/assets/images/lb4/image11.png"
 import List from "@/components/common/list/List";
+import {useTranslation} from "react-i18next";
 
 const Mistakes = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Помилки, які є в прикладі вище:"}
+        <MethodologySection title={t('docsPage.menuTree.other.pythonLesson.mistakes')}
                             id={"mistakes"} isFirstSection={false}>
-            <ImageWrapper imgSubtitle={"в __init__ параметр weight може приймати float"} image={image7} />
-            <ImageWrapper imgSubtitle={"add_country для person_1 не може приймати булеве значення"} image={image8} />
-            <ImageWrapper imgSubtitle={"при створенні person_2 передаємо пусту строку замість імені"} image={image9} />
-            <ImageWrapper imgSubtitle={"person_2.add_weight(0) викликатиме помилку, так як значення має бути більше нуля"} image={image10} />
+            <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.mistakes.img1')} image={image7} />
+            <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.mistakes.img2')} image={image8} />
+            <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.mistakes.img3')} image={image9} />
+            <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.mistakes.img4')} image={image10} />
             <List type={"Text"}>
-                <li>в add_country має валідуватись не тільки строка, а й перевірка на її довжину. person_2.add_country([""]) має викликати помилку,</li>
-                <li>@contract(returns='str_len_gt_zero') для def __str__ не має сенсу. Так як ми вже перевіряємо name на те, що він буде отримувати строку та буде не пустим. Логіка цієї функції не передбачає, що вона буде пустою. Доцільніше обмежети returns=”str”.</li>
+                <li>{t('docsPage.content.other.pythonLesson.mistakes.l1')}</li>
+                <li>{t('docsPage.content.other.pythonLesson.mistakes.l2')}</li>
             </List>
-            <p>Коли всі помилки виправлено, має відпрацювати весь код без помилок:</p>
+            <p>{t('docsPage.content.other.pythonLesson.mistakes.p1')}</p>
             <ImageWrapper image={image11} />
         </MethodologySection>
     );

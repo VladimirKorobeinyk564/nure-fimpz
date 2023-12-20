@@ -9,35 +9,38 @@ import image5 from "@/assets/images/lb4/image5.png"
 import image6 from "@/assets/images/lb4/image6.png"
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet";
+import {useTranslation} from "react-i18next";
 
 const ExampleOfPyContractsOnUbuntu = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Приклад встановлення та використання PyContracts на Ubuntu:"}
+        <MethodologySection title={t('docsPage.menuTree.other.pythonLesson.pyContractsOnUbuntu')}
                             id={"exampleOfPyContractsOnUbuntu"} isFirstSection={false}>
             <List type={"Number"}>
-                <li>Перевіряємо наявність менеджеру пакетів pip3. Встановлюємо pip3, якщо він відсутній в системі:
+                <li>{t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.l1')}
                     <TerminalSnippet>pip3 --version</TerminalSnippet>
-                    <ImageWrapper imgSubtitle={"pip3 є в системі, встановлювати його не треба"} image={image1} />
+                    <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.img1')} image={image1} />
                     <TerminalSnippet>sudo apt update</TerminalSnippet>
                     <ImageWrapper image={image2} />
                     <TerminalSnippet>sudo apt install python3-pip</TerminalSnippet>
                     <ImageWrapper image={image3} />
                 </li>
                 <li>
-                    Створимо віртуальне середовище та активуємо його:
+                    {t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.l2')}
                     <TerminalSnippet>pip install virtualenv</TerminalSnippet>
-                    <TerminalSnippet>{`python<version> -m venv <virtual-environment-name>`}</TerminalSnippet> Для запуску на Python 3.9 з папкою для віртуального середовища env:
+                    <TerminalSnippet>{`python<version> -m venv <virtual-environment-name>`}</TerminalSnippet> {t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.l3')}
                     <TerminalSnippet>python3.9 -m venv env</TerminalSnippet>
                     <TerminalSnippet>source env/bin/activate</TerminalSnippet>
-                    <ImageWrapper imgSubtitle={"Зверніть увагу, що після виконання команди source env/bin/activate біля на початку командного рядку з’явився напис “(env)”. Це означає що ми активували віртуальне середовище і зараз знаодимось в ньому."} image={image4} />
+                    <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.img2')} image={image4} />
                 </li>
-                <li>Встановлюємо PyContracts:
+                <li>{t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.l4')}
                     <TerminalSnippet>pip install PyContracts3==3.0.2</TerminalSnippet>
-                    <ImageWrapper imgSubtitle={"WARNING можна проігнорувати, так як він свідчить про те, що є більш актуальна версія pip, яку можна оновити виконавши вказану команду. Для подальшого виконання завдання його можна ігнорувати."} image={image5} />
+                    <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.img3')} image={image5} />
                 </li>
-                <li>Для перевірки, зайдемо в інтерактивний режим інтерпретатора та імпортуємо PyContracts3:
+                <li>{t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.l5')}
                     <TerminalSnippet>from contracts import contract</TerminalSnippet>
-                    <ImageWrapper imgSubtitle={"Якщо немає помилки, то ми успішно встановили пакет PyContracts3 і можемо його використовувати для роботи."} image={image6} />
+                    <ImageWrapper imgSubtitle={t('docsPage.content.other.pythonLesson.pyContractsOnUbuntu.img4')} image={image6} />
                 </li>
             </List>
         </MethodologySection>

@@ -76,7 +76,17 @@
         "label": "Other",
         "pythonLesson": {
           "label": "Python programming",
-          "goal": "Objective of the lesson"
+          "goal": "Objective of the lesson",
+          "mainIdeaContractProgramming": "The main idea of contract programming",
+          "pyContractsPackage": "PyContracts package",
+          "pyContractsOnUbuntu": "An example of installing and using PyContracts on Ubuntu:",
+          "pyContractsOnWindows": "An example of installing and using PyContracts on Windows:",
+          "installationSteps": "Installation steps",
+          "testing": "Testing the customized utility",
+          "mistakes": "The mistakes in the example above:",
+          "problemStatement": "Problem statement",
+          "individualTasks": "Options for individual tasks",
+          "controlQuestions": "Control questions and tasks"
         }
       }
     },
@@ -292,6 +302,90 @@
             "l1": "Шошмина, И.В. Введение в язык Promela и систему комплексной верификации Spin [Текст] / И.В. Шошмина, Ю. Г. Карпов; Санкт-Петербургский государственный политехнический университет. – СПб:Университет, 2009 г. – 66 с.",
             "l2": "G. Holzmann The Spin Model Checker: Primer and Reference Manual [Електронний ресурс] / SPIN HomePage / Режим доступу: www/URL:",
             "l3": " – 19.05.2012 г. – Загол. з екрану."
+          }
+        }
+      },
+      "other": {
+        "pythonLesson": {
+          "main": {
+            "label": "Contract programming in Python",
+            "goal": "Learn how to create formal specifications for real-world programs based on the \"development under contract\" paradigm."
+          },
+          "mainIdeaContractProgramming": {
+            "p1": "The main idea of contract programming is a model of interaction between elements of a software system based on mutual obligations and benefits. This is a metaphor from business, where a \"client\" and a \"supplier\" enter into a \"contract\" that describes the following behavior:",
+            "l1": "when the \"client\" uses the \"supplier\", the \"client\" is obliged to satisfy the preconditions, which is to the benefit of the \"supplier\", as it relieves him of the obligation to fulfill the contract otherwise;",
+            "l2": "guaranteeing the fulfillment of the post-condition is the obligation of the \"supplier\" and is the benefit of the \"client\";",
+            "l3": "the fulfillment of a certain condition at the beginning and at the end guarantees the preservation of the invariant.",
+            "p2": "Python does not support contract programming by default. Since 2003, there has been a proposal for Python to add native support for contract programming. It is expressed in PEP 316 [1]. In recent years, it has been actively updated and supplemented.",
+            "p3": "Nevertheless, there are a lot of ready-made packages that allow you to implement contract programming. These include:",
+            "l4": "Updates",
+            "l5": "year"
+          },
+          "pyContractsPackage": {
+            "p1": "To develop a contract programming specification in Python, we will use the PyContracts package [2, 2]. This is a Python package that allows you to implement \"design by contract\" approaches. Contracts can be specified using Python 3 annotations or within the documentation line. PyContracts supports the basic type system, variable binding, arithmetic constraints, and has several specialized contracts and API extensions."
+          },
+          "pyContractsOnUbuntu": {
+            "l1": "Check for the pip3 package manager. Install pip3 if it is not present in the system:",
+            "img1": "pip3 is already in the system, no need to install it",
+            "l2": "Create a virtual environment and activate it:",
+            "l3": "To run on Python 3.9 with the folder for the env:",
+            "img2": "Notice that after executing the source env/bin/activate command, the inscription \"(env)\" appeared at the beginning of the command line. This means that we have activated the virtual environment and are now getting to know it.",
+            "l4": "Install PyContracts:",
+            "img3": "WARNING can be ignored, as it indicates that there is a more current version of pip that can be updated by running the specified command. You can ignore it to continue the task.",
+            "l5": "To check, let's go to the interactive mode of the interpreter and import PyContracts3:",
+            "img4": "If there is no error, then we have successfully installed the PyContracts3 package and can use it for work."
+          },
+          "pyContractsOnWindows": {
+            "l1": "Download the stable release of Python from the official website:",
+            "l2": ". In our case, we choose Python 3.11.0.",
+            "l3": "Download Windows installer (32-bit) if you are using a 32-bit installer. If your Windows is a 64-bit system, download Windows installer (64-bit).",
+            "l4": "Launch the installer, select customized installation, and select pip and py launcher. Click next.",
+            "l5": "In the Advanced options, check the \"Install for all users\" and \"Add Python to environment variables\" checkboxes. Pay attention to the Python installation directory that is displayed at this step. In our case, it is C:\\Users\\Python. After selecting additional options, click \"Install\".",
+            "l6": "After that, we check Python in cmd.exe. To do this, write python or python3. If the Python console opens, everything works.",
+            "l7": "Install virtualenv and create a working environment. To do this, run the following commands in cmd.exe:",
+            "l8": "Install PyContracts:",
+            "l9": "To use the package, import it into a file: from contracts import contract"
+          },
+          "installationSteps": {
+            "p1": "You can watch the first 5 steps of installation in the video:",
+            "p2": "(English, 4 minutes).",
+            "p3": "You can watch step 6 in the video",
+            "p4": "(English, 6 minutes).",
+            "p5": "Steps 7-8 are identical for Windows and Linux."
+          },
+          "testing": {
+            "p1": "The rules of use and functionality of the package are described in detail in the presentation [2].",
+            "code1": "To test the customized utility, create a file with the following content:",
+            "p2": "The code can be copied from",
+            "p3": "In the example, contracts are implemented through decorators. However, they can also be specified using docstrings or type annotations.",
+            "code2": "For example, the add_weight method can be written as follows:",
+            "p4": "Using new_contract, we created our own data validation rule - 'str_len_gt_zero'. The logic of this validation is quite simple: the parameter must be a string and have a length greater than 0. Thanks to this function, you can create almost any rule for data validation. Since PyContracts validates data only during function execution, we will create two instances of the class for validation: person1 and person2. Run the person.py file and fix any errors that occurred during validation. Also, rework the described contracts using docstrings or type annotations."
+          },
+          "mistakes": {
+            "img1": "in __init__, the weight parameter can take a float",
+            "img2": "add_country for person_1 cannot accept boolean value",
+            "img3": "when creating person_2, pass an empty string instead of a name",
+            "img4": "person_2.add_weight(0) will cause an error because the value must be greater than zero",
+            "l1": "in add_country, not only the string should be validated, but also a check for its length. person_2.add_country([\"\"]) should cause an error,",
+            "l2": "@contract(returns='str_len_gt_zero') for def __str__ makes no sense. Since we are already checking the name to make sure that it will receive a string and will not be empty. The logic of this function does not assume that it will be empty. It is more appropriate to limit returns=\"str\".",
+            "p1": "When all errors are fixed, the entire code should work without errors:"
+          },
+          "problemStatement": {
+            "p1": "Design interfaces or abstract classes for game entities. Formulate and express pre and post condition invariants in Python for all types and methods. Check the specification with PyContracts. Correct any errors found. Verify that all pre-, post-conditions and invariants are actually fulfilled by testing the game."
+          },
+          "individualTasks": {
+            "l1": "Option 1. The game \"Sapper\".",
+            "l2": "Option 2. The game \"Checkers\".",
+            "l3": "Option 3. The game \"Piggyback\".",
+            "l4": "Option 4. The game \"Sea Battle\".",
+            "l5": "Option 5. The game \"Tic-tac-toe\".",
+            "l6": "Option 6. The game \"Balls\".",
+            "l7": "Option 7. The game \"Giveaways\"."
+          },
+          "controlQuestions": {
+            "l1": "What is the essence of contract programming?",
+            "l2": "How can I disable PyContracts during program execution?",
+            "l3": "How can you set pre- and post-conditions in PyContracts? Which way do you prefer? Why?"
           }
         }
       }

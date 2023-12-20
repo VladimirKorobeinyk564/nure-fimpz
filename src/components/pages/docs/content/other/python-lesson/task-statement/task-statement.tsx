@@ -1,13 +1,13 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
+import {useTranslation} from "react-i18next";
 
 const TaskStatement = () => {
+    const {t} = useTranslation();
+
     return (
-        <MethodologySection title={"Постановка задачі"}
+        <MethodologySection title={t('docsPage.menuTree.other.pythonLesson.problemStatement')}
                             id={"taskStatement"} isFirstSection={false}>
-            <p>Спроектуйте інтерфейси або абстрактні класи для сутностей гри.
-                Сформулюйте та виразіть на Python інваріанти перед та пост умови для всіх типів та методів.
-                Перевірте специфікацію за допомогою PyContracts. Виправте знайдені помилки.
-                Перевірте, що всі перед, пост умови та інваріанти насправді виконуються через тестування гри.</p>
+            <p>{t('docsPage.content.other.pythonLesson.problemStatement.p1')}</p>
         </MethodologySection>
     );
 };
