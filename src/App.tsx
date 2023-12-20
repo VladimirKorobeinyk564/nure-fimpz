@@ -27,7 +27,7 @@ function App() {
     });
 
     return (
-        <div className="light-bg dark:bg-dark-bg">
+        <div className="light-bg dark:bg-dark-bg overflow-hidden">
             <Router>
                 <Header></Header>
                 <AppRouter />

@@ -6,6 +6,8 @@ import {menuItemsList} from "@/components/pages/docs/sidebar/menu-tree/constants
 import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
 import {useActionCreators, useAppSelector} from "@/hooks/redux.ts";
 
+import { motion } from "framer-motion"
+
 export interface MenuItem {
     key: string;
     label: string;
@@ -26,6 +28,18 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
         useAppSelector(state => state.menuTree);
 
     const menuTreeAction = useActionCreators(menuTreeActions);
+
+    const textXAnimation = {
+        hidden: {
+            opacity: 0,
+            x: -100,
+        },
+        visible: (custom: number) => ({
+            opacity: 1,
+            x: 0,
+            transition: {delay: custom * 0.2, duration: 0.8, ease: "linear"}
+        })
+    }
 
     useEffect(() => {
         const currentLocation = window.location.pathname;
@@ -74,14 +88,18 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
     const renderMenu = (items: MenuItem[], level = 0) => {
         if (level >= maxDepth) return null;
 
-        return items.map((item) =>
-            <MenuElement
+        return items.map((item, index) =>
+            <motion.div
                 key={item.key}
-                item={item}
-                maxDepth={maxDepth}
-                level={level}
-                renderMenu={renderMenu}
-            ></MenuElement>
+                custom={index}
+                variants={textXAnimation}>
+                <MenuElement
+                    item={item}
+                    maxDepth={maxDepth}
+                    level={level}
+                    renderMenu={renderMenu}
+                ></MenuElement>
+            </motion.div>
         );
     };
 

@@ -44,7 +44,9 @@ active proctype Receiver() {
                 <li>{t('docsPage.content.lb.lb3.spinOnWindows.l5')}</li>
                 <li>{t('docsPage.content.lb.lb3.spinOnWindows.l6')}</li>
                 <li>{t('docsPage.content.lb.lb3.spinOnWindows.l7')}
-                    <li className={"ml-[30px]"}>{t('docsPage.content.lb.lb3.spinOnWindows.l8')}</li>
+                    <List type={"Text"}>
+                        <li className={"ml-[30px]"}>{t('docsPage.content.lb.lb3.spinOnWindows.l8')}</li>
+                    </List>
                 </li>
                 <li>{t('docsPage.content.lb.lb3.spinOnWindows.l9')}</li>
             </List>

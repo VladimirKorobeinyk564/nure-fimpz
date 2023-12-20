@@ -21,6 +21,7 @@
     "@uiw/react-codemirror": "^4.21.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "framer-motion": "^10.16.16",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.1",
     "lucide-react": "^0.292.0",

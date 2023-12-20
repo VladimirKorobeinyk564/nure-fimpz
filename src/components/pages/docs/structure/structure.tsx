@@ -8,6 +8,8 @@ import {menuTreeActions} from "@/store/menuTreeSlice/slice.ts";
 import {ScrollArea, ScrollBar} from "@/components/ui/scroll-area/scroll-area";
 import {HashLink as Link} from "react-router-hash-link";
 
+import { motion } from "framer-motion"
+
 function Structure() {
     const {t} = useTranslation();
 
@@ -17,23 +19,33 @@ function Structure() {
         selectedStructureTabId
     } = useAppSelector((state) => state.menuTree);
 
-    const selectedTabNodes = findMenuItemByKey(selectedMenuTabId, menuTreeList);
+    const selectedTabNodes: MenuItem[] = findMenuItemByKey(selectedMenuTabId, menuTreeList)?.nodes!;
 
     const menuTreeAction = useActionCreators(menuTreeActions);
 
+    const textXAnimation = {
+        hidden: {
+            opacity: 0,
+            x: 100,
+        },
+        visible: (custom: number) => ({
+            opacity: 1,
+            x: 0,
+            transition: {delay: custom * 0.2, duration: 0.8, ease: "linear"}
+        })
+    }
 
     useEffect(() => {
         const locationHash = window.location.hash;
-        const firstStructureTab = selectedTabNodes?.nodes[0];
+        const firstStructureTab = selectedTabNodes[0];
 
         if (locationHash === '' && firstStructureTab) {
             selectStructureTab(firstStructureTab)
         } else if (locationHash !== '') {
-            const item = selectedTabNodes?.nodes
+            const item = selectedTabNodes
                 .find(node => node.path === locationHash);
 
             if (item) menuTreeAction.setSelectedStructureTabId(item.key);
-            window.history.pushState(null, '', window.location.href)
         }
     }, [selectedMenuTabId]);
 
@@ -51,31 +63,39 @@ function Structure() {
     }
 
     function selectStructureTab(item: MenuItem): void {
+        window.location.hash = item.path!;
+        // window.history.pushState(null, '', `${window.location.href}${item.path}`);
         menuTreeAction.setSelectedStructureTabId(item.key);
-        // if (item.path) setHashToUrl(item.path)
     }
 
-    // function setHashToUrl(path: string): void {
-    //     window.history.pushState(null, '', window.location.href + path);
-    // }
-
     return (
-        <div className={'w-[280px] flex flex-col py-[30px] pl-[15px] pr-[0]'}>
-            <h3 className={'text-[#62656F] mb-[10px]'}>{t('docsPage.structure')}</h3>
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            viewport={{ amount: 0.2, once: true }}
+            className={'w-[280px] flex flex-col py-[30px] pl-[15px] pr-[0]'}>
+            <motion.h3
+                custom={1}
+                variants={textXAnimation}
+                className={'text-[#62656F] mb-[10px]'}>{t('docsPage.structure')}</motion.h3>
             <ScrollArea>
                 <ScrollBar className={"hidden"} />
-                {selectedTabNodes?.nodes.map(item => (
-                    <Link
-                        className={`block decoration-none structure-item cursor-pointer py-[14px] pl-[15px] pr-[30px] rounded-l-[12px] ${item.key === selectedStructureTabId && ' bg-light-tab-bg dark:bg-dark-tab-bg text-[#3175F9]'} `}
-                        to={item.path!}
-                        smooth
+                {selectedTabNodes.map((item, index) => (
+                    <motion.div
                         key={item.key}
-                        onClick={() => selectStructureTab(item)}>
-                        {t(item.label)}
-                    </Link>
+                        custom={index + 1}
+                        variants={textXAnimation}>
+                        <Link
+                            className={`block decoration-none structure-item cursor-pointer py-[14px] pl-[15px] pr-[30px] rounded-l-[12px] ${item.key === selectedStructureTabId && ' bg-light-tab-bg dark:bg-dark-tab-bg text-[#3175F9]'} `}
+                            to={item.path!}
+                            smooth
+                            onClick={() => selectStructureTab(item)}>
+                            {t(item.label)}
+                        </Link>
+                    </motion.div>
                 ))}
             </ScrollArea>
-        </div>
+        </motion.div>
     );
 }
 
