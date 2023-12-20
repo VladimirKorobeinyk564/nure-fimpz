@@ -5,7 +5,7 @@ function MethodicalInstructions() {
     return (
         <MethodologySection
             title={'Методичні вказівки з організації самостійної роботи студентів'}
-            id={"methodicalInstructionsOrganizationIndependentWork"}
+            id={"methodicalInstructionsPzOne"}
             isFirstSection={false}
         >
             <p className={"mb-[10px]"}>Цикли, як правило, є найбільш складною частиною методів, більшість

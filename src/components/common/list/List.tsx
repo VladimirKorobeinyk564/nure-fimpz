@@ -4,6 +4,7 @@ import React from "react";
 interface ListProps {
     type: string;
     children: React.ReactNode;
+    className?: string;
 }
 
 enum ListType {
@@ -11,14 +12,14 @@ enum ListType {
     TEXT = "Text"
 }
 
-const List = ({type, children}: ListProps) => {
+const List = ({type, children, className}: ListProps) => {
     return (
         type === ListType.NUMBER ? (
-            <ol className={classes.number_list}>
+            <ol className={`${classes.number_list} ${className}`}>
                 {children}
             </ol>
         ) : type === ListType.TEXT && (
-            <ul className={classes.text_list}>
+            <ul className={`${classes.text_list} ${className}`}>
                 {children}
             </ul>
         )
