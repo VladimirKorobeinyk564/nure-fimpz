@@ -7,7 +7,6 @@ import image3 from "@/assets/images/lb4/image3.png"
 import image4 from "@/assets/images/lb4/image4.png"
 import image5 from "@/assets/images/lb4/image5.png"
 import image6 from "@/assets/images/lb4/image6.png"
-import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet";
 import {useTranslation} from "react-i18next";
 

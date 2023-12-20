@@ -1,6 +1,5 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import List from "@/components/common/list/List";
-import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import TerminalSnippet from "@/components/common/terminal-snippet/terminal-snippet";
 import {useTranslation} from "react-i18next";
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
 import AccentSpan from "@/components/common/accent-span/accent-span";

@@ -1,7 +1,5 @@
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet";
-import ReactCodeMirror from "@uiw/react-codemirror";
-import { StreamLanguage } from '@codemirror/language';
 import {python} from "@codemirror/lang-python";
 import {useTranslation} from "react-i18next";
 

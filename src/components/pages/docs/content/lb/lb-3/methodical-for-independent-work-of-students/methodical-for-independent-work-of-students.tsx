@@ -1,4 +1,3 @@
-import MethodologyObjective from "@/components/common/methodology-objective/MethodologyObjective";
 import MethodologySection from "@/components/common/methodology-section/MethodologySection";
 import {useTranslation} from "react-i18next";
 
