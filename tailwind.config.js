@@ -79,7 +79,7 @@ export default {
         'home-bg-light': "url('@/assets/images/home/home-page-bg-light.svg')",
 
         //gradient
-        'home-tagline-gradient': 'linear-gradient(270deg, #0075FF 47%, #00FFD1 90.57%)',
+        'home-tagline-gradient': "linear-gradient(90deg, #0075FF 0%, #00FFD1 48.7%, #0075FF 90%);",
       },
       borderRadius: {
         lg: "var(--radius)",

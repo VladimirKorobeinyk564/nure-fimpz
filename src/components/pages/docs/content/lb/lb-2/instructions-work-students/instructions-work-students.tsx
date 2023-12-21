@@ -49,7 +49,7 @@ public /*pure*/ LogRecord getMaximumRecord() {
                 {t('docsPage.content.lb.lb2.provingStatementsHelpKeY.p2')}
             </p>
             <div className="image-container flex justify-center">
-                <div className={'w-[600px]'}>
+                <div className={'w-[80%]'}>
                     <ImageWrapper
                         image={chooseStatementForProve}
                         imgSubtitle={t('docsPage.content.lb.lb2.provingStatementsHelpKeY.p3')}

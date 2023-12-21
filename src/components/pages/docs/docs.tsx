@@ -22,6 +22,8 @@ function Docs() {
             menuTreeAction.setSelectedMenuTab('');
             menuTreeAction.setSelectedStructureTabId('');
         }
+
+
     }, [location.pathname]);
 
     return (
