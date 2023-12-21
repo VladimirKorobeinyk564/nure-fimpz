@@ -18,6 +18,15 @@ import PrincipleCtlVerification
     from "@/components/pages/docs/content/pz/pz-2/principle-ctl-verification/PrincipleCtlVerification.tsx";
 import ExampleLtlVerification
     from "@/components/pages/docs/content/pz/pz-2/example-ltl-verification/ExampleLtlVerification.tsx";
+import BuhiAutomaton from "@/components/pages/docs/content/pz/pz-2/buhi-automaton/BuhiAutomaton.tsx";
+import ExampleBuhiAutomaton
+    from "@/components/pages/docs/content/pz/pz-2/example-buhi-automaton/ExampleBuhiAutomaton.tsx";
+import AlgorithmCheckingLtl
+    from "@/components/pages/docs/content/pz/pz-2/algorithm-checking-ltl/AlgorithmCheckingLtl.tsx";
+import ControlQuestionsAndTasks
+    from "@/components/pages/docs/content/pz/pz-2/control-questions-and-tasks/ControlQuestionsAndTasks.tsx";
+import ExamplesClassroomHomeworkTasks
+    from "@/components/pages/docs/content/pz/pz-2/examples-classroom-homework-tasks/ExamplesClassroomHomeworkTasks.tsx";
 
 function SecondPracticalWork() {
     return (
@@ -45,6 +54,15 @@ function SecondPracticalWork() {
             <SectionDivider/>
             <ExampleLtlVerification/>
             <SectionDivider/>
+            <BuhiAutomaton/>
+            <SectionDivider/>
+            <ExampleBuhiAutomaton/>
+            <SectionDivider/>
+            <AlgorithmCheckingLtl />
+            <SectionDivider/>
+            <ControlQuestionsAndTasks />
+            <SectionDivider />
+            <ExamplesClassroomHomeworkTasks />
         </div>
     );
 }
