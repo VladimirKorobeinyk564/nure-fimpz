@@ -37,7 +37,7 @@ function MenuTree(props: Readonly<MenuTreeProps>) {
         visible: (custom: number) => ({
             opacity: 1,
             x: 0,
-            transition: {delay: custom * 0.2, duration: 0.8, ease: "linear"}
+            transition: {delay: custom * 0.2, duration: 0.5, ease: "linear"}
         })
     }
 
