@@ -1,22 +1,20 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 
 function MethodicalInstructions() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Методичні вказівки з організації самостійної роботи студентів'}
+            title={t("docsPage.content.pz.pz2.methodical.label")}
             id={"methodicalInstructionsPzTwo"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Послідовні програми мають дуже вузьке застосування. Але
-                паралельні програми часто нетривіальні, повні помилок і
-                тому потрібні технології формальної верифікації таких
-                систем. Класична логіка обмежена у вираженні властивостей
-                динамічних систем. Тому для верифікації таких систем часто
-                використовують спеціальні модальні логіки.</p>
-            <p className={"mb-[10px]"}>Наприклад, у класичній логіці неможливо формалізувати такі
-                висловлювання:</p>
-            <p className={"mb-[10px] text-2xl text-center"}>Ми не друзі, доки ти не вибачишся</p>
-            <p className={"text-2xl text-center"}>Запит до ліфта з довільного поверху буде обов'язково задоволений</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz2.methodical.textOne")}</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz2.methodical.textTwo")}</p>
+            <p className={"mb-[10px] text-2xl text-center font-serif italic"}>{t("docsPage.content.pz.pz2.methodical.pOne")}</p>
+            <p className={"text-2xl text-center font-serif italic"}>{t("docsPage.content.pz.pz2.methodical.pTwo")}</p>
         </MethodologySection>
     )
 }

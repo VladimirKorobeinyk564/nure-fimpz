@@ -1,26 +1,31 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 
 function ExamplesFormalizationStatements() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Приклади формалізації висловлювань'}
+            title={t("docsPage.content.pz.pz2.examplesFormalization.label")}
             id={"examplesFormalizationStatements"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}><span className={"font-bold"}>P</span> (Джон_вмирає /\ <span
-                className={"font-bold"}>XF</span> Джона_ховають) = Джон вмирає і його
-                поховали</p>
-            <p><span className={"font-bold"}>PG</span> Ленін_живий</p>
-            <List type={"Text"}>
-                <li>Ленін – жив, Ленін – живий, Ленін – буде жити (В.В.
-                    Маяковський)
-                </li>
+            <p className={"mb-[10px]"}><span
+                className={"font-bold"}>P </span>{t("docsPage.content.pz.pz2.examplesFormalization.textOne")} /\<span
+                className={"font-bold"}> XF</span> {t("docsPage.content.pz.pz2.examplesFormalization.textTwo")}</p>
+            <p><span className={"font-bold"}>PG </span>{t("docsPage.content.pz.pz2.examplesFormalization.textThree")}
+            </p>
+            <List type={"Number"}>
+                <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesFormalization.textFour")}</li>
             </List>
-            <p><span className={"font-bold"}>G</span> {`(Персіл =>`} <span className={"font-bold"}>G</span> Персіл)</p>
-            <List type={"Text"}>
-                <li>Раз Персіл – завжди Персіл (спробувавши одного разу,
-                    будете користуватися завжди)</li>
+            <p><span
+                className={"font-bold"}>G</span> {`(${t("docsPage.content.pz.pz2.examplesFormalization.textFive")} =>`}
+                <span className={"font-bold"}>G</span> {t("docsPage.content.pz.pz2.examplesFormalization.textFive")})
+            </p>
+            <List type={"Number"}>
+                <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesFormalization.textSix")}</li>
             </List>
         </MethodologySection>
     )

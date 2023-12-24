@@ -1,16 +1,18 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 
 function BuhiAutomaton() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Автомат Бюхі'}
+            title={t("docsPage.content.pz.pz2.buhiAutomaton.label")}
             id={"buhiAutomaton"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}><span className={"font-bold"}>Автомат Бюхі</span> – це синтаксично – той же
-                кінцевий автомат, з тією різницею, що кінцевим станам в ньому приписується інший сенс.</p>
-            <p>Ланцюжок допускається автоматом Бюхі, якщо і тільки якщо існує заключний стан автомата, який проходиться
-                нескінченне число разів при прийомі цього ланцюжка.</p>
+            <p className={"mb-[10px]"}><span className={"font-bold"}>{t("docsPage.content.pz.pz2.buhiAutomaton.label")}</span> {t("docsPage.content.pz.pz2.buhiAutomaton.textOne")}</p>
+            <p>{t("docsPage.content.pz.pz2.buhiAutomaton.textTwo")}</p>
         </MethodologySection>
     )
 }

@@ -1,23 +1,25 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 
 function OperatorsSection() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Оператори'}
+            title={t("docsPage.content.pz.pz2.operators.label")}
             id={"operatorsSection"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Для таких цілей у модальних логіках застосовують наступні нові оператори:</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz2.operators.pTitle")}</p>
             <List type={"Text"}>
-                <li><span className={"font-bold"}>F</span>q – q трапиться коли-небудь у майбутньому.</li>
-                <li><span className={"font-bold"}>P</span>q – q траплялося коли-небудь у минулому.</li>
-                <li><span className={"font-bold"}>G</span>q – q завжди буде у майбутньому.</li>
-                <li><span className={"font-bold"}>Н</span>q – q завжди було у минулому.</li>
-                <li>p<span className={"font-bold"}>U</span>q – q трапиться в майбутньому, а до нього безперервно буде
-                    вико-нуватися р.
-                </li>
-                <li><span className={"font-bold"}>Х</span>p – р виконається у наступний момент.</li>
+                <li><span className={"font-bold"}>F</span>{t("docsPage.content.pz.pz2.operators.pOne")}</li>
+                <li><span className={"font-bold"}>P</span>{t("docsPage.content.pz.pz2.operators.pTwo")}</li>
+                <li><span className={"font-bold"}>G</span>{t("docsPage.content.pz.pz2.operators.pThree")}</li>
+                <li><span className={"font-bold"}>Н</span>{t("docsPage.content.pz.pz2.operators.pFour")}</li>
+                <li>p<span className={"font-bold"}>U</span>{t("docsPage.content.pz.pz2.operators.pFive")}</li>
+                <li><span className={"font-bold"}>Х</span>{t("docsPage.content.pz.pz2.operators.pSix")}</li>
             </List>
         </MethodologySection>
     )

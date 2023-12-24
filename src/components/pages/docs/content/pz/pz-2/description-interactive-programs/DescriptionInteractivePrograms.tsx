@@ -1,6 +1,7 @@
 import MathJax from "react-mathjax2";
 
 import {useAppSelector} from "@/hooks/redux.ts";
+import {useTranslation} from "react-i18next";
 
 import {StreamLanguage} from "@codemirror/language"
 import {pascal} from "@codemirror/legacy-modes/mode/pascal";
@@ -15,6 +16,8 @@ import diagramTwoImgDark from "@/assets/images/pz2/diagram-three-dark.jpg";
 import diagramTwoImgLight from "@/assets/images/pz2/diagram-three-light.jpg";
 
 function DescriptionInteractivePrograms() {
+    const {t} = useTranslation();
+
     const theme = useAppSelector((state) => state.systemSettings.theme);
 
     const code = `begin
@@ -31,25 +34,24 @@ end`
 
     return (
         <MethodologySection
-            title={'Опис ітеративних програм'}
+            title={t("docsPage.content.pz.pz2.descriptionPrograms.label")}
             id={"descriptionInteractivePrograms"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Структура Кріпке також може бути використана для опису ітеративних
-                програм наступним чином.</p>
-            <CodeSnippet lang={[StreamLanguage.define(pascal)]} title={"Ітеративна програма"} children={code}/>
-            <ImageWrapper imgSubtitle={"Відповідність ітеративної програми і структури Кріпке"}
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz2.descriptionPrograms.textOne")}</p>
+            <CodeSnippet lang={[StreamLanguage.define(pascal)]}
+                         title={t("docsPage.content.pz.pz2.descriptionPrograms.codeT")} children={code}/>
+            <ImageWrapper imgSubtitle={t("docsPage.content.pz.pz2.descriptionPrograms.imageT")}
                           image={theme === "dark" ? diagramImgDark : diagramImgLight}/>
             <div className={"flex mb-[10px]"}>
-                <p className={"mr-2"}>Тепер легко перевірити, в яких станах системи виконуються умови: </p>
+                <p className={"mr-2"}>{t("docsPage.content.pz.pz2.descriptionPrograms.textTwo")} </p>
                 <MathJax.Context input='ascii'>
                     <MathJax.Node inline>{`a≡x>y і b≡x+v<3`}</MathJax.Node>
                 </MathJax.Context>
             </div>
-            <ImageWrapper imgSubtitle={"Виконання логічної формули на структурі Кріпке"}
+            <ImageWrapper imgSubtitle={t("docsPage.content.pz.pz2.descriptionPrograms.imageTOne")}
                           image={theme === "dark" ? diagramTwoImgDark : diagramTwoImgLight}/>
-            <p>Якщо процес є взаємодією кількох паралельних потоків, то модель процесу - це
-                паралельна композиція їх структур Кріпке.</p>
+            <p>{t("docsPage.content.pz.pz2.descriptionPrograms.textThree")}</p>
         </MethodologySection>
     )
 }

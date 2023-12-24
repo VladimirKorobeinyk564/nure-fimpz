@@ -15,7 +15,7 @@ import ProvingCorrectnessCycle
 import RuleCorrectProgramming
     from "@/components/pages/docs/content/pz/pz-1/rule-correct-programming/RuleCorrectProgramming.tsx";
 import ExampleCorrectProgramming
-    from "@/components/pages/docs/content/pz/pz-1/ example-correct-programming/ExampleCorrectProgramming.tsx";
+    from "@/components/pages/docs/content/pz/pz-1/example-correct-programming/ExampleCorrectProgramming.tsx";
 import ExampleOfProofCorrectProgramming
     from "@/components/pages/docs/content/pz/pz-1/example-of-proof-correct-programming/ExampleOfProofCorrectProgramming.tsx";
 import ControlQuestionsAndTasks

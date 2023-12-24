@@ -186,6 +186,97 @@
             "tSix": "Given an integer a and a positive integer n. Calculate a to the power of n, if it is required that the number of actions (assignment operators performed) be about log n. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
             "tSeven": "Two positive integers a and b are given. Find their greatest common divisor. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction."
           }
+        },
+        "pz2": {
+          "main": {
+            "label": "Program verification based on temporal logic",
+            "goal": "Training skills in formalising statements with temporal logic formulas and using methods for checking their execution on a Kripke model built from a verifiable algorithm."
+          },
+          "methodical": {
+            "label": "Guidelines for organising students' independent work",
+            "textOne": "Sequential programs have a very narrow application. But parallel programs are often non-trivial, full of errors, and therefore require technologies for formal verification of such systems. Classical logic is limited in expressing the properties of dynamic systems. Therefore, special modal logics are often used to verify such systems.",
+            "pOne": "We are not friends until you apologise",
+            "pTwo": "A request for a lift from an arbitrary floor will be satisfied",
+            "textTwo": "For example, it is impossible to formalise such statements in classical logic:"
+          },
+          "operators": {
+            "label": "Operators",
+            "pTitle": "For such purposes, the following new operators are used in modal logics:",
+            "pOne": "q - q will happen at some point in the future.",
+            "pTwo": "q - q has happened at some point in the past.",
+            "pThree": "q - q will always be in the future.",
+            "pFour": "q - q has always been in the past.",
+            "pFive": "q - q will happen in the future, and p will be executed continuously before it.",
+            "pSix": "p - p will be executed at the following moment."
+          },
+          "examplesFormalization": {
+            "label": "Examples of formalising statements",
+            "textOne": "(John_dies",
+            "textTwo": "John_buried) = John dies and is buried",
+            "textThree": "Lenin_is_alive",
+            "textFour": "Lenin - lived, Lenin - is alive, Lenin - will live (V.V. Mayakovsky)",
+            "textFive": "Persil",
+            "textSix": "Once a Persil, always a Persil (once you try it, you will always use it)"
+          },
+          "grammarLtlLogic": {
+            "label": "LTL logic grammar",
+            "textOne": "Most often, when analysing technical systems, LTL and CTL logics are used, which do not have the concept of the past.",
+            "textTwo": "The grammar of LTL formulas is as follows:"
+          },
+          "kripkeStructure": {
+            "label": "Kripke structure",
+            "textOne": "Kripke structure is a system of transitions with marked states and unmarked transitions; the extension of the Kripke structure defines infinite chains of states - a possible history",
+            "word": "computing",
+            "image": "The Kripke framework and the Kripke framework extension"
+          },
+          "pathQuantifiers": {
+            "label": "Path quantifiers",
+            "textOne": "Each state can have more than one, many continuation chains, and is the root of its own computation history tree.",
+            "textTwo": "To make the interpretation of temporal logic formulas unambiguous, path quantifiers are introduced in the Kripke structure:",
+            "textThree": "there exists a path from this state where the path formula",
+            "wordOne": "true",
+            "textFour": "for all paths from this state, the path formula",
+            "wordTwo": "Obviously"
+          },
+          "ltlAndCtl": {
+            "label": "LTL and CTL",
+            "textOne": "LTL (Linear Temporal Logic) - temporal logic of linear time, path formulas are preceded by a path quantifier A: they must be executed for all Kripke structure calculations.",
+            "textTwo": "In CTL (Computational Tree Logic), the temporal logic of branching time, each temporal operator is preceded by a quantifier of path A or E.",
+            "textThree": "Grammar of CTL formulas:"
+          },
+          "exampleStatementCtl": {
+            "label": "An example of a statement in CTL logic",
+            "textOne": "EF( int > 0.01) - There is no operating mode in which the patient's exposure intensity exceeds 0.01 radians per second."
+          },
+          "descriptionPrograms": {
+            "label": "Description of iterative programmes",
+            "textOne": "The Kripke framework can also be used to describe iterative programs as follows.",
+            "codeT": "Iterative programme",
+            "imageT": "Matching the iterative programme and the Kripke framework",
+            "textTwo": "Now it's easy to check which system states meet the conditions:",
+            "imageTOne": "Execution of a logical formula on the Kripke structure",
+            "textThree": "If a process is the interaction of several parallel flows, then the process model is a parallel composition of their Kripke structures."
+          },
+          "principleCtlVerification": {
+            "label": "Principle of CTL formula validation on the Kripke structure",
+            "step": "Step",
+            "textOne": "Build a parsing tree for the formula.",
+            "textTwo": "Those states of the Kripke structure in which the primitive components of the formula (tree leaves) are fulfilled, denote by these formulas.",
+            "textThree": "Apply the marking rules of Y.G. Karpov Model Checking. Verification of parallel and distributed software systems (p.98-99) of states in the Kripke structure based on compositions of primitive formulas, climbing in the tree from leaves to root.",
+            "textFour": "For example, let's show the result of checking the execution of the formula",
+            "textFive": "in the following Kripke structure:",
+            "image": "Checking the CTL formula on the Kripke structure"
+          },
+          "exampleLtlVer": {
+            "label": "Example of LTL formula checking",
+            "textOne": "A different tactic is used to verify the LTL formula:",
+            "textTwo": "If we need to check whether the formula F is satisfied on the Kripke LTL structure, it is enough to check whether there are counterexamples, i.e. to check whether there are computations that satisfy F. To do this, we describe all behaviours that do NOT satisfy F as a Boolean automaton."
+          },
+          "buhiAutomaton": {
+            "label": "Buhi Automaton",
+            "textOne": "- is syntactically the same finite state machine, with the difference that it assigns a different meaning to the final states.",
+            "textTwo": "A chain is allowed by a Boolean automaton if and only if there is a final state of the automaton that is passed through an infinite number of times when accepting this chain."
+          }
         }
       },
       "lb": {

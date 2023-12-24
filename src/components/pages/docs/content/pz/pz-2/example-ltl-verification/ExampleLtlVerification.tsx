@@ -1,20 +1,18 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 
 function ExampleLtlVerification() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Приклад перевірки LTL формули'}
+            title={t("docsPage.content.pz.pz2.exampleLtlVer.label")}
             id={"exampleLtlVerification"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Для перевірки LTL формули використовується інша тактика:</p>
-            <p className={"mb-[10px]"}>якщо потрібно перевірити, чи виконується на розгортці
-                структури Кріпке LTL формула Ф, то достатньо перевірити,
-                чи є контрприклади, тобто перевірити, чи є обчислення, що
-                задовольняють Ф. Для цього опишемо у вигляді автомата
-                Бюхі всі поведінки, які НЕ задовольняють Ф. Перевіримо, чи
-                перетину цього автомата з автоматом Бюхі, що описує
-                алгоритм, який перевіряється.</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz2.exampleLtlVer.textOne")}</p>
+            <p>{t("docsPage.content.pz.pz2.exampleLtlVer.textTwo")}</p>
         </MethodologySection>
     )
 }
