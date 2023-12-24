@@ -1,51 +1,39 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 
 function ExamplesClassroomAndHomeworkTasks() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={"Приклади аудиторних і домашніх задач"}
-            id={"examplesClassroomAndHomeworkTasksPzOne"}
+            title={t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.label")}
+            id={"examplesClassroomAndHomeworkTasksPz1"}
             isFirstSection={false}
         >
             <div className="mb-[40px]">
                 <List type={"Text"}>
-                    <li>1.5.1 Реалізуйте та доведіть коректність циклу обчислення
-                        максимуму у одномірному масиві.
+                    <li><span
+                        className={"font-bold"}>1.5.1 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tOne")}
                     </li>
-                    <li>1.5.2 Дано масив елементів, що приймають одне з двох
-                        значень 1 і 2. Необхідно впорядкувати його так, щоб на
-                        початку йшли всі 1, а потім все 2.
-                        Реалізуйте це завдання, використовуючи один цикл і доведіть
-                        коректність своєї реалізації з використанням варіанти,
-                        інваріанти, перед і постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.2 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tTwo")}
                     </li>
-                    <li>1.5.3 Відсортуйте масив методом вставок. Доведіть
-                        коректність своєї реалізації з використанням варіанти,
-                        інваріанти, перед і постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.3 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tThree")}
                     </li>
-                    <li>1.5.4 Знайти ітеративним способом факторіал натурального
-                        числа N. Реалізуйте це завдання, використовуючи один цикл і
-                        доведіть коректність своєї реалізації з використанням варіанти,
-                        інваріанти, перед і постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.4 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tFour")}
                     </li>
-                    <li>1.5.5 Знайти ітеративним способом N-е число Фібоначчі.
-                        Реалізуйте це завдання, використовуючи один цикл і доведіть
-                        коректність своєї реалізації з використанням варіанти,
-                        інваріанти, перед і постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.5 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tFive")}
                     </li>
-                    <li>1.5.6 Дано ціле число а і натуральне (ціле невід'ємне) число
-                        n. Обчислити а в ступені n, якщо потрібно, щоб число дій
-                        (виконуваних операторів присвоювання) було близько log n.
-                        Реалізуйте це завдання, використовуючи один цикл і доведіть
-                        коректність своєї реалізації з використанням варіанти,
-                        інваріанти, перед і постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.6 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tSix")}
                     </li>
-                    <li>1.5.7 Дано два натуральних числа a і b. Обчислити їх
-                        найбільший спільний дільник. Реалізуйте це завдання,
-                        використовуючи один цикл і доведіть коректність своєї
-                        реалізації з використанням варіанти, інваріанти, перед і
-                        постумов циклу, індукції.
+                    <li><span
+                        className={"font-bold"}>1.5.7 </span>{t("docsPage.content.pz.pz1.examplesClassroomAndHomeworkTasks.tSeven")}
                     </li>
                 </List>
             </div>

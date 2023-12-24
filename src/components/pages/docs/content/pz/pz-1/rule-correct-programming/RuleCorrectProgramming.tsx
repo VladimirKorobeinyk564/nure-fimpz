@@ -1,21 +1,19 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 
 function RuleCorrectProgramming() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={"Правило коректного програмування"}
+            title={t("docsPage.content.pz.pz1.ruleCorrectProgramming.label")}
             id={"ruleCorrectProgramming"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Користуватися інваріантами і варіантами циклу потрібно не тільки і
-                не стільки для того, щоб проводити формальний доказ коректності
-                циклів. Вони сприяють написанню коректних циклів.</p>
-            <p className={"mb-[10px]"}>Правило коректного програмування говорить: "При написанні
-                кожного циклу програміст повинен визначити його відповідний
-                інваріант і варіант".</p>
-            <p>Завдання передумов, постумов, варіантів і інваріантів циклів є такою
-                ж частиною процесу розробки коректного методу, як і написання
-                самого коду.</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz1.ruleCorrectProgramming.textOne")}</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz1.ruleCorrectProgramming.textTwo")}</p>
+            <p>{t("docsPage.content.pz.pz1.ruleCorrectProgramming.textThree")}</p>
         </MethodologySection>
     )
 }

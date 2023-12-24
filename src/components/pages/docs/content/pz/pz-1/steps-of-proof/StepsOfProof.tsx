@@ -1,11 +1,15 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 
 function StepsOfProof() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={"Кроки доведення"}
+            title={t("docsPage.content.pz.pz1.stepsOfProof.label")}
             id={"stepsOfProof"}
             isFirstSection={false}
         >
@@ -15,15 +19,15 @@ function StepsOfProof() {
                 <li><CodeSnippet children={"\n" + "{Inv(x, z)& B} S(x,z){Inv(x,z)}" + "\n"}/></li>
                 <li><CodeSnippet children={"\n" + "~B & Inv(x, z) -> Post(x,z)" + "\n"}/></li>
             </List>
-            <p className={'mb-[10px]'}>Щоб довести п.(б) необхідно виконати наступні кроки:</p>
+            <p className={'mb-[10px]'}>{t("docsPage.content.pz.pz1.stepsOfProof.pTitle")}</p>
             <List type={"Text"}>
-                <li>Крок 1. Довести, що Inv(x, z) виконується перед першою
-                    ітерацією циклу - база індукції.
+                <li>
+                    <span className={"font-bold"}>{t("docsPage.content.pz.pz1.stepsOfProof.pTitleOne")} </span>
+                    {t("docsPage.content.pz.pz1.stepsOfProof.pOne")}
                 </li>
-                <li>Крок 2. Індуктивний крок: довести, що для будь-якого
-                    позитивного n інваріанта виконується після n-ї ітерації
-                    циклу. Тобто якщо інваріанта виконувалася після (n-1)
-                    кроку, то вона буде виконана після n-го кроку.
+                <li>
+                    <span className={"font-bold"}>{t("docsPage.content.pz.pz1.stepsOfProof.pTitleTwo")} </span>
+                    {t("docsPage.content.pz.pz1.stepsOfProof.pTwo")}
                 </li>
             </List>
         </MethodologySection>

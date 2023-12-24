@@ -1,28 +1,32 @@
+import {useTranslation} from "react-i18next";
+
+import MathJax from "react-mathjax2";
+import {StreamLanguage} from "@codemirror/language";
+import {pascal} from "@codemirror/legacy-modes/mode/pascal";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import CodeSnippet from "@/components/common/code-snippet/code-snippet.tsx";
 import MathExpression from "@/components/common/math-expression/MathExpression.tsx";
-import MathJax from "react-mathjax2";
 
 function ExampleCorrectProgramming() {
+    const {t} = useTranslation();
+
+    const code = `
+S=0
+for(int i=0; i<n ; i++)
+  S = S*i/(i+1)+a[i]/(i+1);
+    `
     return (
         <MethodologySection
-            title={"Приклад"}
+            title={t("docsPage.content.pz.pz1.exampleCorrectProgramming.label")}
             id={"exampleCorrectProgramming"}
             isFirstSection={false}
         >
-            <p className={"mb-[10px]"}>Чи важко будувати інваріанти і варіанти циклу? Необхідна певна
-                практика, але зазвичай розуміння алгоритму означає і розуміння
-                інваріантів, які забезпечують коректність роботи алгоритму. Розглянемо
-                простий приклад, нехай є цикл:</p>
-            <CodeSnippet children={"S=0\n" +
-                "\n" +
-                "for(int i=0; i<n ; i++)\n" +
-                "\n" +
-                "S = S*i/(i+1)+a[i]/(i+1);"}/>
-            <p className={"mb-[10px]"}>Стверджується, що цей цикл обчислює середнє арифметичне елементів масиву.
-                Необхідно довести або спростувати це.</p>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz1.exampleCorrectProgramming.textOne")}</p>
+            <CodeSnippet lang={[StreamLanguage.define(pascal)]} children={code}/>
+            <p className={"mb-[10px]"}>{t("docsPage.content.pz.pz1.exampleCorrectProgramming.textTwo")}</p>
             <div className={"mb-[10px] flex"}>
-            <span className={"mr-1"}>Визначимо</span>
+            <span className={"mr-1"}>{t("docsPage.content.pz.pz1.exampleCorrectProgramming.textThree")}</span>
                 <MathJax.Context input='ascii'>
                     <div>
                         <MathJax.Node>{`Pre(S,n,i): S=0 && n ≥ 0 && i=0`}</MathJax.Node>

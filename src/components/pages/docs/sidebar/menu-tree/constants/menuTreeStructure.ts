@@ -25,9 +25,73 @@ export const menuItemsList: MenuItem[] = [
                     },
                     {
                         key: '3rwb9f0d-9532-4783-8fc4-6b145d4acab7',
-                        label: 'docsPage.menuTree.practicalWork.pz1.goal2',
+                        label: 'docsPage.menuTree.practicalWork.pz1.theoreticalInformation',
                         isNavigate: true,
-                        path: '#methodicalInstructionsOrganizationIndependentWork',
+                        path: '#methodicalInstructionsPzOne',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: '3e840af9-1ca1-4631-8749-873d691fa644',
+                        label: 'docsPage.menuTree.practicalWork.pz1.provingPartialCorrectnessLoop',
+                        isNavigate: true,
+                        path: '#partialCorrectnessCycle',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: 'b55ea990-a256-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.cycleDiagramPremise',
+                        isNavigate: true,
+                        path: '#cycleDiagramPremise',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: '20d1dd64-a257-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.definitionCycleInvariant',
+                        isNavigate: true,
+                        path: '#definitionCycleInvariant',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: '5ee01f26-a257-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.howChooseInvariants',
+                        isNavigate: true,
+                        path: '#howChooseInvariants',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: 'af16109a-a257-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.provingCorrectnessCycle',
+                        isNavigate: true,
+                        path: '#provingCorrectnessCycle',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: 'f9303ebc-a257-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.ruleCorrectProgramming',
+                        isNavigate: true,
+                        path: '#ruleCorrectProgramming',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: '526bb9e8-a258-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.controlQuestionsAndTasks',
+                        isNavigate: true,
+                        path: '#controlQuestionsAndTasksPz1',
+                        parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
+                        nodes: []
+                    },
+                    {
+                        key: '7a33d262-a258-11ee-8c90-0242ac120002',
+                        label: 'docsPage.menuTree.practicalWork.pz1.examplesClassroomAndHomeworkTasks',
+                        isNavigate: true,
+                        path: '#examplesClassroomAndHomeworkTasksPz1',
                         parentKey: 'f2f0c19e-8b26-4a75-a13e-ef46c8dc6b2f',
                         nodes: []
                     },

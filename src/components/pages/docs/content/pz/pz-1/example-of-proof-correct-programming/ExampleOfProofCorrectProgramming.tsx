@@ -1,12 +1,17 @@
+import {useTranslation} from "react-i18next";
+
+import MathJax from 'react-mathjax2'
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import MathExpression from "@/components/common/math-expression/MathExpression.tsx";
 import List from "@/components/common/list/List.tsx";
-import MathJax from 'react-mathjax2'
 
 function ExampleOfProofCorrectProgramming() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={"Приклад доведення"}
+            title={t("docsPage.content.pz.pz1.exampleOfProofCorrectProgramming.label")}
             id={"exampleOfProofCorrectProgrammingPzOne"}
             isFirstSection={false}
         >
@@ -41,14 +46,10 @@ function ExampleOfProofCorrectProgramming() {
                             <MathJax.Node inline>{`~B & Inv(x, z) -> Post(x,z)`}</MathJax.Node>
                         </div>
                     </MathJax.Context>
-                    <p className={"mb-[10px] font-normal text-lg"}>Вочевидь, що</p>
+                    <p className={"mb-[10px] font-normal text-lg"}>{t("docsPage.content.pz.pz1.exampleOfProofCorrectProgramming.textOne")}</p>
                     <MathExpression children={"(i=n)&&(S=sum_(k=0)^(i-1)(a[k])/i)=>S=sum_(k=0)^(n-1)(a[k])/n"}/>
-                    <p className={"my-[10px] font-normal text-lg"}>Цикл дійсно обчислює середнє арифметичне у
-                        масиві.</p>
-                    <p className={"font-normal text-lg"}>Детальнішу інформацію щодо теорії доведення коректності
-                        ітеративних
-                        програм
-                        можна знайти у [1, c. 25-138].</p>
+                    <p className={"my-[10px] font-normal text-lg"}>{t("docsPage.content.pz.pz1.exampleOfProofCorrectProgramming.textTwo")}</p>
+                    <p className={"font-normal text-lg"}>{t("docsPage.content.pz.pz1.exampleOfProofCorrectProgramming.textThree")}</p>
                 </li>
             </List>
         </MethodologySection>

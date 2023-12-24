@@ -29,7 +29,15 @@
         "pz1": {
           "label": "Practical № 1",
           "goal": "Objective of the lesson",
-          "goal2": "Objective of the lesson 2"
+          "theoreticalInformation": "Methodological guidelines",
+          "provingPartialCorrectnessLoop": "Proving partial correctness of the loop",
+          "cycleDiagramPremise": "General scheme of the cycle with a precondition",
+          "definitionCycleInvariant": "Loop invariant",
+          "howChooseInvariants": "How to choose invariants?",
+          "provingCorrectnessCycle": "Proving the complete correctness of the cycle",
+          "ruleCorrectProgramming": "The rule of correct programming",
+          "controlQuestionsAndTasks": "Review questions and tasks",
+          "examplesClassroomAndHomeworkTasks": "Examples of classroom and homework assignments"
         },
         "pz2": {
           "label": "Practical № 2",
@@ -92,6 +100,94 @@
     },
     "content": {
       "goalLesson": "Objective of the lesson",
+      "pz": {
+        "pz1": {
+          "main": {
+            "label": "Deductive verification of programs",
+            "goal": "Training of skills in proving the correctness of iterative programs based on preconditions, postconditions and loop invariants."
+          },
+          "methodical": {
+            "label": "Guidelines for organising students' independent work",
+            "textOne": "Loops are usually the most difficult part of methods, and most errors are related to them. When writing loops that work correctly, it is extremely important to understand and use terms:",
+            "pOne": "Loop invariant",
+            "pTwo": "Loop variant",
+            "textTwo": "A formal proof of the correctness of cycles cannot do without them. But an informal understanding of the correctness of the program is also based on these terms."
+          },
+          "provingPartialCorrectnessLoop": {
+            "label": "Proving partial correctness of the loop",
+            "textOne": "Consider a cycle in the form to which all types of cycles can be reduced: x - inputs, z - outputs:",
+            "pTitle": "Here",
+            "pOne": "B — condition of the while loop",
+            "pTwo": "S — his body",
+            "pThree": "а Init — group of preceding statements that specifies the initialization of the loop",
+            "textTwo": "In reality, no cycle is complete without an initialization fragment. It would be syntactically correct for Init to be formally part of the loop statement. In the for statement, this is partially done - the initialization of the counters is part of the loop."
+          },
+          "schemeCycle": {
+            "label": "General scheme of the cycle with a precondition"
+          },
+          "definingCycleInvariant": {
+            "label": "Defining the cycle invariant",
+            "textOne": "A predicate Inv(x, z) is called an invariant of a while loop if the following Hoare triad is true:",
+            "textTwo": "This means that from the truth of the loop invariant before the loop body is executed and from the truth of the loop condition that guarantees the execution of the body, the truth of the invariant after the loop body is executed follows. No matter how many times the loop body is executed, its invariant remains true."
+          },
+          "howChooseInvariants": {
+            "label": "How to choose invariants?",
+            "textOne": "You can write as many invariants as you like for any cycle. Any identical condition (2 * 2 = 4) is an invariant of any cycle. Therefore, among the invariants, the so-called corresponding cycle invariants are distinguished.",
+            "textTwo": "An invariant is called suitable if it allows to prove that after the loop completion its postcondition is fulfilled (partial correctness of the loop)."
+          },
+          "stepsOfProof": {
+            "label": "Steps of proof",
+            "pTitle": "To prove it, you need to follow the following steps:",
+            "pTitleOne": "Step 1.",
+            "pOne": "Prove that Inv(x, z) is executed before the first iteration of the loop - the basis of induction.",
+            "pTitleTwo": "Step 2.",
+            "pTwo": "Inductive step: prove that for any positive n, the invariant is satisfied after the nth iteration of the loop. That is, if the invariant was executed after the (n-1) step, then it will be executed after the nth step."
+          },
+          "provingCorrectnessCycle": {
+            "label": "Proving the complete correctness of the cycle",
+            "textOne": "Another important concept associated with the loop is loop variants, which are used to prove that the loop will complete.",
+            "textTwo": "Definition of a loop variant. An integer nonnegative expression Var (x, z) is called a loop variant if the following triad is true:",
+            "textThree": "This means that each execution of the loop body leads to a decrease in the value of its variant. After a finite number of steps, the variant reaches its lower bound, and the loop terminates. The simplest example of a loop variant is the expression (n - i) for a loop of type:",
+            "textFour": "The cycle for which statements (1.1) and (1.2) are proved",
+            "textFive": "is completely correct."
+          },
+          "ruleCorrectProgramming": {
+            "label": "The rule of correct programming",
+            "textOne": "You need to use loop invariants and variants not only and not so much to formally prove the correctness of loops. They help you to write correct loops.",
+            "textTwo": "A rule of correct programming states: \"When writing each loop, the programmer must define its corresponding invariant and variant\".",
+            "textThree": "Setting preconditions, postconditions, variants, and loop invariants is as much a part of the process of developing a correct method as writing the code itself."
+          },
+          "exampleCorrectProgramming": {
+            "label": "Example",
+            "textOne": "Is it difficult to build loop invariants and variants? It takes some practice, but usually, understanding an algorithm means understanding the invariants that ensure the algorithm works correctly. Let's take a simple example, let's say there is a loop:",
+            "textTwo": "It is claimed that this loop calculates the arithmetic mean of the array elements. Prove or disprove it.",
+            "textThree": "Let's define"
+          },
+          "exampleOfProofCorrectProgramming": {
+            "label": "Example of proof",
+            "textOne": "It is obvious that",
+            "textTwo": "The loop actually calculates the arithmetic mean in the array.",
+            "textThree": "More information about the theory of proving the correctness of iterative programs can be found in Proving Programs Correct by Anderson, Robert B. (1979) (pp. 25-138)."
+          },
+          "controlQuestionsAndTasks": {
+            "label": "Review questions and tasks",
+            "qOne": "What is the difference between statement logic and predicate logic? Which of the two logics is used in deductive proof of correctness of programs?",
+            "qTwo": "List the basic rules of logical inference in predicate logic.",
+            "qThree": "Give a formal definition of a partially correct cycle.",
+            "qFour": "Give a formal definition of a fully correct cycle."
+          },
+          "examplesClassroomAndHomeworkTasks": {
+            "label": "Examples of classroom and homework assignments",
+            "tOne": "Implement and prove the correctness of the loop for calculating the maximum in a one-dimensional array.",
+            "tTwo": "You are given an array of elements that take one of two values 1 and 2. It is necessary to arrange it so that all 1's go first, and then all 2's. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, induction.",
+            "tThree": "Sort the array using the insertion method. Prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tFour": "Find the factorial of a positive integer N by iterative method. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tFive": "Find the Nth Fibonacci number by iterative method. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tSix": "Given an integer a and a positive integer n. Calculate a to the power of n, if it is required that the number of actions (assignment operators performed) be about log n. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tSeven": "Two positive integers a and b are given. Find their greatest common divisor. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction."
+          }
+        }
+      },
       "lb": {
         "lb1": {
           "main": {
@@ -254,7 +350,7 @@
             "p3": "Check the syntactic correctness of the program by selecting Run/Run Syntax Check. The message box should say \"no syntax errors\". Now you can start the simulation Run/Set Simulation Parameters (Fig. 2)",
             "p4": "Click Start. The simulation profile opens, where the Simulation Output window displays program messages and the Sequence Chart graphically displays the graph of process interaction (Fig. 3). The simulation supports 2 modes: Single Step and Run."
           },
-          "correctnessModel":  {
+          "correctnessModel": {
             "p1": "Checking the correctness of a model based on the verification of LTL formulas means that some properties of its \"correct\" behavior are expressed in the form of an LTL formula. All such properties must be checked one by one.",
             "p2": "To test the LTL-based model, let's introduce an additional variable accepted to the program, which will be set to 0 at the beginning of the run and every time a message is sent to the client. Accepted is set to 1 only if a confirmation is received from the client. Now we can express the requirement that the model is correct if every message is always acknowledged",
             "img1": "System verification window",
@@ -269,7 +365,7 @@
             "l3": "liveness properties, establishing that under certain conditions something \"good\" will eventually happen in any scenario of system behavior, the general form of the LTL formula ",
             "l4": "fairness properties, establishing that something will be executed indefinitely often, the general form of the LTL formula"
           },
-          "spinOperatorsLTL":  {
+          "spinOperatorsLTL": {
             "table1": "Description",
             "table2": "At least once in the future q",
             "table3": "Always in the future q",
@@ -289,7 +385,7 @@
             "l10": "no starvation (if the client has requested a resource, sooner or later he will receive it).",
             "l11": "Needham-Schroeder cryptographic protocol. Implement the protocol, introduce a third party (an attacker), and prove the possibility of an external attack (the attacker learns the secret of one of the parties)."
           },
-          "controlQuestionsAndTasks":  {
+          "controlQuestionsAndTasks": {
             "l1": "Define temporal logic.",
             "l2": "What constructions distinguish temporal logic from predicate logic?",
             "l3": "What subclasses of temporal logics exist?",
