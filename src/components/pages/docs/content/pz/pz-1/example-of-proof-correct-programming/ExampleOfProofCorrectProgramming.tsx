@@ -18,7 +18,7 @@ function ExampleOfProofCorrectProgramming() {
             <List type={"Number"}>
                 <li className={"text-2xl mb-[10px]"}>
                     <MathJax.Context input='ascii'>
-                        <div className={"mb-[10px]"}><MathJax.Node inline>{`Pre(x) => Inv(x,z)`}</MathJax.Node></div>
+                        <div className={"mb-[10px]"}><MathJax.Node inline>{`Pre(x) => Inv(x,y)`}</MathJax.Node></div>
                     </MathJax.Context>
                     <MathExpression
                         children={"n≥0 && i=0 =>  S=sum_(k=0)^(i-1)((a[k])/i)≡S=sum_(k=0)^(-1)((a[k])/0)≡S=0"}/>
@@ -26,7 +26,7 @@ function ExampleOfProofCorrectProgramming() {
                 <li className={"text-2xl mb-[10px]"}>
                     <MathJax.Context input='ascii'>
                         <div className={"mb-[10px]"}>
-                            <MathJax.Node inline>{`{Inv(x, z)& B} [S(x,z)]{Inv(x,z)}`}</MathJax.Node>
+                            <MathJax.Node inline>{`{Inv(x, y)& B} [S(x,y)]{Inv(x,y)}`}</MathJax.Node>
                         </div>
                     </MathJax.Context>
                     <MathExpression className={"pb-0 rounded-b-none"}
@@ -43,7 +43,7 @@ function ExampleOfProofCorrectProgramming() {
                 <li className={"text-2xl"}>
                     <MathJax.Context input='ascii'>
                         <div className={"mb-[10px]"}>
-                            <MathJax.Node inline>{`~B & Inv(x, z) -> Post(x,z)`}</MathJax.Node>
+                            <MathJax.Node inline>{`~B & Inv(x, y) -> Post(x,y)`}</MathJax.Node>
                         </div>
                     </MathJax.Context>
                     <p className={"mb-[10px] font-normal text-lg"}>{t("docsPage.content.pz.pz1.exampleOfProofCorrectProgramming.textOne")}</p>

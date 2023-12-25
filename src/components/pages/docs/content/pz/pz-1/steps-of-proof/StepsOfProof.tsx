@@ -13,11 +13,11 @@ function StepsOfProof() {
             id={"stepsOfProof"}
             isFirstSection={false}
         >
-            <CodeSnippet children={"\n" + "Inv(x, z) & ! B ==> Post(x, z)" + "\n"}/>
+            <CodeSnippet children={"\n" + "Inv(x, y) & ! B ==> Post(x, y)" + "\n"}/>
             <List type={"Number"}>
-                <li><CodeSnippet children={"\n" + "Pre(x) -> Inv(x,z)" + "\n"}/></li>
-                <li><CodeSnippet children={"\n" + "{Inv(x, z)& B} S(x,z){Inv(x,z)}" + "\n"}/></li>
-                <li><CodeSnippet children={"\n" + "~B & Inv(x, z) -> Post(x,z)" + "\n"}/></li>
+                <li><CodeSnippet children={"\n" + "Pre(x) -> Inv(x,y)" + "\n"}/></li>
+                <li><CodeSnippet children={"\n" + "{Inv(x, y)& B} S(x,y){Inv(x,y)}" + "\n"}/></li>
+                <li><CodeSnippet children={"\n" + "~B & Inv(x, y) -> Post(x,y)" + "\n"}/></li>
             </List>
             <p className={'mb-[10px]'}>{t("docsPage.content.pz.pz1.stepsOfProof.pTitle")}</p>
             <List type={"Text"}>

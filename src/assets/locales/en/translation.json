@@ -131,7 +131,7 @@
           },
           "provingPartialCorrectnessLoop": {
             "label": "Proving partial correctness of the loop",
-            "textOne": "Consider a cycle in the form to which all types of cycles can be reduced: x - inputs, z - outputs:",
+            "textOne": "Consider a cycle in the form to which all types of cycles can be reduced: x - inputs, y - outputs:",
             "pTitle": "Here",
             "pOne": "B — condition of the while loop",
             "pTwo": "S — his body",
@@ -143,7 +143,7 @@
           },
           "definingCycleInvariant": {
             "label": "Defining the cycle invariant",
-            "textOne": "A predicate Inv(x, z) is called an invariant of a while loop if the following Hoare triad is true:",
+            "textOne": "A predicate Inv(x, y) is called an invariant of a while loop if the following Hoare triad is true:",
             "textTwo": "This means that from the truth of the loop invariant before the loop body is executed and from the truth of the loop condition that guarantees the execution of the body, the truth of the invariant after the loop body is executed follows. No matter how many times the loop body is executed, its invariant remains true."
           },
           "howChooseInvariants": {
@@ -155,14 +155,14 @@
             "label": "Steps of proof",
             "pTitle": "To prove it, you need to follow the following steps:",
             "pTitleOne": "Step 1.",
-            "pOne": "Prove that Inv(x, z) is executed before the first iteration of the loop - the basis of induction.",
+            "pOne": "Prove that Inv(x, y) is executed before the first iteration of the loop - the basis of induction.",
             "pTitleTwo": "Step 2.",
             "pTwo": "Inductive step: prove that for any positive n, the invariant is satisfied after the nth iteration of the loop. That is, if the invariant was executed after the (n-1) step, then it will be executed after the nth step."
           },
           "provingCorrectnessCycle": {
             "label": "Proving the complete correctness of the cycle",
             "textOne": "Another important concept associated with the loop is loop variants, which are used to prove that the loop will complete.",
-            "textTwo": "Definition of a loop variant. An integer nonnegative expression Var (x, z) is called a loop variant if the following triad is true:",
+            "textTwo": "Definition of a loop variant. An integer nonnegative expression Var (x, y) is called a loop variant if the following triad is true:",
             "textThree": "This means that each execution of the loop body leads to a decrease in the value of its variant. After a finite number of steps, the variant reaches its lower bound, and the loop terminates. The simplest example of a loop variant is the expression (n - i) for a loop of type:",
             "textFour": "The cycle for which statements (1.1) and (1.2) are proved",
             "textFive": "is completely correct."

@@ -11,8 +11,8 @@ function PartialCorrectnessCycle() {
     const {t} = useTranslation();
 
     const code = `
-Init(x,z);
-while(B)S(x,z);
+Init(x,y);
+while(B)S(x,y);
     `
     return (
         <MethodologySection
@@ -26,7 +26,7 @@ while(B)S(x,z);
             <List type={"Text"}>
                 <li>{t("docsPage.content.pz.pz1.provingPartialCorrectnessLoop.pOne")}</li>
                 <li>{t("docsPage.content.pz.pz1.provingPartialCorrectnessLoop.pTwo")}</li>
-                <li>а{t("docsPage.content.pz.pz1.provingPartialCorrectnessLoop.pThree")}</li>
+                <li>{t("docsPage.content.pz.pz1.provingPartialCorrectnessLoop.pThree")}</li>
             </List>
             <p>{t("docsPage.content.pz.pz1.provingPartialCorrectnessLoop.textTwo")}</p>
         </MethodologySection>

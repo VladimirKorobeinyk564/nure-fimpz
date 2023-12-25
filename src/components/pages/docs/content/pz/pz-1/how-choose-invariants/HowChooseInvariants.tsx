@@ -7,7 +7,7 @@ function HowChooseInvariants() {
     const {t} = useTranslation();
 
     const code = `
-Inv(x, z) & ! B ==> Post(x, z)x     (1.1)
+Inv(x, y) & ! B ==> Post(x, y)     (1.1)
     `
     return (
         <MethodologySection

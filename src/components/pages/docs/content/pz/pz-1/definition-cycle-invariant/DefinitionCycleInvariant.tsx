@@ -7,7 +7,7 @@ function DefinitionCycleInvariant() {
     const {t} = useTranslation();
 
     const code = `
-{Inv(x, z)& B}S(x,z){Inv(x,z)}
+{Inv(x, y)& B}S(x,y){Inv(x,y)}
    `
 
     return (

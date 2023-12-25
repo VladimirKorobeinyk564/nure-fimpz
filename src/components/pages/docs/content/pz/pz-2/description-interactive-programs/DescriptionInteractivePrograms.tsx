@@ -22,10 +22,10 @@ function DescriptionInteractivePrograms() {
 
     const code = `begin
     х:=0; у:=1;
-      while x+z < 5
+      while x+i < 5
         do {
               x:=5;
-              if z=1 then
+              if i=1 then
         y:=x+1;
               x:= -2; y:=1;
         }
