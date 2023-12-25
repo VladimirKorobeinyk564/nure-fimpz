@@ -20,7 +20,7 @@ function PathQuantifiers() {
                 <div
                     className={cn(`flex justify-center items-center py-[40px] w-full rounded-[15px] bg-[#CDDFFF] dark:bg-[#1F242E] mb-[10px]`)}>
 
-                    <p className={"text-[#1D4A80] dark:text-[#5890D2] text-[25px] italic font-serif"}>
+                    <p className={"text-[#1D4A80] dark:text-[#5890D2] text-[25px] italic font-serif max-[1550px]:text-[21px] max-[1408px]:text-[18px] max-[1300px]:text-[16px] max-[1234px]:text-[14px] max-[1160px]:text-[12px] max-[1098px]:text-[10px]"}>
                         <MathJax.Node inline>Е^φ</MathJax.Node>“{t("docsPage.content.pz.pz2.pathQuantifiers.textThree")}
                          <MathJax.Node inline>φ</MathJax.Node> {t("docsPage.content.pz.pz2.pathQuantifiers.wordOne")}”
                         (<span className={"font-bold"}>E</span>xists)<br/>
