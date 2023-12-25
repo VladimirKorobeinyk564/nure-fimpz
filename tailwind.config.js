@@ -22,12 +22,19 @@ export default {
         'dark-second-bg': '#23272F',
         'dark-input-bg': '#333A45',
         'dark-text-color': '#EBECF0',
+        'dark-second-text-color': '#c8c9cf',
         'dark-subtext-color': '#A1A1A1',
+        'dark-tab-bg': '#1D2B39',
+
+        //Accent
+        'primary-color': '#0075FF',
 
         //Light
         'light-bg': '#FFFFFF',
         'light-input-bg': '#EBECF0',
-        'light-text-color': '#23272F',
+        'light-text-color': '#23272f',
+        'light-second-text-color': '#404756',
+        'light-tab-bg': 'rgba(189,222,255,0.61)',
 
         //Common
         'theme-hover-bg': 'rgba(175, 175, 175, 0.34)',
@@ -72,7 +79,7 @@ export default {
         'home-bg-light': "url('@/assets/images/home/home-page-bg-light.svg')",
 
         //gradient
-        'home-tagline-gradient': 'linear-gradient(270deg, #0075FF 47%, #00FFD1 90.57%)',
+        'home-tagline-gradient': "linear-gradient(90deg, #0075FF 0%, #00FFD1 48.7%, #0075FF 90%);",
       },
       borderRadius: {
         lg: "var(--radius)",

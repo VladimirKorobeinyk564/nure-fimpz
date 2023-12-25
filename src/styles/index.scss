@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './fonts.scss';
 
 
 @layer base {
@@ -62,14 +60,11 @@
   body {
     @apply bg-background text-foreground;
   }
-  div {
-    @apply transition-colors duration-300;
-  }
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -77,4 +72,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
+  font-size: 16px;
 }

@@ -19,5 +19,632 @@
       "second": "for reliable and secure solutions."
     },
     "startBtn": "Start to learn"
+  },
+  "docsPage": {
+    "fimpzLearn": "STUDYING FMOSE",
+    "structure": "STRUCTURE",
+    "menuTree": {
+      "practicalWork": {
+        "label": "Practical work",
+        "pz1": {
+          "label": "Practical № 1",
+          "goal": "Objective of the lesson",
+          "theoreticalInformation": "Methodological guidelines",
+          "provingPartialCorrectnessLoop": "Proving partial correctness of the loop",
+          "cycleDiagramPremise": "General scheme of the cycle with a precondition",
+          "definitionCycleInvariant": "Loop invariant",
+          "howChooseInvariants": "How to choose invariants?",
+          "provingCorrectnessCycle": "Proving the complete correctness of the cycle",
+          "ruleCorrectProgramming": "The rule of correct programming",
+          "controlQuestionsAndTasks": "Review questions and tasks",
+          "examplesClassroomAndHomeworkTasks": "Examples of classroom and homework assignments"
+        },
+        "pz2": {
+          "label": "Practical № 2",
+          "goal": "Objective of the lesson",
+          "theoreticalInformation": "Guidelines",
+          "operatorsSection": "Operators",
+          "examplesFormalization": "Examples formalising statements",
+          "grammarLtlLogic": "LTL logic grammar",
+          "kripkeStructure": "Kripke structure",
+          "pathQuantifiers": "Path quantifiers",
+          "ltlAndCtl": "LTL and CTL",
+          "exampleStatementCtlLogic": "Example statement in CTL logic",
+          "descriptionInteractivePrograms": "Description iterative programmes",
+          "principleCtlVerification": "Principle CTL formula validation on the Kripke structure",
+          "exampleLtlVerification": "Example LTL formula checking",
+          "buhiAutomaton": "Buhi automaton",
+          "exampleBuhiAutomaton": "Example Buhi automaton",
+          "algorithmCheckingLtl": "General algorithm for checking feasibility formula",
+          "controlQuestions": "Review questions and tasks",
+          "examplesClassroomAndHomeworkTasks": "Examples classroom and homework assignments"
+        }
+      },
+      "laboratoryWork": {
+        "label": "Laboratory work",
+        "lb1": {
+          "label": "Laboratory № 1",
+          "goal": "Objective of the lesson",
+          "theoreticalInformation": "Theoretical information",
+          "usageOpenJML": "OpenJML usage",
+          "testingCustomizedUtility": "Testing the customized utility",
+          "problemStatement": "Problem statement",
+          "variantsIndividualTasks": "Options of individual tasks",
+          "controlQuestionsTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
+        },
+        "lb2": {
+          "label": "Laboratory № 2",
+          "goal": "Objective of the lesson",
+          "preparingWorkKeY": "Preparing to work with KeY",
+          "provingStatementsHelpKeY": "Proving statements with the help of KeY",
+          "variantsIndividualTasks": "Options of individual tasks",
+          "controlQuestionsTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
+        },
+        "lb3": {
+          "label": "Laboratory № 3",
+          "goal": "Objective of the lesson",
+          "guidelinesForIndependentWork": "Guidelines for organizing students' independent work",
+          "spinPackage": "Spin package",
+          "spinOnWindows": "Using Spin on Windows platform",
+          "correctnessModel": "Checking the correctness of the model based on LTL",
+          "classesOfPropertiesDistributedSystems": "Classes of properties of distributed systems",
+          "spinOperatorsLTL": "Spin operators in LTL",
+          "optionsIndividualTasks": "Options for individual tasks",
+          "controlQuestionsAndTasks": "Control questions and tasks",
+          "listOfReferences": "List of references"
+        }
+      },
+      "other": {
+        "label": "Other",
+        "pythonLesson": {
+          "label": "Python programming",
+          "goal": "Objective of the lesson",
+          "mainIdeaContractProgramming": "The main idea of contract programming",
+          "pyContractsPackage": "PyContracts package",
+          "pyContractsOnUbuntu": "An example of installing and using PyContracts on Ubuntu:",
+          "pyContractsOnWindows": "An example of installing and using PyContracts on Windows:",
+          "installationSteps": "Installation steps",
+          "testing": "Testing the customized utility",
+          "mistakes": "The mistakes in the example above:",
+          "problemStatement": "Problem statement",
+          "individualTasks": "Options for individual tasks",
+          "controlQuestions": "Control questions and tasks"
+        }
+      }
+    },
+    "content": {
+      "goalLesson": "Objective of the lesson",
+      "pz": {
+        "pz1": {
+          "main": {
+            "label": "Deductive verification of programs",
+            "goal": "Training of skills in proving the correctness of iterative programs based on preconditions, postconditions and loop invariants."
+          },
+          "methodical": {
+            "label": "Guidelines for organising students' independent work",
+            "textOne": "Loops are usually the most difficult part of methods, and most errors are related to them. When writing loops that work correctly, it is extremely important to understand and use terms:",
+            "pOne": "Loop invariant",
+            "pTwo": "Loop variant",
+            "textTwo": "A formal proof of the correctness of cycles cannot do without them. But an informal understanding of the correctness of the program is also based on these terms."
+          },
+          "provingPartialCorrectnessLoop": {
+            "label": "Proving partial correctness of the loop",
+            "textOne": "Consider a cycle in the form to which all types of cycles can be reduced: x - inputs, z - outputs:",
+            "pTitle": "Here",
+            "pOne": "B — condition of the while loop",
+            "pTwo": "S — his body",
+            "pThree": "а Init — group of preceding statements that specifies the initialization of the loop",
+            "textTwo": "In reality, no cycle is complete without an initialization fragment. It would be syntactically correct for Init to be formally part of the loop statement. In the for statement, this is partially done - the initialization of the counters is part of the loop."
+          },
+          "schemeCycle": {
+            "label": "General scheme of the cycle with a precondition"
+          },
+          "definingCycleInvariant": {
+            "label": "Defining the cycle invariant",
+            "textOne": "A predicate Inv(x, z) is called an invariant of a while loop if the following Hoare triad is true:",
+            "textTwo": "This means that from the truth of the loop invariant before the loop body is executed and from the truth of the loop condition that guarantees the execution of the body, the truth of the invariant after the loop body is executed follows. No matter how many times the loop body is executed, its invariant remains true."
+          },
+          "howChooseInvariants": {
+            "label": "How to choose invariants?",
+            "textOne": "You can write as many invariants as you like for any cycle. Any identical condition (2 * 2 = 4) is an invariant of any cycle. Therefore, among the invariants, the so-called corresponding cycle invariants are distinguished.",
+            "textTwo": "An invariant is called suitable if it allows to prove that after the loop completion its postcondition is fulfilled (partial correctness of the loop)."
+          },
+          "stepsOfProof": {
+            "label": "Steps of proof",
+            "pTitle": "To prove it, you need to follow the following steps:",
+            "pTitleOne": "Step 1.",
+            "pOne": "Prove that Inv(x, z) is executed before the first iteration of the loop - the basis of induction.",
+            "pTitleTwo": "Step 2.",
+            "pTwo": "Inductive step: prove that for any positive n, the invariant is satisfied after the nth iteration of the loop. That is, if the invariant was executed after the (n-1) step, then it will be executed after the nth step."
+          },
+          "provingCorrectnessCycle": {
+            "label": "Proving the complete correctness of the cycle",
+            "textOne": "Another important concept associated with the loop is loop variants, which are used to prove that the loop will complete.",
+            "textTwo": "Definition of a loop variant. An integer nonnegative expression Var (x, z) is called a loop variant if the following triad is true:",
+            "textThree": "This means that each execution of the loop body leads to a decrease in the value of its variant. After a finite number of steps, the variant reaches its lower bound, and the loop terminates. The simplest example of a loop variant is the expression (n - i) for a loop of type:",
+            "textFour": "The cycle for which statements (1.1) and (1.2) are proved",
+            "textFive": "is completely correct."
+          },
+          "ruleCorrectProgramming": {
+            "label": "The rule of correct programming",
+            "textOne": "You need to use loop invariants and variants not only and not so much to formally prove the correctness of loops. They help you to write correct loops.",
+            "textTwo": "A rule of correct programming states: \"When writing each loop, the programmer must define its corresponding invariant and variant\".",
+            "textThree": "Setting preconditions, postconditions, variants, and loop invariants is as much a part of the process of developing a correct method as writing the code itself."
+          },
+          "exampleCorrectProgramming": {
+            "label": "Example",
+            "textOne": "Is it difficult to build loop invariants and variants? It takes some practice, but usually, understanding an algorithm means understanding the invariants that ensure the algorithm works correctly. Let's take a simple example, let's say there is a loop:",
+            "textTwo": "It is claimed that this loop calculates the arithmetic mean of the array elements. Prove or disprove it.",
+            "textThree": "Let's define"
+          },
+          "exampleOfProofCorrectProgramming": {
+            "label": "Example of proof",
+            "textOne": "It is obvious that",
+            "textTwo": "The loop actually calculates the arithmetic mean in the array.",
+            "textThree": "More information about the theory of proving the correctness of iterative programs can be found in Proving Programs Correct by Anderson, Robert B. (1979) (pp. 25-138)."
+          },
+          "controlQuestionsAndTasks": {
+            "label": "Review questions and tasks",
+            "qOne": "What is the difference between statement logic and predicate logic? Which of the two logics is used in deductive proof of correctness of programs?",
+            "qTwo": "List the basic rules of logical inference in predicate logic.",
+            "qThree": "Give a formal definition of a partially correct cycle.",
+            "qFour": "Give a formal definition of a fully correct cycle."
+          },
+          "examplesClassroomAndHomeworkTasks": {
+            "label": "Examples of classroom and homework assignments",
+            "tOne": "Implement and prove the correctness of the loop for calculating the maximum in a one-dimensional array.",
+            "tTwo": "You are given an array of elements that take one of two values 1 and 2. It is necessary to arrange it so that all 1's go first, and then all 2's. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, induction.",
+            "tThree": "Sort the array using the insertion method. Prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tFour": "Find the factorial of a positive integer N by iterative method. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tFive": "Find the Nth Fibonacci number by iterative method. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tSix": "Given an integer a and a positive integer n. Calculate a to the power of n, if it is required that the number of actions (assignment operators performed) be about log n. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction.",
+            "tSeven": "Two positive integers a and b are given. Find their greatest common divisor. Implement this task using a single loop and prove the correctness of your implementation using variants, invariants, pre- and postconditions of the loop, and induction."
+          }
+        },
+        "pz2": {
+          "main": {
+            "label": "Program verification based on temporal logic",
+            "goal": "Training skills in formalising statements with temporal logic formulas and using methods for checking their execution on a Kripke model built from a verifiable algorithm."
+          },
+          "methodical": {
+            "label": "Guidelines for organising students' independent work",
+            "textOne": "Sequential programs have a very narrow application. But parallel programs are often non-trivial, full of errors, and therefore require technologies for formal verification of such systems. Classical logic is limited in expressing the properties of dynamic systems. Therefore, special modal logics are often used to verify such systems.",
+            "pOne": "We are not friends until you apologise",
+            "pTwo": "A request for a lift from an arbitrary floor will be satisfied",
+            "textTwo": "For example, it is impossible to formalise such statements in classical logic:"
+          },
+          "operators": {
+            "label": "Operators",
+            "pTitle": "For such purposes, the following new operators are used in modal logics:",
+            "pOne": "q - q will happen at some point in the future.",
+            "pTwo": "q - q has happened at some point in the past.",
+            "pThree": "q - q will always be in the future.",
+            "pFour": "q - q has always been in the past.",
+            "pFive": "q - q will happen in the future, and p will be executed continuously before it.",
+            "pSix": "p - p will be executed at the following moment."
+          },
+          "examplesFormalization": {
+            "label": "Examples of formalising statements",
+            "textOne": "(John_dies",
+            "textTwo": "John_buried) = John dies and is buried",
+            "textThree": "Lenin_is_alive",
+            "textFour": "Lenin - lived, Lenin - is alive, Lenin - will live (V.V. Mayakovsky)",
+            "textFive": "Persil",
+            "textSix": "Once a Persil, always a Persil (once you try it, you will always use it)"
+          },
+          "grammarLtlLogic": {
+            "label": "LTL logic grammar",
+            "textOne": "Most often, when analysing technical systems, LTL and CTL logics are used, which do not have the concept of the past.",
+            "textTwo": "The grammar of LTL formulas is as follows:"
+          },
+          "kripkeStructure": {
+            "label": "Kripke structure",
+            "textOne": "Kripke structure is a system of transitions with marked states and unmarked transitions; the extension of the Kripke structure defines infinite chains of states - a possible history",
+            "word": "computing",
+            "image": "The Kripke framework and the Kripke framework extension"
+          },
+          "pathQuantifiers": {
+            "label": "Path quantifiers",
+            "textOne": "Each state can have more than one, many continuation chains, and is the root of its own computation history tree.",
+            "textTwo": "To make the interpretation of temporal logic formulas unambiguous, path quantifiers are introduced in the Kripke structure:",
+            "textThree": "there exists a path from this state where the path formula",
+            "wordOne": "true",
+            "textFour": "for all paths from this state, the path formula",
+            "wordTwo": "Obviously"
+          },
+          "ltlAndCtl": {
+            "label": "LTL and CTL",
+            "textOne": "LTL (Linear Temporal Logic) - temporal logic of linear time, path formulas are preceded by a path quantifier A: they must be executed for all Kripke structure calculations.",
+            "textTwo": "In CTL (Computational Tree Logic), the temporal logic of branching time, each temporal operator is preceded by a quantifier of path A or E.",
+            "textThree": "Grammar of CTL formulas:"
+          },
+          "exampleStatementCtl": {
+            "label": "An example of a statement in CTL logic",
+            "textOne": "EF( int > 0.01) - There is no operating mode in which the patient's exposure intensity exceeds 0.01 radians per second."
+          },
+          "descriptionPrograms": {
+            "label": "Description of iterative programmes",
+            "textOne": "The Kripke framework can also be used to describe iterative programs as follows.",
+            "codeT": "Iterative programme",
+            "imageT": "Matching the iterative programme and the Kripke framework",
+            "textTwo": "Now it's easy to check which system states meet the conditions:",
+            "imageTOne": "Execution of a logical formula on the Kripke structure",
+            "textThree": "If a process is the interaction of several parallel flows, then the process model is a parallel composition of their Kripke structures."
+          },
+          "principleCtlVerification": {
+            "label": "Principle of CTL formula validation on the Kripke structure",
+            "step": "Step",
+            "textOne": "Build a parsing tree for the formula.",
+            "textTwo": "Those states of the Kripke structure in which the primitive components of the formula (tree leaves) are fulfilled, denote by these formulas.",
+            "textThree": "Apply the marking rules of Y.G. Karpov Model Checking. Verification of parallel and distributed software systems (p.98-99) of states in the Kripke structure based on compositions of primitive formulas, climbing in the tree from leaves to root.",
+            "textFour": "For example, let's show the result of checking the execution of the formula",
+            "textFive": "in the following Kripke structure:",
+            "image": "Checking the CTL formula on the Kripke structure"
+          },
+          "exampleLtlVer": {
+            "label": "Example of LTL formula checking",
+            "textOne": "A different tactic is used to verify the LTL formula:",
+            "textTwo": "If we need to check whether the formula F is satisfied on the Kripke LTL structure, it is enough to check whether there are counterexamples, i.e. to check whether there are computations that satisfy F. To do this, we describe all behaviours that do NOT satisfy F as a Boolean automaton."
+          },
+          "buhiAutomaton": {
+            "label": "Buhi Automaton",
+            "textOne": "- is syntactically the same finite state machine, with the difference that it assigns a different meaning to the final states.",
+            "textTwo": "A chain is allowed by a Boolean automaton if and only if there is a final state of the automaton that is passed through an infinite number of times when accepting this chain."
+          },
+          "exampleBuhi": {
+            "label": "An example of a Buhi automaton",
+            "textOne": "For example, the following automaton describes the formula",
+            "textTwo": "- describes chains in which, after the first occurrence of an event p, this event is held an infinite number of times:",
+            "image": "An example of a Buhi automaton"
+          },
+          "algorithmChecking": {
+            "label": "A general algorithm for checking the feasibility of the LTL formula for the Kripke K structure:",
+            "textOne": "By structure",
+            "textTwo": "a Buhi automaton is being built",
+            "textThree": "This machine allows all possible calculations of the structure",
+            "textFour": "By LTL formula",
+            "textFive": "a Buhi automaton is being built",
+            "textSix": "which allows a set of calculations that satisfy",
+            "textSeven": "A automaton is being built",
+            "textEight": "This automaton is a synchronous composition of automaton",
+            "textNine": "allows the intersection of languages that each component of the automaton allows",
+            "textTen": "Formula",
+            "textEleven": "is performed for",
+            "textTwelve": "if and only if",
+            "textThirteen": "allows for empty speech.",
+            "textFourteen": "If the slot machine",
+            "textFifteen": "is a loop that includes the receiving state, then the language",
+            "textSixteen": "not empty and",
+            "textSeventeen": "does not satisfy",
+            "textEighteen": "More information on Model Checking can be found in Y.G. Karpov Model Checking. Verification of Parallel and Distributed Software Systems (p. 41-170)."
+          },
+          "controlQuestions": {
+            "label": "Review questions and tasks",
+            "aOne": "What temporal operators exist in CTL logic?",
+            "aTwo": "What temporal operators exist in LTL logic?",
+            "aThree": "What is the difference between CTL and LTL logistics? What are the advantages and disadvantages of each?",
+            "aFour": "Give a formal definition of the Boolean automaton and the Kripke model.",
+            "aFive": "Describe the algorithm for constructing the Kripke model using the iterative program algorithm.",
+            "aSix": "Describe the algorithm for constructing a Boolean automaton using the LTL formula.",
+            "aSeven": "Describe the algorithm for checking the CTL formula on the Kripke model.",
+            "aEight": "Describe the algorithm for checking the LTL formula on the Kripke model."
+          },
+          "examplesTasks": {
+            "label": "Examples of classroom and homework assignments",
+            "tOne": "Formalise your statements",
+            "pOneTOne": "a) If I have seen her before, I will recognise her when we meet.",
+            "pTwoTOne": "b) In all modes, once a req is set, it will never be removed until it is acknowledged.",
+            "pThreeTOne": "c) Any request to the resource will hang until it is confirmed or rejected.",
+            "pFourTOne": "d) Wherever we go in our lives, there is a path that will eventually lead us to the state from which the path of true faith begins.",
+            "pFiveTOne": "e) From any state at any system functioning, we will definitely return to the restart state.",
+            "tTwo": "Match the formulas to the following system tracks",
+            "tThree": "Check the execution of CTL formulas on the Kripke structure",
+            "tFour": "Find the intersection of automatic languages:",
+            "tFive": "Check if the LTL formula is being followed",
+            "tSix": "for the following Kripke structure. If not, give a counter example.",
+            "image": "Kripke structure"
+          }
+        }
+      },
+      "lb": {
+        "lb1": {
+          "main": {
+            "label": "Contract programming",
+            "goal": "Learn how to create formal specifications for real-world programs based on the \"development under contract\" paradigm"
+          },
+          "theoreticalInformation": {
+            "label": "Theoretical information",
+            "p1": {
+              "t1": "To develop the specification, it is proposed to use ",
+              "span": "Java Modeling Language (JML)",
+              "t2": " [1, p.1-13]."
+            },
+            "p2": "It is a language that formalizes a behavioral specification interface that can be used to describe the behavior of Java modules. It combines the \"design by contract\" approach borrowed from Eiffel, model-based specification borrowed from the Larch family of specification languages, and elements of refinement calculus.",
+            "p3": "To process jml specifications, you can use any of two console utilities: jmlspecs[1, p.9-10] (processes java 1.4 syntax) or OpenJml [2, 3-20] (java 1.4-1.7) - still under development. You can also use a plug-in for the Eclipse environment - JMLEclipse [3]."
+          },
+          "usageOpenJML": {
+            "label": "OpenJML usage",
+            "p1": "The instructions for using OpenJML are as follows.",
+            "list": {
+              "l1": "Unpack the latest version of openjml into a new directory, for example, ",
+              "l2": "Unpack the automatic theorem proving utility yices alongside, for example, to ",
+              "l3-1": "Add a directory ",
+              "l3-2": " to the CLASSPATH variable.",
+              "l4-1": "Create a configuration file ",
+              "l4-2": " in the directory ",
+              "l4-3": " with the following content"
+            },
+            "p2": "The rules for using the utility are described in detail in the manual [2, 6-12].",
+            "p3": "Here are just the basic commands.",
+            "p4": "Launch the annotation syntax checker:",
+            "p5": "Launch the generation of object code with contract execution verification:",
+            "p6": "Run the compiled class for execution:",
+            "p7": "Start static code verification:"
+          },
+          "testingCustomizedUtility": {
+            "label": "Testing the customized utility",
+            "p1": "The JML syntax is described in detail in the manual [1, p. 4-8].",
+            "p2": "To test the customized utility, create the following content files:",
+            "p3": "Run all the above commands for the files one by one.",
+            "p4": "Analyze the result"
+          },
+          "problemStatement": {
+            "label": "Problem statement",
+            "l1": "Design interfaces or abstract classes for game entities.",
+            "l2": "Formulate and express pre- and post-condition invariants in jml for all types and methods.",
+            "l3": "Check the jml specification with a static code analyzer.",
+            "l4": "Fix any errors you find. Verify that all pre-, post-conditions and invariants are actually fulfilled by testing the game."
+          },
+          "variantsIndividualTasks": {
+            "label": "Options of individual tasks",
+            "l1": "Option 1. The game \"Sapper\".",
+            "l2": "Option 2. The game \"Checkers\".",
+            "l3": "Option 3. The game \"Piggyback\".",
+            "l4": "Option 4. The game \"Sea Battle\".",
+            "l5": "Option 5. The game \"Tic-tac-toe\".",
+            "l6": "Option 6. The game \"Balls\".",
+            "l7": "Option 7. The game \"Giveaways\"."
+          },
+          "controlQuestionsTasks": {
+            "label": "Control questions and tasks",
+            "l1": "List the basic jml constructs.",
+            "l2": "List the main tasks of openjml.",
+            "l3": "What utilities are included in OpenJml and what is the purpose of each of them?"
+          },
+          "listOfReferences": {
+            "label": "List of references",
+            "eletrResource": "Electronic resource",
+            "accessMode": "Access mode",
+            "year": " – 19.05.2012 - Headline. From the screen."
+          }
+        },
+        "lb2": {
+          "main": {
+            "label": "Deductive program verification",
+            "goal": "Learn to perform static verification of object-oriented programs based on deductive logic and symbolic program execution."
+          },
+          "preparingWorkKeY": {
+            "label": "Preparing to work with KeY",
+            "p1": "We will verify programs using KeY [1, pp. 7-14], a static verification environment for programs in JML and a subset of the Java programming language (Java Cards API 2.2), as well as in UML+OCL. From the Java language standard, which is not related to the Java Cards API, the environment supports multidimensional arrays, integer and character and string data types. That is, if you write a program without dynamically loading classes and the float data type, you can prove its correctness using KeY.",
+            "p2": "In addition, you can choose between different semantics of the integer data type: mathematical definition, overflow consideration. KeY is based on dynamic logic (DL), which works on the same level as a programming language (there is no need to translate expressions into formalisms such as finite automata or higher-order logic). DL is a modal logic that operates formulas depending on the current state to which the program is led by the execution of its operators. To prove formulas about KeY positional logic, I use automatic proof utilities such as Simplify, Yieces, Z3, etc.",
+            "p3": "You will need a stable version of KeY 1.4 and JDK 1.4 or higher. To complete the assignment, implement the specified task in Java, annotate it using JML, and check the syntactic correctness of the annotations using JMLEclipse similarly to the assignment #1.",
+            "p4": "Launch",
+            "p5": "Choose File/Open and select the annotated *.java file. After analyzing the KeY code, the Proof Obligation Browser will prompt you to select a class, then a method, and the desired statement to prove (the so-called proof obligations). Proof obligations are generated on the basis of annotations attached to the selected method and its context (invariants of the class where the method is located). The most commonly used proof obligations are PreservesInv, Ensures-Post, RespectModifies."
+          },
+          "provingStatementsHelpKeY": {
+            "label": "Proving statements with the help of KeY",
+            "p1": "For the test example, load the issued paycard package, select the PayCard.java class and the charge(int amount) method. You will be presented with several statements related to this method that correspond to the constraints classified in the annotation as two normal or error calls.",
+            "p2": "For each constraint, the pre- and post-condition and the mode of proof are specified (Fig. 1).",
+            "p3": "Selecting a statement to prove",
+            "p4": "Select the first option normal_behavior. The Java DL statement will be loaded into the environment (Figure 2).",
+            "p5": "The system window before the start of refinement",
+            "p6": "On the Proof Search Strategy tab, select the necessary parameters that will control the procedure of automatic proof of the statement, as shown in Fig. 2.3.",
+            "p7": "Step 1",
+            "p8": "Step 2",
+            "p9": "Setting up KeY for automated proofing",
+            "p10": "Note that sometimes the proof cannot be performed completely automatically. An example of such a case is the getMaximumRecord method of the LogFile class. In it, the invariant asserts that the change in max contains the current larger value in the part of the array that has already been analyzed up to position j.",
+            "p11": "Load the EnsuresPost assertion for the specified method. Select Java DL as the strategy, set \"Loop treatment\" to None, and check the \"Autoresume strategy\" box, then start the proof. If an invariant was not specified in the code, the system would prompt you to enter an invariant or an induction hypothesis during the proof. When there are no more rules to apply, select the while loop including the previous block, click the mouse button, and select loopInvariant. This way you will use the invariant and the \"assignables\" directive in the code. Several targets will remain open after the proof strategy is refreshed. Restart the strategies and execute them until only one target remains open. Apply an external prouver - click Run Yices (or another installed prouver). The proof will complete successfully.",
+            "p12": "Do the same for your individual assignment.",
+            "p13": "The report should contain an annotated implementation of the class, the course (history) of the proof of each statement in it. You can save the proof by selecting Save current proof in the panel."
+          },
+          "variantsIndividualTasks": {
+            "label": "Options of individual tasks",
+            "l1": "Option 1: ATD Stack.",
+            "l2": "Option 2: ATD Queue.",
+            "l3": "Option 3. ATD Plural.",
+            "l4": "Option 4. ATD A queue with priorities.",
+            "l5": "Option 5. Sort by inserts.",
+            "l6": "Option 6. Binary search.",
+            "l7": "Option 7. Quick sorting.",
+            "l8": "Option 8. Sum, minimum and maximum in an array."
+          },
+          "controlQuestionsTasks": {
+            "label": "Control questions and tasks",
+            "l1": "Describe the basic principles of predicate logic.",
+            "l2": "What are the methods of logical inference in predicate logic?",
+            "l3": "Describe the basic principles and constructions of dynamic logic, how does it differ from predicate logic?",
+            "l4": "List the main features of KeY",
+            "l5": "List the main limitations of KeY"
+          },
+          "listOfReferences": {
+            "label": "List of references",
+            "eletrResource": "Electronic resource",
+            "accessMode": "Access mode",
+            "year": " – 19.05.2012 - Headline. From the screen."
+          }
+        },
+        "lb3": {
+          "main": {
+            "label": "Program verification based on temporal logic",
+            "goal": "Learn how to verify automated program models based on LTL temporal logic."
+          },
+          "guidelinesForIndependentWork": {
+            "p1": "To perform the work, we use SPIN [1, pp. 4-32,6 pp. 1-126] - a verifier of models of parallel programs written in the C-like language Promela (Protocol Meta Language). It was developed at the Bell Labs research center by Gerard Holzmann. The ACM International Association awarded Spin with the ACM Software System Award for 2001. In 1983, this award was given to the UNIX operating system, in 1997 - to Tcl/Tk, and in 2002 - to the Java language."
+          },
+          "spinPackage": {
+            "p1": "The Spin package allows:",
+            "l1": "build models of parallel programs (protocols, drivers, logic control and management systems) and a wide class of discrete systems;",
+            "l2": "express the necessary properties of their behavior (temporal properties);",
+            "l3": "automatically check the fulfillment of temporal properties of models based on the phomal approach by pressing a button.",
+            "p2": "Spin can be used in two modes: as a simulator and as a verifier. During a simulation, Spin displays information about one specific trajectory of the built model in graphical mode - a graphical representation of the behavior in the form of a Message Sequence Diagrams that occurs during the operation of parallel processes.",
+            "p3": "When performing a simulation, you need to understand that no amount of simulation can ",
+            "p4": "bring ",
+            "p5": "properties of the models. To do this, you need to do the following ",
+            "p6": "verification.",
+            "p7": "The verifier tries to find a counterexample - an incorrect, false behavioral trajectory that refutes the user-defined property - by analyzing all possible executions of the model. To do this, it builds a synchronous combination of the transition model of the system under test and a Boolean automaton that sets all undesirable incorrect behaviors. If the intersection of the models is invalid, which is a counterexample, Spin shows it to the user in a controlled manner. Thus, simulation and verification in Spin are closely related."
+          },
+          "spinOnWindows": {
+            "p1": "To use spin on Windows, you will need the following minimum set of utilities:",
+            "l1": "mingw - windows port of the GNU gcc compiler;",
+            "l2": "ActiveTcl is an interpreter of the high-level scripting language Tcl/Tk;",
+            "l3": "Graphviz is a library for building a wide range of graphs and charts;",
+            "l4": "Spin is a console utility for interpreting Promela programs;",
+            "l5": "xspin is a Tcl/Tk script that implements a graphical shell to facilitate and automate work with the Spin interpreter.",
+            "l6": "The bin directories of all utilities must be included in the PATH system variable.",
+            "l7": "The syntax of the Promella language was discussed in detail in the lecture and in [1,2]. Let's consider an example of working with the system. To run the utility, you need to create and run the run.bat script as follows:",
+            "l8": "wish -f xspin525.tcl,",
+            "l9": "where xspin525.tcl is the graphical shell script. The appearance of the visual shell window is shown in Fig. 1.",
+            "p2": "You can enter the program directly in the editor or load it from a *.pml file using File/Open. Load the altbit.pml file into the environment. It implements the alternate bit protocol. In the alternating bit algorithm, the sending process alternately sends messages marked with bit 1 or bit 0 and waits for the corresponding confirmations. The receiving process receives messages marked with bit 1 or bit 0 and sends acknowledgments to the sending process.",
+            "p3": "Check the syntactic correctness of the program by selecting Run/Run Syntax Check. The message box should say \"no syntax errors\". Now you can start the simulation Run/Set Simulation Parameters (Fig. 2)",
+            "p4": "Click Start. The simulation profile opens, where the Simulation Output window displays program messages and the Sequence Chart graphically displays the graph of process interaction (Fig. 3). The simulation supports 2 modes: Single Step and Run."
+          },
+          "correctnessModel": {
+            "p1": "Checking the correctness of a model based on the verification of LTL formulas means that some properties of its \"correct\" behavior are expressed in the form of an LTL formula. All such properties must be checked one by one.",
+            "p2": "To test the LTL-based model, let's introduce an additional variable accepted to the program, which will be set to 0 at the beginning of the run and every time a message is sent to the client. Accepted is set to 1 only if a confirmation is received from the client. Now we can express the requirement that the model is correct if every message is always acknowledged",
+            "img1": "System verification window",
+            "p3": "Please note that we want to verify that the formula is true for all executions of the system, so select the \"All executions\" radio button Now click Generate - a Never Claim process will be created, which in Promela contains the expression of the entered formula. Now click Run Verification. In the Verification Results field, you will see a positive report on the verification results: ",
+            "p4": "Do the same for your individual assignment.",
+            "p5": "The report should contain the model code in Promela, the model state machine, a fragment of the simulation, a list of all (in your opinion) necessary LTL formulas for model verification and the corresponding protocols (screenshots)."
+          },
+          "classesOfPropertiesDistributedSystems": {
+            "p1": "Traditionally, the properties of distributed systems are divided into the following classes:",
+            "l1": "reachability properties, establishing that a specific state of the system can be achieved, the general form of the LTL formula ",
+            "l2": "safety properties, establishing that something undesirable will never happen in the system, the general form of the LTL formula ",
+            "l3": "liveness properties, establishing that under certain conditions something \"good\" will eventually happen in any scenario of system behavior, the general form of the LTL formula ",
+            "l4": "fairness properties, establishing that something will be executed indefinitely often, the general form of the LTL formula"
+          },
+          "spinOperatorsLTL": {
+            "table1": "Description",
+            "table2": "At least once in the future q",
+            "table3": "Always in the future q",
+            "table4": "w until the moment when q"
+          },
+          "optionsIndividualTasks": {
+            "l1": "Student/Beverage vending machine;",
+            "l2": "ATM/user",
+            "l3": "The algorithm for finding NODs",
+            "l4": "Modeling the interaction of processes from N distributed clusters to ensure exclusive access of processes to a shared resource.",
+            "l5": "Description",
+            "l6": ". N clusters with M user processes on each cluster and one manager process per cluster. General description of the protocol idea: when a user process wants to access a resource, it submits a request to its manager and waits for access to be granted, uses it, and must notify the manager when the resource is free. Managers interact with each other to control/grant access to the resource to only one client at a time. The manager who exclusively owns the resource holds a so-called virtual token, which he/she gives to the client upon request. A manager who receives a client's request but does not have a virtual token must request it from other managers.",
+            "c1": "An example of a process-client workpiece is shown below:",
+            "l7": "Add all the necessary components (other processes, required global and local variables) to make the simulation possible. Create two clusters and 2 client processes on each.",
+            "l8": "Prove the following rules on the created system:",
+            "l9": "only one process can access the resource at a time;",
+            "l10": "no starvation (if the client has requested a resource, sooner or later he will receive it).",
+            "l11": "Needham-Schroeder cryptographic protocol. Implement the protocol, introduce a third party (an attacker), and prove the possibility of an external attack (the attacker learns the secret of one of the parties)."
+          },
+          "controlQuestionsAndTasks": {
+            "l1": "Define temporal logic.",
+            "l2": "What constructions distinguish temporal logic from predicate logic?",
+            "l3": "What subclasses of temporal logics exist?",
+            "l4": "Define the Kripke model and the Bushy automaton and how they are related to each other.",
+            "l5": "Explain the strategy for checking the truth of the formula of the CTL logic.",
+            "l6": "Explain the strategy for checking the truth of the LTL logic formula.",
+            "l7": "What are the principles of xSpin utility operation when verifying program models based on temporal logic?"
+          },
+          "listOfReferences": {
+            "l1": "Шошмина, И.В. Введение в язык Promela и систему комплексной верификации Spin [Текст] / И.В. Шошмина, Ю. Г. Карпов; Санкт-Петербургский государственный политехнический университет. – СПб:Университет, 2009 г. – 66 с.",
+            "l2": "G. Holzmann The Spin Model Checker: Primer and Reference Manual [Електронний ресурс] / SPIN HomePage / Режим доступу: www/URL:",
+            "l3": " – 19.05.2012 г. – Загол. з екрану."
+          }
+        }
+      },
+      "other": {
+        "pythonLesson": {
+          "main": {
+            "label": "Contract programming in Python",
+            "goal": "Learn how to create formal specifications for real-world programs based on the \"development under contract\" paradigm."
+          },
+          "mainIdeaContractProgramming": {
+            "p1": "The main idea of contract programming is a model of interaction between elements of a software system based on mutual obligations and benefits. This is a metaphor from business, where a \"client\" and a \"supplier\" enter into a \"contract\" that describes the following behavior:",
+            "l1": "when the \"client\" uses the \"supplier\", the \"client\" is obliged to satisfy the preconditions, which is to the benefit of the \"supplier\", as it relieves him of the obligation to fulfill the contract otherwise;",
+            "l2": "guaranteeing the fulfillment of the post-condition is the obligation of the \"supplier\" and is the benefit of the \"client\";",
+            "l3": "the fulfillment of a certain condition at the beginning and at the end guarantees the preservation of the invariant.",
+            "p2": "Python does not support contract programming by default. Since 2003, there has been a proposal for Python to add native support for contract programming. It is expressed in PEP 316 [1]. In recent years, it has been actively updated and supplemented.",
+            "p3": "Nevertheless, there are a lot of ready-made packages that allow you to implement contract programming. These include:",
+            "l4": "Updates",
+            "l5": "year"
+          },
+          "pyContractsPackage": {
+            "p1": "To develop a contract programming specification in Python, we will use the PyContracts package [2, 2]. This is a Python package that allows you to implement \"design by contract\" approaches. Contracts can be specified using Python 3 annotations or within the documentation line. PyContracts supports the basic type system, variable binding, arithmetic constraints, and has several specialized contracts and API extensions."
+          },
+          "pyContractsOnUbuntu": {
+            "l1": "Check for the pip3 package manager. Install pip3 if it is not present in the system:",
+            "img1": "pip3 is already in the system, no need to install it",
+            "l2": "Create a virtual environment and activate it:",
+            "l3": "To run on Python 3.9 with the folder for the env:",
+            "img2": "Notice that after executing the source env/bin/activate command, the inscription \"(env)\" appeared at the beginning of the command line. This means that we have activated the virtual environment and are now getting to know it.",
+            "l4": "Install PyContracts:",
+            "img3": "WARNING can be ignored, as it indicates that there is a more current version of pip that can be updated by running the specified command. You can ignore it to continue the task.",
+            "l5": "To check, let's go to the interactive mode of the interpreter and import PyContracts3:",
+            "img4": "If there is no error, then we have successfully installed the PyContracts3 package and can use it for work."
+          },
+          "pyContractsOnWindows": {
+            "l1": "Download the stable release of Python from the official website:",
+            "l2": ". In our case, we choose Python 3.11.0.",
+            "l3": "Download Windows installer (32-bit) if you are using a 32-bit installer. If your Windows is a 64-bit system, download Windows installer (64-bit).",
+            "l4": "Launch the installer, select customized installation, and select pip and py launcher. Click next.",
+            "l5": "In the Advanced options, check the \"Install for all users\" and \"Add Python to environment variables\" checkboxes. Pay attention to the Python installation directory that is displayed at this step. In our case, it is C:\\Users\\Python. After selecting additional options, click \"Install\".",
+            "l6": "After that, we check Python in cmd.exe. To do this, write python or python3. If the Python console opens, everything works.",
+            "l7": "Install virtualenv and create a working environment. To do this, run the following commands in cmd.exe:",
+            "l8": "Install PyContracts:",
+            "l9": "To use the package, import it into a file: from contracts import contract"
+          },
+          "installationSteps": {
+            "p1": "You can watch the first 5 steps of installation in the video:",
+            "p2": "(English, 4 minutes).",
+            "p3": "You can watch step 6 in the video",
+            "p4": "(English, 6 minutes).",
+            "p5": "Steps 7-8 are identical for Windows and Linux."
+          },
+          "testing": {
+            "p1": "The rules of use and functionality of the package are described in detail in the presentation [2].",
+            "code1": "To test the customized utility, create a file with the following content:",
+            "p2": "The code can be copied from",
+            "p3": "In the example, contracts are implemented through decorators. However, they can also be specified using docstrings or type annotations.",
+            "code2": "For example, the add_weight method can be written as follows:",
+            "p4": "Using new_contract, we created our own data validation rule - 'str_len_gt_zero'. The logic of this validation is quite simple: the parameter must be a string and have a length greater than 0. Thanks to this function, you can create almost any rule for data validation. Since PyContracts validates data only during function execution, we will create two instances of the class for validation: person1 and person2. Run the person.py file and fix any errors that occurred during validation. Also, rework the described contracts using docstrings or type annotations."
+          },
+          "mistakes": {
+            "img1": "in __init__, the weight parameter can take a float",
+            "img2": "add_country for person_1 cannot accept boolean value",
+            "img3": "when creating person_2, pass an empty string instead of a name",
+            "img4": "person_2.add_weight(0) will cause an error because the value must be greater than zero",
+            "l1": "in add_country, not only the string should be validated, but also a check for its length. person_2.add_country([\"\"]) should cause an error,",
+            "l2": "@contract(returns='str_len_gt_zero') for def __str__ makes no sense. Since we are already checking the name to make sure that it will receive a string and will not be empty. The logic of this function does not assume that it will be empty. It is more appropriate to limit returns=\"str\".",
+            "p1": "When all errors are fixed, the entire code should work without errors:"
+          },
+          "problemStatement": {
+            "p1": "Design interfaces or abstract classes for game entities. Formulate and express pre and post condition invariants in Python for all types and methods. Check the specification with PyContracts. Correct any errors found. Verify that all pre-, post-conditions and invariants are actually fulfilled by testing the game."
+          },
+          "individualTasks": {
+            "l1": "Option 1. The game \"Sapper\".",
+            "l2": "Option 2. The game \"Checkers\".",
+            "l3": "Option 3. The game \"Piggyback\".",
+            "l4": "Option 4. The game \"Sea Battle\".",
+            "l5": "Option 5. The game \"Tic-tac-toe\".",
+            "l6": "Option 6. The game \"Balls\".",
+            "l7": "Option 7. The game \"Giveaways\"."
+          },
+          "controlQuestions": {
+            "l1": "What is the essence of contract programming?",
+            "l2": "How can I disable PyContracts during program execution?",
+            "l3": "How can you set pre- and post-conditions in PyContracts? Which way do you prefer? Why?"
+          }
+        }
+      }
+    }
   }
 }

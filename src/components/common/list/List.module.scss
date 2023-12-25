@@ -1,0 +1,29 @@
+.text_list {
+  padding-left: 30px;
+  
+  li {
+    position: relative;
+    padding: 5px 0;
+    &:before {
+      content: "";
+      background-color: #EBECF0;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.number_list {
+  padding-left: 30px;
+  list-style-type: decimal;
+  list-style-position: outside;
+  li {
+    position: relative;
+    padding: 5px 0;
+  }
+}
