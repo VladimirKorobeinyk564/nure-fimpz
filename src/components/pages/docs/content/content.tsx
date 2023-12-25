@@ -7,10 +7,7 @@ function Content() {
 
     useEffect(() => {
         const hash = window.location.hash;
-        console.log(window.location)
-        console.log(hash)
         if (hash) {
-            console.log(hash)
             const sectionId = hash.substring(1);
             const element = document.getElementById(sectionId);
             element?.scrollIntoView();
