@@ -1,33 +1,51 @@
-import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import List from "@/components/common/list/List.tsx";
+import {useTranslation} from "react-i18next";
+
 import MathJax from "react-mathjax2";
 
+import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import List from "@/components/common/list/List.tsx";
+
 function AlgorithmCheckingLtl() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Загальний алгоритм перевірки здійсненності формули LTL для структури Кріпке К:'}
+            title={t("docsPage.content.pz.pz2.algorithmChecking.label")}
             id={"algorithmCheckingLtl"}
             isFirstSection={false}
         >
             <MathJax.Context input='ascii'>
                 <List type={"Number"}>
-                    <li>По структурі  <MathJax.Node inline>К</MathJax.Node> будується автомат Бюхі <MathJax.Node inline>AК</MathJax.Node>. Цей автомат допускає всі
-                        можливі обчислення структури <MathJax.Node inline>К</MathJax.Node>.
+                    <li>{t("docsPage.content.pz.pz2.algorithmChecking.textOne")} <MathJax.Node
+                        inline>К</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textTwo")} <MathJax.Node
+                        inline>AК</MathJax.Node>. {t("docsPage.content.pz.pz2.algorithmChecking.textThree")}
+                        <MathJax.Node inline>К</MathJax.Node>.
                     </li>
-                    <li>По формулі LTL <MathJax.Node inline>Ф</MathJax.Node> будується автомат Бюхі В <MathJax.Node inline>Ф</MathJax.Node>, який допускає
-                        множину обчислень, які задовольняють <MathJax.Node inline>Ф</MathJax.Node>.
+                    <li>{t("docsPage.content.pz.pz2.algorithmChecking.textFour")} <MathJax.Node
+                        inline>Ф</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textFive")} <MathJax.Node
+                        inline>Ф</MathJax.Node>, {t("docsPage.content.pz.pz2.algorithmChecking.textSix")} <MathJax.Node
+                        inline>Ф</MathJax.Node>.
                     </li>
-                    <li>Будується автомат <MathJax.Node inline>А_К⊗ В_Ф</MathJax.Node>. Цей автомат – синхронна композиція
-                        автоматів<MathJax.Node inline>А_К</MathJax.Node>і <MathJax.Node inline>В_Ф</MathJax.Node>, допускає перетин мов, які допускає кожен компонент
-                        автомата.
+                    <li>{t("docsPage.content.pz.pz2.algorithmChecking.textSeven")} <MathJax.Node inline>А_К⊗
+                        В_Ф</MathJax.Node>. {t("docsPage.content.pz.pz2.algorithmChecking.textEight")}<MathJax.Node
+                        inline>А_К</MathJax.Node>і <MathJax.Node
+                        inline>В_Ф</MathJax.Node>, {t("docsPage.content.pz.pz2.algorithmChecking.textNine")}
                     </li>
-                    <li>Формула <MathJax.Node inline>Ф</MathJax.Node> виконується для <MathJax.Node inline>K</MathJax.Node>, якщо і тільки якщо <MathJax.Node inline>А_К⊗ В_Ф</MathJax.Node> допускає
-                        пусту мову.
+                    <li>{t("docsPage.content.pz.pz2.algorithmChecking.textTen")} <MathJax.Node
+                        inline>Ф</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textEleven")}
+                        <MathJax.Node
+                            inline>K</MathJax.Node>, {t("docsPage.content.pz.pz2.algorithmChecking.textTwelve")}
+                        <MathJax.Node inline>А_К⊗
+                            В_Ф</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textThirteen")}
                     </li>
-                    <li>Якщо в автоматі <MathJax.Node inline>А_К⊗ В_Ф</MathJax.Node> є цикл, який включає приймаючий стан, то
-                        мова <MathJax.Node inline>L А_К⊗ В_Ф</MathJax.Node> непуста і <MathJax.Node inline>K</MathJax.Node> не задовольняє <MathJax.Node inline>Ф</MathJax.Node>.
+                    <li>{t("docsPage.content.pz.pz2.algorithmChecking.textFourteen")} <MathJax.Node inline>А_К⊗
+                        В_Ф</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textFifteen")} <MathJax.Node
+                        inline>L А_К⊗ В_Ф</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textSixteen")}
+                        <MathJax.Node
+                            inline>K</MathJax.Node> {t("docsPage.content.pz.pz2.algorithmChecking.textSeventeen")}
+                        <MathJax.Node inline>Ф</MathJax.Node>.
                     </li>
-                    <p>Детальнішу інформацію щодо Model Checking можна знайти у Ю.Г. Карпов Model Checking. Верифікація паралельних та розподілених програмних систем (c. 41-170).</p>
+                    <p>{t("docsPage.content.pz.pz2.algorithmChecking.textEighteen")}</p>
                 </List>
             </MathJax.Context>
         </MethodologySection>

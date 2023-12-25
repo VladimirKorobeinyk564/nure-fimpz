@@ -41,7 +41,23 @@
         },
         "pz2": {
           "label": "Practical № 2",
-          "goal": "Objective of the lesson"
+          "goal": "Objective of the lesson",
+          "theoreticalInformation": "Guidelines",
+          "operatorsSection": "Operators",
+          "examplesFormalization": "Examples formalising statements",
+          "grammarLtlLogic": "LTL logic grammar",
+          "kripkeStructure": "Kripke structure",
+          "pathQuantifiers": "Path quantifiers",
+          "ltlAndCtl": "LTL and CTL",
+          "exampleStatementCtlLogic": "Example statement in CTL logic",
+          "descriptionInteractivePrograms": "Description iterative programmes",
+          "principleCtlVerification": "Principle CTL formula validation on the Kripke structure",
+          "exampleLtlVerification": "Example LTL formula checking",
+          "buhiAutomaton": "Buhi automaton",
+          "exampleBuhiAutomaton": "Example Buhi automaton",
+          "algorithmCheckingLtl": "General algorithm for checking feasibility formula",
+          "controlQuestions": "Review questions and tasks",
+          "examplesClassroomAndHomeworkTasks": "Examples classroom and homework assignments"
         }
       },
       "laboratoryWork": {
@@ -276,6 +292,59 @@
             "label": "Buhi Automaton",
             "textOne": "- is syntactically the same finite state machine, with the difference that it assigns a different meaning to the final states.",
             "textTwo": "A chain is allowed by a Boolean automaton if and only if there is a final state of the automaton that is passed through an infinite number of times when accepting this chain."
+          },
+          "exampleBuhi": {
+            "label": "An example of a Buhi automaton",
+            "textOne": "For example, the following automaton describes the formula",
+            "textTwo": "- describes chains in which, after the first occurrence of an event p, this event is held an infinite number of times:",
+            "image": "An example of a Buhi automaton"
+          },
+          "algorithmChecking": {
+            "label": "A general algorithm for checking the feasibility of the LTL formula for the Kripke K structure:",
+            "textOne": "By structure",
+            "textTwo": "a Buhi automaton is being built",
+            "textThree": "This machine allows all possible calculations of the structure",
+            "textFour": "By LTL formula",
+            "textFive": "a Buhi automaton is being built",
+            "textSix": "which allows a set of calculations that satisfy",
+            "textSeven": "A automaton is being built",
+            "textEight": "This automaton is a synchronous composition of automaton",
+            "textNine": "allows the intersection of languages that each component of the automaton allows",
+            "textTen": "Formula",
+            "textEleven": "is performed for",
+            "textTwelve": "if and only if",
+            "textThirteen": "allows for empty speech.",
+            "textFourteen": "If the slot machine",
+            "textFifteen": "is a loop that includes the receiving state, then the language",
+            "textSixteen": "not empty and",
+            "textSeventeen": "does not satisfy",
+            "textEighteen": "More information on Model Checking can be found in Y.G. Karpov Model Checking. Verification of Parallel and Distributed Software Systems (p. 41-170)."
+          },
+          "controlQuestions": {
+            "label": "Review questions and tasks",
+            "aOne": "What temporal operators exist in CTL logic?",
+            "aTwo": "What temporal operators exist in LTL logic?",
+            "aThree": "What is the difference between CTL and LTL logistics? What are the advantages and disadvantages of each?",
+            "aFour": "Give a formal definition of the Boolean automaton and the Kripke model.",
+            "aFive": "Describe the algorithm for constructing the Kripke model using the iterative program algorithm.",
+            "aSix": "Describe the algorithm for constructing a Boolean automaton using the LTL formula.",
+            "aSeven": "Describe the algorithm for checking the CTL formula on the Kripke model.",
+            "aEight": "Describe the algorithm for checking the LTL formula on the Kripke model."
+          },
+          "examplesTasks": {
+            "label": "Examples of classroom and homework assignments",
+            "tOne": "Formalise your statements",
+            "pOneTOne": "a) If I have seen her before, I will recognise her when we meet.",
+            "pTwoTOne": "b) In all modes, once a req is set, it will never be removed until it is acknowledged.",
+            "pThreeTOne": "c) Any request to the resource will hang until it is confirmed or rejected.",
+            "pFourTOne": "d) Wherever we go in our lives, there is a path that will eventually lead us to the state from which the path of true faith begins.",
+            "pFiveTOne": "e) From any state at any system functioning, we will definitely return to the restart state.",
+            "tTwo": "Match the formulas to the following system tracks",
+            "tThree": "Check the execution of CTL formulas on the Kripke structure",
+            "tFour": "Find the intersection of automatic languages:",
+            "tFive": "Check if the LTL formula is being followed",
+            "tSix": "for the following Kripke structure. If not, give a counter example.",
+            "image": "Kripke structure"
           }
         }
       },

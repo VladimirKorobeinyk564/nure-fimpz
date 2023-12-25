@@ -108,10 +108,138 @@ export const menuItemsList: MenuItem[] = [
                         key: 'd4fbb1bc-f666-4b1b-981d-1c0eeac1761a',
                         label: 'docsPage.menuTree.practicalWork.pz2.goal',
                         isNavigate: true,
-                        path: '#goalt',
+                        path: '#programVerificationTemporalLogic',
                         parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
                         nodes: []
                     },
+                    {
+                        key: 'd2c65c87-a882-4561-899d-081040e1bca1',
+                        label: 'docsPage.menuTree.practicalWork.pz2.theoreticalInformation',
+                        isNavigate: true,
+                        path: '#methodicalInstructionsPzTwo',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '1a0e154d-d583-40dd-bcca-c728043fd76c',
+                        label: 'docsPage.menuTree.practicalWork.pz2.operatorsSection',
+                        isNavigate: true,
+                        path: '#operatorsSection',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '1632aa01-8a6b-4d1b-8c29-c3ba31e9010c',
+                        label: 'docsPage.menuTree.practicalWork.pz2.examplesFormalization',
+                        isNavigate: true,
+                        path: '#examplesFormalizationStatements',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '4d3b7d93-8f86-414c-ad33-4686a0134b9b',
+                        label: 'docsPage.menuTree.practicalWork.pz2.grammarLtlLogic',
+                        isNavigate: true,
+                        path: '#grammarLtlLogic',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '6616b4b6-382e-4894-bb36-ce9e95371c07',
+                        label: 'docsPage.menuTree.practicalWork.pz2.kripkeStructure',
+                        isNavigate: true,
+                        path: '#kripkeStructure',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '529d3566-292d-4078-8da4-4ffab086e1a2',
+                        label: 'docsPage.menuTree.practicalWork.pz2.pathQuantifiers',
+                        isNavigate: true,
+                        path: '#pathQuantifiers',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '27a4dd3a-a83a-4a58-80ab-a9ba6a48e0f2',
+                        label: 'docsPage.menuTree.practicalWork.pz2.ltlAndCtl',
+                        isNavigate: true,
+                        path: '#ltlAndCtl',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: 'c23e689b-41f7-4b79-84dc-382ee9de357e',
+                        label: 'docsPage.menuTree.practicalWork.pz2.exampleStatementCtlLogic',
+                        isNavigate: true,
+                        path: '#exampleStatementCtlLogic',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '218f9cee-2a6c-4aac-81d5-11c11be63d1b',
+                        label: 'docsPage.menuTree.practicalWork.pz2.descriptionInteractivePrograms',
+                        isNavigate: true,
+                        path: '#descriptionInteractivePrograms',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '3dfadae5-e659-4f07-b4ec-ca2181585963',
+                        label: 'docsPage.menuTree.practicalWork.pz2.principleCtlVerification',
+                        isNavigate: true,
+                        path: '#principleCtlVerification',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '24dcc411-db87-40cc-ab5a-3a04b6d9764e',
+                        label: 'docsPage.menuTree.practicalWork.pz2.exampleLtlVerification',
+                        isNavigate: true,
+                        path: '#exampleLtlVerification',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: 'e5d43d45-8dc5-4627-97ce-9738b0b2eaba',
+                        label: 'docsPage.menuTree.practicalWork.pz2.buhiAutomaton',
+                        isNavigate: true,
+                        path: '#buhiAutomaton',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: 'c8df99d9-f7b2-42a1-b307-70865d393fd4',
+                        label: 'docsPage.menuTree.practicalWork.pz2.exampleBuhiAutomaton',
+                        isNavigate: true,
+                        path: '#exampleBuhiAutomaton',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: 'd9fa815e-3d93-4191-bb2d-dcf3c121f3f9',
+                        label: 'docsPage.menuTree.practicalWork.pz2.algorithmCheckingLtl',
+                        isNavigate: true,
+                        path: '#algorithmCheckingLtl',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '6bc39254-1f4c-4988-8742-97e2ad4dbb13',
+                        label: 'docsPage.menuTree.practicalWork.pz2.controlQuestions',
+                        isNavigate: true,
+                        path: '#controlQuestionsAndTasksPz2',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    },
+                    {
+                        key: '6a3be677-cba5-40f1-95c4-6bfa705e4aa3',
+                        label: 'docsPage.menuTree.practicalWork.pz2.examplesClassroomAndHomeworkTasks',
+                        isNavigate: true,
+                        path: '#examplesClassroomHomeworkTasksPz2',
+                        parentKey: '9c3f8e69-5d0d-4e3e-b6ee-30a15a54b2a2',
+                        nodes: []
+                    }
                 ],
             },
         ],

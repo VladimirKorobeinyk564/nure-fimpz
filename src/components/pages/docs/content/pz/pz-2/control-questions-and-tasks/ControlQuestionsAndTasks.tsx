@@ -1,34 +1,26 @@
+import {useTranslation} from "react-i18next";
+
 import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
 import List from "@/components/common/list/List.tsx";
 
 function ControlQuestionsAndTasks() {
+    const {t} = useTranslation();
+
     return (
         <MethodologySection
-            title={'Контрольні запитання і завдання'}
+            title={t("docsPage.content.pz.pz2.controlQuestions.label")}
             id={"controlQuestionsAndTasksPz2"}
             isFirstSection={false}
         >
             <List type={"Number"}>
-                <li>Які темпоральні оператори існують у логіці CTL?</li>
-                <li>Які темпоральні оператори існують у логіці LTL?</li>
-                <li>Яка різниця між логіками CTL та LTL? Які кожна з них
-                    мають переваги та недоліки.
-                </li>
-                <li>Дайте формальне визначення автомату Бюхі та моделі
-                    Кріпке.
-                </li>
-                <li>Опишіть алгоритм побудови моделі Кріпке за алгоритмом
-                    ітеративної програми.
-                </li>
-                <li>Опишіть алгоритм побудови автомату Бюхі за формулою
-                    LTL.
-                </li>
-                <li>Опишіть алгоритм перевірки формули CTL на моделі
-                    Кріпке.
-                </li>
-                <li>Опишіть алгоритм перевірки формули LTL на моделі
-                    Кріпке.
-                </li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aOne")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aTwo")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aThree")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aFour")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aFive")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aSix")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aSeven")}</li>
+                <li>{t("docsPage.content.pz.pz2.controlQuestions.aEight")}</li>
             </List>
         </MethodologySection>
     )

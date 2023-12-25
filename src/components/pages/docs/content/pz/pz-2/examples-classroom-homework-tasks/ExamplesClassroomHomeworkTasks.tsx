@@ -1,8 +1,11 @@
-import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
-import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper.tsx";
+import MathJax from "react-mathjax2";
 
 import {useAppSelector} from "@/hooks/redux.ts";
-import MathJax from "react-mathjax2";
+import {useTranslation} from "react-i18next";
+
+import MethodologySection from "@/components/common/methodology-section/MethodologySection.tsx";
+import ImageWrapper from "@/components/common/image-wrapper/ImageWrapper.tsx";
+import List from "@/components/common/list/List.tsx";
 
 import diagramImgOneLight from "@/assets/images/pz2/diagram-eight-light.jpg";
 import diagramImgOneDark from "@/assets/images/pz2/diagram-eight-dark.jpg";
@@ -13,42 +16,30 @@ import diagramImgThreeDark from "@/assets/images/pz2/diagram-nine-dark.jpg";
 import diagramImgFourDark from "@/assets/images/pz2/diagram-six-dark.jpg";
 import diagramImgFourLight from "@/assets/images/pz2/diagram-six-light.jpg";
 
-
-import List from "@/components/common/list/List.tsx";
-
 function ExamplesClassroomHomeworkTasks() {
+    const {t} = useTranslation();
+
     const theme = useAppSelector((state) => state.systemSettings.theme);
 
     return (
         <MethodologySection
-            title={'Приклади аудиторних і домашніх задач'}
+            title={t("docsPage.content.pz.pz2.examplesTasks.label")}
             id={"examplesClassroomHomeworkTasksPz2"}
             isFirstSection={false}
         >
             <div className={"mb-[40px]"}>
                 <div className={"mb-[10px]"}>
-                    <p><span className={"font-bold"}>2.4.1 </span>Формалізуйте висловлювання</p>
+                    <p><span className={"font-bold"}>2.4.1 </span>{t("docsPage.content.pz.pz2.examplesTasks.tOne")}</p>
                     <List type={"Number"}>
-                        <li className={"list-none"}>а) Якщо я бачив її раніше, то я впізнаю її під час зустрічі.</li>
-                        <li className={"list-none"}>б) У всіх режимах після того, як запит req встановиться, він ніколи
-                            не
-                            буде знятий, доки на нього не прийде підтвердження.
-                        </li>
-                        <li className={"list-none"}>в) Будь-який запит до ресурсу буде висіти до підтвердження або
-                            відхилення.
-                        </li>
-                        <li className={"list-none"}>г) Завжди, куди б ми не потрапили в нашому житті, існує такий шлях,
-                            що
-                            на ньому в кінці кінців обов'язково потрапимо в стан, з якого йде шлях
-                            істиної віри.
-                        </li>
-                        <li className={"list-none"}>д) З будь-якого стану при будь-якому функціонуванні системи
-                            обов'язково повернемося до стану рестарту.
-                        </li>
+                        <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesTasks.pOneTOne")}</li>
+                        <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesTasks.pTwoTOne")} </li>
+                        <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesTasks.pThreeTOne")}</li>
+                        <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesTasks.pFourTOne")}</li>
+                        <li className={"list-none"}>{t("docsPage.content.pz.pz2.examplesTasks.pFiveTOne")}</li>
                     </List>
                 </div>
                 <div className={"mb-[10px]"}>
-                    <p><span className={"font-bold"}>2.4.2 </span>Співставте формули наступним трекам систем</p>
+                    <p><span className={"font-bold"}>2.4.2 </span>{t("docsPage.content.pz.pz2.examplesTasks.tTwo")}</p>
                     <div className={"flex"}>
                         <div className={"w-1/2"}>
                             <img src={theme === "dark" ? diagramImgOneDark : diagramImgOneLight} alt={"diagram"}
@@ -69,7 +60,7 @@ function ExamplesClassroomHomeworkTasks() {
                     </div>
                 </div>
                 <div className={"mb-[10px]"}>
-                    <p><span className={"font-bold"}>2.4.3 </span>Перевірте виконання CTL формул на структурі Кріпке</p>
+                    <p><span className={"font-bold"}>2.4.3 </span>{t("docsPage.content.pz.pz2.examplesTasks.tThree")}</p>
                     <div className={"flex"}>
                         <div className={"w-1/2"}>
                             <img src={theme === "dark" ? diagramImgTwoDark : diagramImgTwoLight} alt={"diagram"}
@@ -94,19 +85,18 @@ function ExamplesClassroomHomeworkTasks() {
                     </div>
                 </div>
                 <div>
-                    <p><span className={"font-bold"}>2.4.4 </span>Знайдіть перетин автоматних мов:</p>
+                    <p><span className={"font-bold"}>2.4.4 </span>{t("docsPage.content.pz.pz2.examplesTasks.tFour")}</p>
                     <ImageWrapper image={theme === "dark" ? diagramImgThreeDark : diagramImgThreeLight}/>
                 </div>
                 <div>
-                    <p><span className={"font-bold"}>2.4.5 </span>Перевірте, чи виконується формула LTL
+                    <p><span className={"font-bold"}>2.4.5 </span>{t("docsPage.content.pz.pz2.examplesTasks.tFive")}
                         <span className={"mx-1"}>
                 <MathJax.Context input='ascii'>
                     <MathJax.Node inline>{`Φ = G ( p → XFq)`}</MathJax.Node>
                 </MathJax.Context>
                 </span>
-                        для наступної структури Кріпке. У випадку невиконання
-                        наведіть контр приклад.</p>
-                    <ImageWrapper imgSubtitle={"Структура Кріпке"}
+                        {t("docsPage.content.pz.pz2.examplesTasks.tSix")}</p>
+                    <ImageWrapper imgSubtitle={t("docsPage.content.pz.pz2.examplesTasks.image")}
                                   image={theme === "dark" ? diagramImgFourDark : diagramImgFourLight}/>
                 </div>
             </div>
