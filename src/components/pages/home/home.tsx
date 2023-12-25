@@ -3,14 +3,17 @@ import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import SupportUkraine from "@/components/common/support-ukraine/support-ukraine.tsx";
 import { motion } from "framer-motion"
+import {useEffect, useRef, useState} from "react";
 
 function Home() {
     const navigate = useNavigate();
-    const {t} = useTranslation();
+    const {t, i18n } = useTranslation();
+    const [animationKey, setAnimationKey] = useState('animation');
+    const gradientWord = useRef<HTMLSpanElement | null>(null);
 
     const gradientAnimation = {
         hidden: {
-            backgroundPositionX: "-385px",
+            backgroundPositionX: `-${gradientWord.current?.offsetWidth}px`,
         },
         visible: {
             backgroundPositionX: 0,
@@ -30,7 +33,6 @@ function Home() {
         })
     }
 
-    console.log(window.innerWidth)
     const mainBgAnimation = {
         hidden: {
             backgroundPositionY: 0,
@@ -40,6 +42,11 @@ function Home() {
             transition: {delay: 0.2, duration: 3, repeat: Infinity, ease: "linear"}
         }
     }
+
+    useEffect(() => {
+        gradientAnimation.hidden.backgroundPositionX = `-${gradientWord.current?.offsetWidth}px`
+        setAnimationKey((prevKey) => `${prevKey}-updated`);
+    }, [i18n.language, gradientWord.current?.offsetWidth]);
 
     return (
         <motion.div
@@ -57,6 +64,8 @@ function Home() {
                     custom={1}
                     variants={textYAnimation}
                     className={'text-[55px] font-extrabold leading-[60px] mb-[20px]'}><motion.span
+                    ref={gradientWord}
+                    key={animationKey}
                     variants={gradientAnimation}
                     className={'bg-home-tagline-gradient bg-clip-text text-transparent'}>
                     {t('homePage.tagline.span')}</motion.span> {t('homePage.tagline.methods')}<br/> {t('homePage.tagline.other')}
