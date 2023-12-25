@@ -23,7 +23,7 @@ const slice = createSlice({
             root.classList.add(newTheme);
 
             localStorage.setItem('theme', action.payload);
-            state.theme = action.payload;
+            state.theme = newTheme;
         },
     }
 })
