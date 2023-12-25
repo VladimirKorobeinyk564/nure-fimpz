@@ -6,11 +6,11 @@ import { motion } from "framer-motion"
 
 function Home() {
     const navigate = useNavigate();
-    const {t} = useTranslation();
+    const {t, i18n } = useTranslation();
 
     const gradientAnimation = {
         hidden: {
-            backgroundPositionX: "-385px",
+            backgroundPositionX: i18n.language === "ua" ? "-400px" : "232px",
         },
         visible: {
             backgroundPositionX: 0,
@@ -30,7 +30,6 @@ function Home() {
         })
     }
 
-    console.log(window.innerWidth)
     const mainBgAnimation = {
         hidden: {
             backgroundPositionY: 0,
