@@ -3,14 +3,16 @@ import {useNavigate} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import SupportUkraine from "@/components/common/support-ukraine/support-ukraine.tsx";
 import { motion } from "framer-motion"
+import {useEffect, useState} from "react";
 
 function Home() {
     const navigate = useNavigate();
     const {t, i18n } = useTranslation();
+    const [animationKey, setAnimationKey] = useState('animation');
 
     const gradientAnimation = {
         hidden: {
-            backgroundPositionX: i18n.language === "ua" ? "-400px" : "232px",
+            backgroundPositionX: i18n.language === "ua" ? "-390px" : "-232px",
         },
         visible: {
             backgroundPositionX: 0,
@@ -40,6 +42,10 @@ function Home() {
         }
     }
 
+    useEffect(() => {
+        setAnimationKey((prevKey) => `${prevKey}-updated`);
+    }, [i18n.language]);
+
     return (
         <motion.div
             initial="hidden"
@@ -56,6 +62,7 @@ function Home() {
                     custom={1}
                     variants={textYAnimation}
                     className={'text-[55px] font-extrabold leading-[60px] mb-[20px]'}><motion.span
+                    key={animationKey}
                     variants={gradientAnimation}
                     className={'bg-home-tagline-gradient bg-clip-text text-transparent'}>
                     {t('homePage.tagline.span')}</motion.span> {t('homePage.tagline.methods')}<br/> {t('homePage.tagline.other')}
